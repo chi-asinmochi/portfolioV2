@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LogoText = styled.h1.attrs()`
+export const LogoText = styled.h1`
    & {
         color: #E1F1F4;
         font-family: Orbitron, sans-serif;
@@ -29,7 +29,6 @@ export const LogoText = styled.h1.attrs()`
     }
 
     &::before, &::after {
-        content: 'lalaa';
         position: absolute;
         width: 100%;
         height: 100%;

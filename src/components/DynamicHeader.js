@@ -46,9 +46,9 @@ function DynamicHeader() {
 
     return (
         <BigNav>
-            <Container onMouseLeave={shuffleReady} onMouseEnter={shuffle}>
+            <Container onMouseLeave={shuffleReady} onMouseEnter={shuffle} >
                 <Logo>
-                    <LogoText text={text} shuffling={shuffling} >{text}</LogoText>
+                    <LogoText text={text} shuffling={shuffling} >{text} </LogoText>
                 </Logo>
                 <Menu>
                     <li>Projects</li>
