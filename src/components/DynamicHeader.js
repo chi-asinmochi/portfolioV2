@@ -1,14 +1,13 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import { LogoText } from './styles/LogoText.styled' 
-// import { throttle } from 'underscore'
-// import throttle from 'lodash'
+import { TextFragment } from './styles/TextFragment'
+
 
 const letters = '*+-/@_$[%£!XO1&>'
 
-
-function DynamicHeader() {
-    // console.log(_.throttle)
+function DynamicHeader({ big }) {
+    let isBig = big
     const [text, setLogoText] = useState('shawnchi')
     const [shuffling, setShuffling] = useState(false)
 
@@ -29,26 +28,65 @@ function DynamicHeader() {
                 i--
             } else {
                 clearInterval(shuffler)
-                // setShuffling(false)
+                setLogoText(prev => {
+                    let arr = [...prev].map((l, i) => {
+                        switch (i) {
+                            case 1:
+                                return 'h'
+                                break
+                            case 2:
+                                return 'e'
+                                break
+                            case 4:
+                                return 'l'
+                                break
+                            case 5:
+                                return 'l'
+                                break
+                            case 6:
+                                return 'o'
+                                break
+                            default:
+                                return letters[parseInt(Math.random()*100%letters.length)]
+                        }
+                    }
+                    )
+                    console.log('render')
+                    return arr
+                })
             }
         }, 10);
-        // setShuffling(false)
-
-        // setTimeout(() => {
-        //     setShuffling(false)
-        // }, 1000);
     }
     const shuffleReady = () => {
         setShuffling(false)
         console.log('shuffle ready')
+        let i = 10
+        const shuffler = setInterval(() => {
+            if (i>0) {
+                setLogoText((prev) => {
+                    let arr = [...prev].map(l => 
+                        letters[parseInt(Math.random()*100%letters.length)]
+                    )
+                    console.log('render')
+                    return arr
+                })
+                i--
+            } else {
+                clearInterval(shuffler)
+                setLogoText('shawnchi')
+                // setShuffling(false)
+            }
+        }, 10);
     }
 
 
     return (
         <BigNav>
             <Container onMouseLeave={shuffleReady} onMouseEnter={shuffle} >
-                <Logo>
-                    <LogoText text={text} shuffling={shuffling} >{text} </LogoText>
+                <Logo> 
+                    <TextFragment bottom={true}>{text}</TextFragment>
+                    <TextFragment bottom={false}>{text}</TextFragment>
+                    <LogoText text={text} shuffling={shuffling}>{text} </LogoText>
                 </Logo>
                 <Menu>
                     <li>Projects</li>
@@ -62,7 +100,7 @@ function DynamicHeader() {
 
 const BigNav = styled.nav`
     /* width: 8em; */
-    height: 100%;
+    height: ${({ big }) => big ? '100%' : ''};
     display: grid;
     place-content: center;
     /* background-color: red; */
@@ -70,6 +108,7 @@ const BigNav = styled.nav`
 const Logo = styled.div`
     & {
         position: relative;
+        transform: ${({big}) => big ? 'scale(1)' : 'scale(0.2)'};
     }
     &::before, &::after {
         content: "";
@@ -77,7 +116,7 @@ const Logo = styled.div`
         width: 100%;
         height: 1%;
         background-color: ${({ theme }) => theme.colors.background};
-        z-index: 2;
+        z-index: 4;
         opacity: 0.3;
     }
     &::before {
@@ -134,9 +173,11 @@ const Menu = styled.ul`
 `
 
 const Container = styled.div`
-    margin-top: min(calc(-200px + 8vw), -100px);
+    margin-top: ${
+        ({ big }) => big ? 'min(calc(-200px + 8vw), -100px)' : '0'
+    };
     display: flex;
-    flex-direction: column;
+    flex-direction: ${({big}) => big? 'column' : 'row'};
     gap: 10px;
     
 `
