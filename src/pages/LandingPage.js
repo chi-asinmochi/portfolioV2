@@ -4,9 +4,7 @@ import DynamicHeader from '../components/DynamicHeader'
 function LandingPage() {
     return (
         <>
-            <DynamicHeader>
-                
-            </DynamicHeader>
+            <DynamicHeader big={true}></DynamicHeader>
         </>
     )
 }

@@ -4,7 +4,7 @@ export const TextFragment = styled.h1`
     color: ${
         ({ theme, bottom }) => bottom? theme.colors.pink : theme.colors.cyan
     };
-    font-family: Orbitron, sans-serif;
+    font-family: ${({ theme }) => theme.font.cyber}, sans-serif;
     font-size: min(calc(2em + 5vw), 8em);
     letter-spacing: 0.2em;
     font-weight: 700;
@@ -29,6 +29,7 @@ export const TextFragment = styled.h1`
     @keyframes left-glitch {
         2% {
             left: -1%;
+            
         }
         0%, 5% {
             left: -0.3%;
@@ -53,9 +54,11 @@ export const TextFragment = styled.h1`
             top: 0%;
             transform: skew(1deg, -1deg); 
             opacity: 1;
+            
         }
         90% {
             opacity: 1;
+            
         }
     }
 `
