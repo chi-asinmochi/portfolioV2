@@ -2,11 +2,12 @@ import styled from "styled-components";
 // import WFCover from '../../assets/img/WFCover.svg'
 export const Frame = styled.div`
     width: 100%;
+
 `
 export const ProjectContainer = styled.div`
 
     float: right;
-    width: 50%;  
+    width: 55%;  
     padding: 8vh 0 30vh 0;
     display: flex;
     gap: 30vh;
@@ -20,13 +21,13 @@ export const ProjectContainer = styled.div`
 
 `
 export const BG = styled.div`
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    /* height: 100%; */
     background: url(${({src}) => src}) no-repeat;
     background-size: contain;
     position: fixed;
     top: 12%;
-    left: 40%;
+    left: 35%;
     width: 70%;
     height: 70%;
     filter: blur(20px);
@@ -37,6 +38,7 @@ export const BG = styled.div`
 `
 export const ProjectWrapper = styled.div`
     scroll-snap-align: center;
+    scroll-snap-stop: always;   
 `
 
 export const ProjectCover = styled.div`
@@ -50,7 +52,7 @@ export const IMG = styled.img`
 
     &:hover {
         position: sticky;
-        transform: scale(1.2);
+        transform: scale(1.1);
         z-index:2;
         box-shadow: 0px 12px 30px black;
     }

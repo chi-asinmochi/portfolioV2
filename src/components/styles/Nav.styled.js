@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Nav = styled.nav`
 /* width: 8em; */
 ${({ big }) => big ? 'display: grid;place-content: center; height 100%' :
- 'position: sticky; top: 0; z-index: 10;'}
+ 'position: fixed; top: 0; z-index: 10;'}
 /* background-color: red; */
 `
 export const Container = styled.div`

@@ -1,20 +1,20 @@
 import { useState } from 'react'
 import { LogoText } from './styles/LogoText.styled' 
-import { TextFragment } from './styles/TextFragment'
+import { TextFragment } from './styles/TextFragment.styled'
 import { Nav, Container, Logo, Menu } from './styles/Nav.styled'
 
 
 const letters = '*+-/@_$[%£!XO1&>'
 
 function DynamicHeader({ big }) {
-    console.log(big)
+    // console.log(big)
     const [text, setLogoText] = useState('shawnchi')
     const [shuffling, setShuffling] = useState(false)
 
     const shuffle = (e) => {
         if (shuffling) {return}
         setShuffling(true)
-        console.log('shuffle called')   
+        // console.log('shuffle called')   
         let i = 10
         const shuffler = setInterval(() => {
             if (i>0) {
@@ -22,7 +22,7 @@ function DynamicHeader({ big }) {
                     let arr = [...prev].map(l => 
                         letters[parseInt(Math.random()*100%letters.length)]
                     )
-                    console.log('render')
+                    // console.log('render')
                     return arr
                 })
                 i--
@@ -51,7 +51,7 @@ function DynamicHeader({ big }) {
                         }
                     }
                     )
-                    console.log('render')
+                    // console.log('render')
                     return arr
                 })
             }
@@ -59,7 +59,7 @@ function DynamicHeader({ big }) {
     }
     const shuffleReady = () => {
         setShuffling(false)
-        console.log('shuffle ready')
+        // console.log('shuffle ready')
         let i = 10
         const shuffler = setInterval(() => {
             if (i>0) {
@@ -67,7 +67,7 @@ function DynamicHeader({ big }) {
                     let arr = [...prev].map(l => 
                         letters[parseInt(Math.random()*100%letters.length)]
                     )
-                    console.log('render')
+                    // console.log('render')
                     return arr
                 })
                 i--
