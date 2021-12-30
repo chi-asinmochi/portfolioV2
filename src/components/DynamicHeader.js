@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { LogoText } from './styles/LogoText.styled' 
+import { Link } from 'react-router-dom'
 import { TextFragment } from './styles/TextFragment.styled'
 import { Nav, Container, Logo, Menu } from './styles/Nav.styled'
 
@@ -81,16 +82,19 @@ function DynamicHeader({ big }) {
 
     return (
         <Nav big = {big}>
-            <Container big={big}  >
-                <Logo big={big} onMouseLeave={shuffleReady} onMouseEnter={shuffle}> 
-                    <TextFragment bottom={true}>{text}</TextFragment>
-                    <TextFragment bottom={false}>{text}</TextFragment>
-                    <LogoText text={text} shuffling={shuffling}>{text} </LogoText>
-                </Logo>
+            <Container big={big} >
+                <Link to='/'>
+                    <Logo big={big} onMouseLeave={shuffleReady} onMouseEnter={shuffle}> 
+                        <TextFragment bottom={true}>{text}</TextFragment>
+                        <TextFragment bottom={false}>{text}</TextFragment>
+                        <LogoText text={text} shuffling={shuffling}>{text} </LogoText>
+                    </Logo>
+                </Link>
+
                 <Menu big={big}>
-                    <li>Projects</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <li><Link to='/projects'>Projects</Link></li>
+                    <li><Link to='/about'>About</Link></li>
+                    <li><Link to='/contact'>Contact</Link></li>
                 </Menu>
             </Container>
         </Nav>

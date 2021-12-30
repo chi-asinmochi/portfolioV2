@@ -17,9 +17,6 @@ const GlobalStyles = createGlobalStyle`
         color: white;
         font-weight: 300;
     }
-    h1, h2, h3 {
-        font-family: ${({ theme }) => theme.font.cyber}, sans-serif;
-    }
     #root {
         /* position: fixed; */
         /* background: pink; */
@@ -28,6 +25,14 @@ const GlobalStyles = createGlobalStyle`
         overflow: scroll;
         
     }
+    h1, h2, h3 {
+        font-family: ${({ theme }) => theme.font.cyber}, sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
 `
 
 export default GlobalStyles

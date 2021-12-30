@@ -85,12 +85,13 @@ export const Menu = styled.ul`
     list-style: none;
 
 
-    li {
+    a {
+        text-decoration: none;
         color: grey;
         cursor: pointer;
         transition: 0.6s all;
     }
-    li:hover {
+    a:hover {
         color: white;
         text-shadow: 0px 0px 6px cyan;
     }

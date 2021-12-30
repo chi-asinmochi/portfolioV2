@@ -5,7 +5,7 @@ import MainContent from '../components/MainContent'
 function Projects() {
     return (
         <>
-            <DynamicHeader big={false}></DynamicHeader>
+            
             <MainContent></MainContent>
         </>
 
