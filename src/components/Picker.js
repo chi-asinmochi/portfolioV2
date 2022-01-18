@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useLayoutEffect, useContext } from 
 import styled from 'styled-components'
 import { SlowLayer, ScrollLayer, ProjectTitle } from './styles/PickerLayers'
 import { ScrollContext } from './MainContent'
-import indicator from '../assets/icon/indicator.svg'
+
 
 
 function Picker({ scrollAmount, setClickState}, ref) {
@@ -56,13 +56,13 @@ function Picker({ scrollAmount, setClickState}, ref) {
                     {/* assign position (classname = pos[0]) to each li and change based on scroll position */}
                     <li>
                         <ProjectTitle ref={el => {titletRefs.current[0] = el}} className='current' id='title-1' onClick={titleClickHandler}>
-                            first
+                            Wildfire.org
                         </ProjectTitle>
                     </li>
-                    <li><ProjectTitle ref={el => {titletRefs.current[1] = el}} id='title-2' onClick={titleClickHandler}>second</ProjectTitle></li>
-                    <li><ProjectTitle ref={el => {titletRefs.current[2] = el}} id='title-3' onClick={titleClickHandler}>third</ProjectTitle></li>
-                    <li><ProjectTitle ref={el => {titletRefs.current[3] = el}} id='title-4' onClick={titleClickHandler}>fourth</ProjectTitle></li>
-                    <li><ProjectTitle ref={el => {titletRefs.current[4] = el}} id='title-5' onClick={titleClickHandler}>fifth</ProjectTitle></li>
+                    <li><ProjectTitle ref={el => {titletRefs.current[1] = el}} id='title-2' onClick={titleClickHandler}>Fraud Management</ProjectTitle></li>
+                    <li><ProjectTitle ref={el => {titletRefs.current[2] = el}} id='title-3' onClick={titleClickHandler}>Carousel Interaction</ProjectTitle></li>
+                    <li><ProjectTitle ref={el => {titletRefs.current[3] = el}} id='title-4' onClick={titleClickHandler}>3D Object</ProjectTitle></li>
+                    <li><ProjectTitle ref={el => {titletRefs.current[4] = el}} id='title-5' onClick={titleClickHandler}>Contact Tracing</ProjectTitle></li>
                 </SlowLayer>
             {/* </ScrollLayer> */}
         </SideBar>

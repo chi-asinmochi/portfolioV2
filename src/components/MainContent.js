@@ -3,6 +3,8 @@ import Picker from './Picker'
 import styled from 'styled-components'
 import { Frame, ProjectContainer, BG, ProjectWrapper, ProjectCover, IMG } from './styles/ProjectContainer.styled'
 import WFCover from '../assets/img/WFCover.svg'
+import chartIMG from '../assets/img/WFChart.svg'
+import chartIMG2 from '../assets/img/WFChart.png'
 
 
 export const ScrollContext = React.createContext()
@@ -82,16 +84,16 @@ function MainSection() {
                     <BG src={WFCover}></BG>
                     <ProjectContainer onLoad={loadHandler} ref={containerRef}>
                         <ProjectWrapper ref={el => {projectRefs.current[0] = el}} >
-                            <ProjectCover src={WFCover}>
-                                <IMG src={WFCover}></IMG>
+                            <ProjectCover src={chartIMG2}>
+                                <IMG src={chartIMG2}></IMG>
                             </ProjectCover>
                             <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras donec amet, ac id lorem. Pharetra, ornare varius tellus non vel, in libero elementum.
                             </p>
                         </ProjectWrapper>
                         <ProjectWrapper ref={el => {projectRefs.current[1] = el}}>
-                            <ProjectCover src={WFCover}>
-                                <IMG src={WFCover}></IMG>
+                            <ProjectCover src={chartIMG2}>
+                                <IMG src={chartIMG2}></IMG>
                             </ProjectCover>
                             <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras donec amet, ac id lorem. Pharetra, ornare varius tellus non vel, in libero elementum.
@@ -106,8 +108,8 @@ function MainSection() {
                             </p>
                         </ProjectWrapper>
                         <ProjectWrapper ref={el => {projectRefs.current[3] = el}}>
-                            <ProjectCover src={WFCover}>
-                                <IMG src={WFCover}></IMG>
+                            <ProjectCover id='spline'>
+                                <iframe src='https://my.spline.design/tree1-5982d22f322ef6c7b085c67988eb7d7f/' frameborder='0' width='100%' height='100%'></iframe>
                             </ProjectCover>
                             <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras donec amet, ac id lorem. Pharetra, ornare varius tellus non vel, in libero elementum.
@@ -132,7 +134,7 @@ function MainSection() {
 
 export default MainSection
 
-const Main = styled.div`
+const Main = styled.main`
     /* align-items: flex-end; */
     padding: 15vh 10vw 0 10vw;
     /* background: green; */

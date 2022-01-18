@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LogoText = styled.h1`
    & {
-        color: #E1F1F4;
+        color: white;
         z-index: 3;
         font-size: min(calc(2em + 5vw), 8em);
         letter-spacing: 0.2em;
@@ -10,7 +10,7 @@ export const LogoText = styled.h1`
         text-transform: uppercase;
         margin-right: -0.2em;
         position: relative;
-        animation: main-glitch linear 1s infinite; 
+        animation: main-glitch linear 1.5s infinite; 
         width: 8em;
         text-align: end;
         text-shadow: 3px 6px 30px rgb(242, 61, 224, 0.4),
@@ -22,35 +22,14 @@ export const LogoText = styled.h1`
         }
         4%,60%{
             left: -0.2%;
+            filter: blur(0px);
         }
         62%{
             left: -0.8%;
+            filter: blur(0px);
+            
         }
     }
 
-    &::before, &::after {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-    &::before {
-        /* cyan */
-        left: -0.3%;
-        top: 2%;
-        color: ${({ theme }) => theme.colors.neonTeal};
-        z-index: -1;
-        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-        animation: left-glitch linear 1s infinite;
-    }
-
-    &::after {
-        /* pink */
-        top: -1%;
-        left: 0%;
-        color: ${({ theme }) => theme.colors.neonPink};
-        z-index: -1;
-        clip-path: polygon(0 48%, 100% 48%, 100% 100%, 0 100%);
-        animation: right-glitch linear 1s infinite;
-    }
 
 `

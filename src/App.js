@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const theme = {
     colors: {
-        background: '#1B1B20',
+        background: '#15151B',
         pink: '#FF49A1',
         cyan: '#51F5FF',
     },
@@ -26,24 +26,24 @@ return (
                 <GlobalStyles />
                 <Switch>
                     <Route exact path={"/"}>
-                        <DynamicHeader big={true}></DynamicHeader>
+                        <DynamicHeader big={true} current='home'></DynamicHeader>
                     </Route>
                 </Switch>
                 <Switch>
                     <Route path={"/projects"}>
-                        <DynamicHeader big={false}></DynamicHeader>
+                        <DynamicHeader big={false} current='project'></DynamicHeader>
                         <Projects></Projects>
                     </Route>
                 </Switch>
                 <Switch>
                     <Route path={"/about"}>
-                        <DynamicHeader big={false}></DynamicHeader>
+                        <DynamicHeader big={false} current='about'></DynamicHeader>
 
                     </Route>
                 </Switch>
                 <Switch>
                     <Route path={"/contact"}>
-                        <DynamicHeader big={false}></DynamicHeader>
+                        <DynamicHeader big={false} current='contact'></DynamicHeader>
 
                     </Route>
                 </Switch>

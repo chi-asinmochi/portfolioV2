@@ -42,7 +42,16 @@ export const ProjectWrapper = styled.div`
 `
 
 export const ProjectCover = styled.div`
-    /* width: 100%; */
+    width: 100%;
+    /* max-height: 100%;  */
+    &#spline {
+        display: flex;
+        justify-content: center;
+        iframe {
+            width: 70%;
+            height: 500px;
+        }
+    }
 
 `
 export const IMG = styled.img`

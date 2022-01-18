@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Nav = styled.nav`
 /* width: 8em; */
 ${({ big }) => big ? 'display: grid;place-content: center; height 100%' :
- 'position: fixed; top: 0; z-index: 10;'}
+ 'position: fixed; top: 0; z-index: 10; width: 100%;'}
 /* background-color: red; */
 `
 export const Container = styled.div`
@@ -13,7 +13,7 @@ export const Container = styled.div`
     width: ${({big}) => big? 'auto' : '100%'};
     display: flex;
     flex-direction: ${({big}) => big? 'column' : 'row'};
-    gap: 10px;
+    /* gap: 10px; */
     justify-content: ${({big}) => big? '' : 'space-between'};
     padding: 0 10vw;
 `
@@ -22,6 +22,23 @@ export const Logo = styled.div`
         position: relative;
         transform: ${({big}) => big ? 'scale(1)' : 'scale(0.2)'};
         transform-origin: left;
+        animation: fuzzy 4s linear infinite;
+    }
+    @keyframes fuzzy {
+        0% {
+            filter: blur(4px);
+        }
+        30% {
+            filter: blur(0px);
+        }
+        100% {
+            0% {
+            filter: blur(0px);
+        }
+        }
+    }
+    &:hover {
+        cursor: ${({big}) => big? 'default' : 'pointer'};
     }
     &::before, &::after {
         content: "";
@@ -81,18 +98,31 @@ export const Logo = styled.div`
 export const Menu = styled.ul`
     align-self: ${({big}) => big? 'end' : 'center'};
     display: flex;
-    gap: calc(40px + 5vw);
+    width: 50%;
+    justify-content: space-between;
     list-style: none;
+    li {
+        padding: 1em 2em;
 
-
-    a {
+        a {
         text-decoration: none;
         color: grey;
         cursor: pointer;
-        transition: 0.6s all;
+        filter: blur(1px);
+        transition: 0.3s all;   
+        }
+
+        a:hover, a.current {
+            color: white;
+            text-shadow: 0px 0px 6px cyan;
+            /* font-size: 1.1em; */
+            /* letter-spacing: 0.2em; */
+            filter: blur(0px);
+            
+        }
     }
-    a:hover {
-        color: white;
-        text-shadow: 0px 0px 6px cyan;
+    li:last-of-type {
+        padding-right: 0;
     }
+
 `

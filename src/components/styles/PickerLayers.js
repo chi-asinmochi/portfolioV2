@@ -64,8 +64,8 @@ export const ProjectTitle = styled.h3`
         position: absolute;
         top: 50%;
         left: -2em;
-        width: 1em;
-        height: 1em;
+        width: 1.5em;
+        height: 1.5em;
         transform: translateY(-50%);
         background: url(${indicator});
     }
