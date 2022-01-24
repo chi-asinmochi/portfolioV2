@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useLayoutEffect, useContext } from 
 import styled from 'styled-components'
 import { SlowLayer, ScrollLayer, ProjectTitle } from './styles/PickerLayers'
 import { ScrollContext } from './MainContent'
+import projectData from '../data/Project.data'
 
 
 
@@ -42,9 +43,9 @@ function Picker({ scrollAmount, setClickState}, ref) {
     }, [scrollPos])
 
     const titleClickHandler = (e) => {
-        let i = e.target.id.slice(-1)
+        let i = Number(e.target.id.slice(-1))
         console.log(i)
-        setClickState(i)
+        setClickState(i+1)
     }
 
 
@@ -54,15 +55,26 @@ function Picker({ scrollAmount, setClickState}, ref) {
             {/* <ScrollLayer ref={scrollRef} pageLength={pageLength}> */}
                 <SlowLayer  ref={slowRef} scrollAmount={scrollAmount}>
                     {/* assign position (classname = pos[0]) to each li and change based on scroll position */}
-                    <li>
+                    {/* <li>
                         <ProjectTitle ref={el => {titletRefs.current[0] = el}} className='current' id='title-1' onClick={titleClickHandler}>
                             Wildfire.org
                         </ProjectTitle>
-                    </li>
-                    <li><ProjectTitle ref={el => {titletRefs.current[1] = el}} id='title-2' onClick={titleClickHandler}>Fraud Management</ProjectTitle></li>
-                    <li><ProjectTitle ref={el => {titletRefs.current[2] = el}} id='title-3' onClick={titleClickHandler}>Carousel Interaction</ProjectTitle></li>
-                    <li><ProjectTitle ref={el => {titletRefs.current[3] = el}} id='title-4' onClick={titleClickHandler}>3D Object</ProjectTitle></li>
-                    <li><ProjectTitle ref={el => {titletRefs.current[4] = el}} id='title-5' onClick={titleClickHandler}>Contact Tracing</ProjectTitle></li>
+                    </li> */}
+                    {
+                        projectData.map(proj => {
+                            return (
+                                <li>
+                                    <ProjectTitle 
+                                    ref={el => {titletRefs.current[proj.id] = el}} 
+                                    key={proj.id}
+                                    onClick={titleClickHandler}
+                                    id={'project-' + proj.id}>
+                                        {proj.title}
+                                    </ProjectTitle>
+                                </li>
+                            )
+                        })
+                    }
                 </SlowLayer>
             {/* </ScrollLayer> */}
         </SideBar>

@@ -43,26 +43,36 @@ export const ProjectWrapper = styled.div`
 
 export const ProjectCover = styled.div`
     width: 100%;
-    /* max-height: 100%;  */
-    &#spline {
-        display: flex;
-        justify-content: center;
-        iframe {
+    display: flex;
+    justify-content: center;
+    /* height: 500px;  */
+    iframe {
+        border: none;
+        height: 500px;
+    }
+    .spline {
             width: 70%;
-            height: 500px;
+            height: 350px;
+            /* display: none; */
         }
+    }
+    .codePen {
+        width: 100%;
     }
 
 `
 export const IMG = styled.img`
     width: 100%;
     transition: all 0.6s;
+
     /* display: none; */
 
     &:hover {
         position: sticky;
-        transform: scale(1.1);
+        transform: scale(1.05);
         z-index:2;
         box-shadow: 0px 12px 30px black;
+        border-radius: 6px;
+        
     }
 `

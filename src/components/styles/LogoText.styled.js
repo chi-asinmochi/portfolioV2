@@ -27,7 +27,6 @@ export const LogoText = styled.h1`
         62%{
             left: -0.8%;
             filter: blur(0px);
-            
         }
     }
 
