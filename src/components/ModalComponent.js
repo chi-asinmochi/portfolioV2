@@ -11,6 +11,8 @@ export default function ModalComponent({ modalState, setModal }) {
     const [slideInView, setSlideInView] = useState(0)
     // console.log(graphFrameRef)
 
+    console.log(modalState)
+
     const observer = new IntersectionObserver(
         entries => {
             // console.log(entries)
@@ -19,7 +21,7 @@ export default function ModalComponent({ modalState, setModal }) {
                 if (entry.isIntersecting) {
                     
                     setSlideInView(entry.target.id)
-                    console.log(slideInView)
+                    // console.log(slideInView)
                     scrollIndicators.current[entry.target.id].classList.add('active')
                     
                 } else if (!entry.isIntersecting) {
@@ -34,17 +36,20 @@ export default function ModalComponent({ modalState, setModal }) {
         }
     )
 
-    // console.log(imgRefs.current)
+    // clear nulls in ref 
     if (imgRefs.current.length != 0) {
-        // console.log(imgRefs.current)
+        console.log(imgRefs.current)
         imgRefs.current.forEach(item => {
-            observer.observe(item)
+            if (item != null) {observer.observe(item)}
         })
     } 
     
     return (
         <Modal show = {modalState.isActive}>
             <Overlay  onClick={() => {setModal(prev => {
+                // imgRefs.current.forEach(item => {
+                //     observer.unobserve(item)
+                // })
                 return ({...prev, isActive: false})
             })}
             //clear observer?

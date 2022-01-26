@@ -4,7 +4,7 @@ export const LogoText = styled.h1`
    & {
         color: white;
         z-index: 3;
-        font-size: min(calc(2em + 5vw), 8em);
+        /* font-size: min(calc(2em + 5vw), 8em); */
         letter-spacing: 0.2em;
         font-weight: 900;
         text-transform: uppercase;

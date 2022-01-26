@@ -2,8 +2,16 @@ import styled from "styled-components"
 
 export const Nav = styled.nav`
 /* width: 8em; */
-${({ big }) => big ? 'display: grid;place-content: center; height 100%' :
- 'position: fixed; top: 0; z-index: 10; width: 100%;'}
+    display: ${({big}) => big? 'grid' : ''};
+    place-content: ${({big}) => big? 'center' : ''};
+    height: ${({big}) => big? '100%' : 'auto'};
+    position: ${({big}) => big? '' : 'fixed'};
+    top: 0;
+    z-index: 10;
+    width: ${({big}) => big? 'auto' : '100%'};
+    background-image: ${({big, theme}) => big? 'none' : 'linear-gradient(to bottom, var(--bg-color), var(--bg-trans))'};
+
+
 /* background-color: red; */
 `
 export const Container = styled.div`
@@ -15,14 +23,19 @@ export const Container = styled.div`
     flex-direction: ${({big}) => big? 'column' : 'row'};
     /* gap: 10px; */
     justify-content: ${({big}) => big? '' : 'space-between'};
-    padding: 0 10vw;
+    padding: 1.5em var(--side-padding);
+    .home-link {
+        display: flex;
+    }
 `
 export const Logo = styled.div`
     & {
+        margin: auto;
         position: relative;
-        transform: ${({big}) => big ? 'scale(1)' : 'scale(0.2)'};
-        transform-origin: left;
         animation: fuzzy 4s linear infinite;
+    }
+    h1 {
+        font-size: ${({big}) => big? 'var(--big-logo)' : 'var(--small-logo)'};
     }
     @keyframes fuzzy {
         0% {
@@ -96,13 +109,14 @@ export const Logo = styled.div`
 `
 
 export const Menu = styled.ul`
-    align-self: ${({big}) => big? 'end' : 'center'};
+    align-self: ${({big}) => big? 'flex-end' : 'center'};
     display: flex;
-    width: 50%;
     justify-content: space-between;
     list-style: none;
+    gap: 1em;
     li {
         padding: 1em 2em;
+        font-size: 1.2em;
 
         a {
         text-decoration: none;

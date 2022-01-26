@@ -5,9 +5,9 @@ export const TextFragment = styled.h1`
         ({ theme, bottom }) => bottom? theme.colors.pink : theme.colors.cyan
     };
     font-family: ${({ theme }) => theme.font.cyber}, sans-serif;
-    font-size: min(calc(2em + 5vw), 8em);
+    /* font-size: min(calc(2em + 5vw), 8em); */
     letter-spacing: 0.2em;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
     margin-right: -0.2em;
     width: 8em;

@@ -43,7 +43,7 @@ const projectData = [
             type: 'iframe',
             class: 'codePen',
             src: "https://codepen.io/shawn_chi/embed/OJxGeVO?default-tab=&theme-id=dark",
-            link: '',
+            link: "https://retool.com/startups/#playbooks",
         },
         intro: "orem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et.",
         slides: null

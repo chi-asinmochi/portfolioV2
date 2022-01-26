@@ -83,7 +83,7 @@ function DynamicHeader({ big, current }) {
     return (
         <Nav big = {big}>
             <Container big={big} >
-                <Link to='/'>
+                <Link to='/' className='home-link'>
                     <Logo className={current=='project'? 'current' : ''} big={big}
                         onMouseLeave={shuffleReady}
                         onMouseEnter={shuffle}

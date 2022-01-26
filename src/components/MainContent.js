@@ -108,7 +108,12 @@ function MainSection() {
                                                     <ProjectCover>
                                                         <iframe src={proj.content.src} className={proj.content.class}></iframe>
                                                     </ProjectCover>
-                                                    <p>{proj.intro}</p>
+                                                    <p>
+                                                        {proj.intro}
+                                                        <a href={proj.content.link} className='externalLink'>
+                                                            {proj.content.hasOwnProperty('link')? "View live" : null}
+                                                        </a>
+                                                    </p>
                                                 </ProjectWrapper>
                                             )
                                             break;
@@ -183,9 +188,9 @@ export default MainSection
 
 const Main = styled.main`
     /* align-items: flex-end; */
-    padding: 15vh 10vw 0 10vw;
+    padding: 15vh var(--side-padding) 0 var(--side-padding);
     /* background: green; */
-    height: 90%;
+    height: 100%;
     position: relative;
     overflow: scroll;
     scroll-snap-type: y mandatory;

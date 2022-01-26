@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const theme = {
     colors: {
         background: '#15151B',
+        backgroundTrans: '#15151B00', 
         pink: '#FF49A1',
         cyan: '#51F5FF',
     },
