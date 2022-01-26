@@ -86,20 +86,18 @@ const forwardedPicker = React.forwardRef(Picker)
 export default forwardedPicker
 
 const SideBar = styled.div`
-    /* width: 25%; */
-    height: 70%;
     /* background-color: pink; */
     padding: 1em 2em 1em 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 15vh;
+    /* padding-bottom: 15vh; */
     position: absolute;
     z-index: 2;
     overflow: scroll;
     /* scroll-snap-type: y mandatory; */
 
-    top: 10%;
+    top: 20%;
 
 `
 
