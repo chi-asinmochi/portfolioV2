@@ -6,9 +6,9 @@ import projectData from '../data/Project.data'
 
 
 
-function Picker({ scrollAmount, setClickState}, ref) {
+function Picker({ scrollPos, setClickState}, ref) {
 
-    const scrollPos = useContext(ScrollContext)
+    // const scrollPos = useContext(ScrollContext)
     const scrollPosRef = useRef(3)
     const slowRef = useRef(null)
     const titletRefs = useRef([])
@@ -33,7 +33,7 @@ function Picker({ scrollAmount, setClickState}, ref) {
         // })
         // console.log(titletRefs.current[0].className)
         titletRefs.current.forEach((el, i) => {
-            if (i == scrollPos - 1) {
+            if (i == scrollPos) {
                 el.classList.add('current')
             } else {
                 el.classList.remove('current')
@@ -44,8 +44,8 @@ function Picker({ scrollAmount, setClickState}, ref) {
 
     const titleClickHandler = (e) => {
         let i = Number(e.target.id.slice(-1))
-        console.log(i)
-        setClickState(i+1)
+        // console.log(i)
+        setClickState(i)
     }
 
 
@@ -53,7 +53,7 @@ function Picker({ scrollAmount, setClickState}, ref) {
     return (
         <SideBar ref={ref} >
             {/* <ScrollLayer ref={scrollRef} pageLength={pageLength}> */}
-                <SlowLayer  ref={slowRef} scrollAmount={scrollAmount}>
+                <SlowLayer  ref={slowRef}>
                     {/* assign position (classname = pos[0]) to each li and change based on scroll position */}
                     {/* <li>
                         <ProjectTitle ref={el => {titletRefs.current[0] = el}} className='current' id='title-1' onClick={titleClickHandler}>
@@ -94,12 +94,12 @@ const SideBar = styled.div`
     flex-direction: column;
     justify-content: center;
     padding-bottom: 15vh;
-    position: fixed;
-    /* z-index: -1 */
+    position: absolute;
+    z-index: 2;
     overflow: scroll;
     /* scroll-snap-type: y mandatory; */
 
-    /* top: 10%; */
+    top: 10%;
 
 `
 

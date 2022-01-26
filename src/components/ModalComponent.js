@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Modal, ModalContainer, GraphFrame, Overlay, SliderControl, TextFrame, Slot } from './styles/Modal.styled'
 // import cover from '../assets/img/WFChart.png'
 import projectData from '../data/Project.data'
@@ -37,12 +37,27 @@ export default function ModalComponent({ modalState, setModal }) {
     )
 
     // clear nulls in ref 
-    if (imgRefs.current.length != 0) {
-        console.log(imgRefs.current)
-        imgRefs.current.forEach(item => {
-            if (item != null) {observer.observe(item)}
-        })
-    } 
+    // if (imgRefs.current.length != 0) {
+    //     console.log(imgRefs.current)
+    //     imgRefs.current.forEach(item => {
+    //         if (item != null) {observer.observe(item)}
+    //     })
+    // } 
+
+    //Something's weird here!!!!!!
+    // Try using different images for different projects
+    useEffect(() => {
+        if (imgRefs.current.length != 0) {
+            console.log(imgRefs.current)
+            imgRefs.current.forEach(item => {
+                if (item != null) {observer.observe(item)}
+            })
+        } 
+        return () => {
+            observer.disconnect()
+        };
+    }, []);
+    
     
     return (
         <Modal show = {modalState.isActive}>

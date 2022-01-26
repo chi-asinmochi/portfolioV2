@@ -13,6 +13,8 @@ const GlobalStyles = createGlobalStyle`
         --bg-color: ${({ theme }) => theme.colors.background};
         --bg-trans: ${({ theme }) => theme.colors.backgroundTrans};
         --side-padding: 10vw;
+        --bp-large: 1000px;
+        --medium: 700px;
     }
     body {
         background-color: ${({ theme }) => theme.colors.background};

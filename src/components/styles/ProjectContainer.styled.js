@@ -7,7 +7,7 @@ export const Frame = styled.div`
 export const ProjectContainer = styled.div`
 
     float: right;
-    width: 55%;  
+    width: 60%;  
     padding: 8vh 0 30vh 0;
     display: flex;
     gap: 30vh;
