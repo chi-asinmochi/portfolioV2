@@ -1,4 +1,5 @@
 import LandingPage from "./pages/LandingPage";
+import About from "./pages/About";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/styles/Global"
 import DynamicHeader from "./components/DynamicHeader";
@@ -40,7 +41,7 @@ return (
                 <Switch>
                     <Route path={"/about"}>
                         <DynamicHeader big={false} current='about'></DynamicHeader>
-
+                        <About></About>
                     </Route>
                 </Switch>
                 <Switch>

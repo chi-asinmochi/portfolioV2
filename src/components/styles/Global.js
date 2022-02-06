@@ -13,6 +13,9 @@ const GlobalStyles = createGlobalStyle`
         --bg-color: ${({ theme }) => theme.colors.background};
         --bg-trans: ${({ theme }) => theme.colors.backgroundTrans};
         --side-padding: 10vw;
+        --caution-yellow: #F8D34B;
+        --font-cyber: ${({ theme }) => theme.font.cyber};
+        --font-mono: ${({ theme }) => theme.font.mono};
     }
     body {
         background-color: ${({ theme }) => theme.colors.background};
