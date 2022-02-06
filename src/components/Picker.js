@@ -1,103 +1,51 @@
-import React, { useState, useEffect, useRef, useLayoutEffect, useContext } from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import { SlowLayer, ScrollLayer, ProjectTitle } from './styles/PickerLayers'
-import { ScrollContext } from './MainContent'
+import { Ul, ScrollLayer, ProjectTitle } from './styles/PickerLayers.styled'
 import projectData from '../data/Project.data'
 
 
 
-function Picker({ scrollPos, setClickState}, ref) {
+function Picker({ titleRefs, titleClickHandler, sideBarRef}) {
 
     // const scrollPos = useContext(ScrollContext)
-    const scrollPosRef = useRef(3)
-    const slowRef = useRef(null)
-    const titletRefs = useRef([])
-    
     useEffect(() => {
-        // console.log('picker', scrollPos)
-        // let scrollDiff = scrollPos - scrollPosRef.current
-        // console.log('scrolldiff', scrollDiff)
-        // titletRefs.current.forEach(el => {
-        //     let pos = el.className.slice(-1)
-            
-            
-
-        //     pos = Number(pos) + scrollDiff
-        //     // el.className = el.className.slice(0, el.className.length-1) + pos
-        // })
-        // scrollPosRef.current = scrollPos
-
-        // console.log(scrollPosRef)
-        // titletRefs.current.forEach(el => {
-        //     console.log(el.className)
-        // })
-        // console.log(titletRefs.current[0].className)
-        titletRefs.current.forEach((el, i) => {
-            if (i == scrollPos) {
-                el.classList.add('current')
-            } else {
-                el.classList.remove('current')
-            }
-        })
-
-    }, [scrollPos])
-
-    const titleClickHandler = (e) => {
-        let i = Number(e.target.id.slice(-1))
-        // console.log(i)
-        setClickState(i)
-    }
-
-
+        console.log('title rendered')
+    },);
+    
+    console.log('titles rendered')
 
     return (
-        <SideBar ref={ref} >
-            {/* <ScrollLayer ref={scrollRef} pageLength={pageLength}> */}
-                <SlowLayer  ref={slowRef}>
-                    {/* assign position (classname = pos[0]) to each li and change based on scroll position */}
-                    {/* <li>
-                        <ProjectTitle ref={el => {titletRefs.current[0] = el}} className='current' id='title-1' onClick={titleClickHandler}>
-                            Wildfire.org
-                        </ProjectTitle>
-                    </li> */}
-                    {
-                        projectData.map(proj => {
-                            return (
-                                <li>
-                                    <ProjectTitle 
-                                    ref={el => {titletRefs.current[proj.id] = el}} 
-                                    key={proj.id}
-                                    onClick={titleClickHandler}
-                                    id={'project-' + proj.id}>
-                                        {proj.title}
-                                    </ProjectTitle>
-                                </li>
-                            )
-                        })
-                    }
-                </SlowLayer>
-            {/* </ScrollLayer> */}
-        </SideBar>
+
+        <Ul ref={sideBarRef} id='sideBar'
+            onScroll={(e)=> {
+                console.log(e.target.scrollLeft)
+            }}
+        >
+            {
+                projectData.map(proj => {
+                    return (
+                        <li 
+                            key={'li-' + proj.id}
+                            id={'li-' + proj.id}
+                            ref={el => {titleRefs.current[proj.id] = el}} 
+                            
+                        >
+                            <ProjectTitle key={'title-' + proj.id} id={'title-' + proj.id} onClick={titleClickHandler}>
+                                {proj.title}
+                            </ProjectTitle>
+                        </li>
+                    )
+                })
+            }
+        </Ul>
+
     )
 }
 
-const forwardedPicker = React.forwardRef(Picker)
 
-export default forwardedPicker
+export default Picker
 
 const SideBar = styled.div`
-    /* background-color: pink; */
-    padding: 1em 2em 1em 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* padding-bottom: 15vh; */
-    position: absolute;
-    z-index: 2;
-    overflow: scroll;
-    /* scroll-snap-type: y mandatory; */
-
-    top: 20%;
 
 `
 

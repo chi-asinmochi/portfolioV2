@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { LogoText } from './styles/LogoText.styled' 
 import { Link } from 'react-router-dom'
 import { TextFragment } from './styles/TextFragment.styled'
-import { Nav, Container, Logo, Menu } from './styles/Nav.styled'
+import { Nav, Container, Logo, Menu, Hamburger } from './styles/Nav.styled'
 
 
 const letters = '*+-/@_$[%£!XO1&>'
@@ -11,9 +11,10 @@ function DynamicHeader({ big, current }) {
     // console.log(big)
     const [text, setLogoText] = useState('shawnchi')
     const [shuffling, setShuffling] = useState(false)
+    const menuRef = useRef(null);
 
     const shuffle = (e) => {
-        if (shuffling) {return}
+        if (shuffling || !big)  {return}
         setShuffling(true)
         // console.log('shuffle called')   
         let i = 10
@@ -59,6 +60,9 @@ function DynamicHeader({ big, current }) {
         }, 10);
     }
     const shuffleReady = () => {
+        if (!big) {
+            return
+        }
         setShuffling(false)
         // console.log('shuffle ready')
         let i = 10
@@ -80,6 +84,11 @@ function DynamicHeader({ big, current }) {
         }, 20);
     }
 
+    const modalMenuTrigger = (e) => {
+        menuRef.current.classList.toggle('modal')
+        e.target.classList.toggle('close-btn')
+    }
+
     return (
         <Nav big = {big}>
             <Container big={big} >
@@ -95,10 +104,17 @@ function DynamicHeader({ big, current }) {
                     </Logo>
                 </Link>
 
-                <Menu big={big}>
-                    <li><Link id='projects' className={current=='project'? 'current' : ''} to='/projects'>Projects</Link></li>
-                    <li><Link id='about' className={current=='about'? 'current' : ''} to='/about'>About</Link></li>
-                    <li><Link id='contact' className={current=='contact'? 'current' : ''} to='/contact'>Contact</Link></li>
+                <Menu big={big} ref={menuRef}>
+                    {big? null :
+                    <Hamburger onClick={modalMenuTrigger}>
+                        <div className='line'></div>
+                    </Hamburger>}
+                    <div className='wrapper'>
+                        <li><Link id='projects' className={current=='project'? 'current' : ''} to='/projects'>Projects</Link></li>
+                        <li><Link id='about' className={current=='about'? 'current' : ''} to='/about'>About</Link></li>
+                        <li><Link id='contact' className={current=='contact'? 'current' : ''} to='/contact'>Contact</Link></li>
+                    </div>
+
                 </Menu>
             </Container>
         </Nav>

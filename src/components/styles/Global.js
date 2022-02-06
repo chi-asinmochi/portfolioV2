@@ -48,10 +48,12 @@ const GlobalStyles = createGlobalStyle`
     }
     @media (max-width: 700px) {
         html {
-            --side-padding: 3vw;
+            --side-padding: 8vw;
         }
     }
-
+    #tsparticles {
+        position: absolute;
+    }
 `
 
 export default GlobalStyles

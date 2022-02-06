@@ -9,7 +9,10 @@ export const Nav = styled.nav`
     top: 0;
     z-index: 10;
     width: ${({big}) => big? 'auto' : '100%'};
-    background-image: ${({big, theme}) => big? 'none' : 'linear-gradient(to bottom, var(--bg-color), var(--bg-trans))'};
+    background-image: ${({big, theme}) => big? `transparent` : 'linear-gradient(to bottom, var(--bg-color), var(--bg-trans))'};
+    @media (max-width: 800px) {
+        padding-top: 4vh;
+    }
 
 
 /* background-color: red; */
@@ -29,6 +32,7 @@ export const Container = styled.div`
     }
 `
 export const Logo = styled.div`
+    --Blur: ${({ big }) => big? 'blur(4px)' : 'blur(1px)'};
     & {
         margin: auto;
         position: relative;
@@ -39,7 +43,7 @@ export const Logo = styled.div`
     }
     @keyframes fuzzy {
         0% {
-            filter: blur(4px);
+            filter: var(--Blur);
         }
         30% {
             filter: blur(0px);
@@ -111,9 +115,15 @@ export const Logo = styled.div`
 export const Menu = styled.ul`
     align-self: ${({big}) => big? 'flex-end' : 'center'};
     display: flex;
+    align-items: center;
     justify-content: space-between;
     list-style: none;
     gap: 1em;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     li {
         padding: 1em 2em;
         font-size: 1.2em;
@@ -138,5 +148,130 @@ export const Menu = styled.ul`
     li:last-of-type {
         padding-right: 0;
     }
+    
 
+    @media (max-width: ${({ big }) => big? '0px':'800px'}) {
+        .wrapper {
+            flex-direction: column;
+            align-items: flex-end;
+            position: absolute;
+            right: var(--side-padding);
+            top: 30vh;
+            text-align: right;
+            transform: translate(0, -100%);
+            transition: all 0.6s;
+            li {
+                transition: all 0.3s;
+                padding: 0;
+                opacity: 0;
+                
+            }
+        }
+        &.modal {
+            .wrapper {
+                transform: unset;
+                li {
+                    transition: all ease-out 0.6s;
+                    padding: 1.2em 0 1.2em 1.2em;
+                    opacity: 1;
+                }
+            }
+            ::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                backdrop-filter: blur(4px);
+            /* z-index: 1; */
+            }
+            ::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: var(--bg-color);
+                opacity: 0.6;
+                z-index: -1;
+            }
+
+        }
+
+
+    }
+
+`
+export const Hamburger = styled.div`
+    --length: 1.6em;
+    --thickness: 1px;
+    --scaleUp: 0%;
+    width: var(--length);
+    height: var(--length);
+    position: relative;
+    cursor: pointer;
+    opacity: 0.8;
+    display: none;
+
+    &:hover {
+        --thickness: 1px;
+        --scaleUp: 20%;
+        opacity: 1;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 200%;
+        height: 200%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .line, .line::before, .line::after {
+        pointer-events: none;
+        position: absolute;
+        height: var(--thickness);
+        background-color: white;
+        transition: all 0.4s;
+        right: 0;
+        /* z-index: 0; */
+    }
+
+    .line {
+        width: calc(70% + var(--scaleUp));
+        top: 50%;
+    }
+    .line::before {
+        content: "";
+        width: calc(120% + var(--scaleUp));
+        top: calc(var(--length) * -0.4);
+    }
+    .line::after {
+        content: "";
+        width: calc(60% + var(--scaleUp));
+        bottom: calc(var(--length) * -0.4);
+    }
+
+    &.close-btn {
+        .line::before {
+            width: calc(100%);
+            transform: rotate(84deg);
+            top: 0;
+        }
+        .line {
+            width: calc(105% + var(--scaleUp));
+            transform: rotate(-42deg);
+        }
+        .line::after {
+            width: 0px;
+            /* opacity: 0; */
+        }
+    } 
+    @media (max-width: 800px) {
+            display: block;
+        }
 `

@@ -37,7 +37,7 @@ export const ModalContainer = styled.div`
     /* padding: 0 22vw; */
     width: min(80%, 1000px);
     z-index: 12;
-    gap: 2em;  
+    gap: 2em;
     /* position: relative; */
 
 
@@ -57,11 +57,13 @@ export const Overlay = styled.div`
 
 `
 export const GraphFrame = styled.div`
-    width: 100%;
+    width: ${({ contentType }) => contentType == 'video'? '' : '100%'};
     max-height: 70%;
     z-index: 12;
     display: flex;
+    justify-content: ${({ contentType }) => contentType == 'video'? 'center' : ''};
     overflow: scroll;
+    overscroll-behavior: contain;
     gap: 20vw;
     /* padding: 0 20vw; */
     scroll-snap-type: x mandatory;

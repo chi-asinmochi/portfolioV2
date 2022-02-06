@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Modal, ModalContainer, GraphFrame, Overlay, SliderControl, TextFrame, Slot } from './styles/Modal.styled'
 // import cover from '../assets/img/WFChart.png'
 import projectData from '../data/Project.data'
+import styled from 'styled-components'
 
 export default function ModalComponent({ modalState, setModal }) {
 
@@ -11,7 +12,7 @@ export default function ModalComponent({ modalState, setModal }) {
     const [slideInView, setSlideInView] = useState(0)
     // console.log(graphFrameRef)
 
-    console.log(modalState)
+    // console.log(modalState)
 
     const observer = new IntersectionObserver(
         entries => {
@@ -55,10 +56,11 @@ export default function ModalComponent({ modalState, setModal }) {
         } 
         return () => {
             observer.disconnect()
+            // setSlideInView(0)
         };
     }, []);
     
-    
+    console.log(projectData[modalState.projNum].content.type)
     return (
         <Modal show = {modalState.isActive}>
             <Overlay  onClick={() => {setModal(prev => {
@@ -66,34 +68,57 @@ export default function ModalComponent({ modalState, setModal }) {
                 //     observer.unobserve(item)
                 // })
                 return ({...prev, isActive: false})
-            })}
+                })
+                // observer.disconnect()
+                // setSlideInView(0)
+            }
             //clear observer?
             }></Overlay>
-            <ModalContainer>
-                <GraphFrame ref={graphFrameRef}>
-                    {projectData[modalState.projNum].slides.map((slide, i) => {
-                        return <img src={slide.image} id={i} key={i} ref={ el => imgRefs.current[i] = el}></img>
-                    })}
-                </GraphFrame>
-                <SliderControl>
-                    {/* <Slot className='active'></Slot> */}
-                    {projectData[modalState.projNum].slides.map((slide, i) => {
-                        return <Slot key={i} ref={ el => scrollIndicators.current[i] = el}></Slot>
-                    })}
- 
-                </SliderControl>
+            {
+                projectData[modalState.projNum].content.type == 'video'?
+                <Video autoPlay controls>
+                    <source src={projectData[modalState.projNum].content.src} type='video/mp4'></source>
+                </Video> :
+                <>
+                    <ModalContainer>
+                        <GraphFrame ref={graphFrameRef} contentType={projectData[modalState.projNum].content.type}>
+                            {
+                                projectData[modalState.projNum].slides?.map((slide, i) => {
+                                    return <img src={slide.image} id={i} key={i} ref={ el => imgRefs.current[i] = el}></img>
+                                })
+                            }
 
-                <TextFrame>
-                    <p>
-                        {projectData[modalState.projNum].slides[slideInView].text}
-                    </p>
-                    
-                </TextFrame>
+                        </GraphFrame>
+                        
+                        <SliderControl>
+                            {projectData[modalState.projNum].slides?.map((slide, i) => {
+                                return <Slot key={i} ref={ el => scrollIndicators.current[i] = el}></Slot>
+                            })}
+            
+                        </SliderControl>
 
-            </ModalContainer> 
-            <div className='gradient'></div>
+                        <TextFrame>
+                            <p>
+                                {projectData[modalState.projNum].slides?.[slideInView].text}
+                            </p>
+                        </TextFrame>
+
+                    </ModalContainer> 
+                    <div className='gradient'></div>
+                </>
+            }
+
+            
         </Modal>
     )
 
 }
 
+const Video = styled.video`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    z-index: 12;
+`

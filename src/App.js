@@ -28,6 +28,7 @@ return (
                 <Switch>
                     <Route exact path={"/"}>
                         <DynamicHeader big={true} current='home'></DynamicHeader>
+                        <LandingPage></LandingPage>
                     </Route>
                 </Switch>
                 <Switch>
@@ -45,7 +46,6 @@ return (
                 <Switch>
                     <Route path={"/contact"}>
                         <DynamicHeader big={false} current='contact'></DynamicHeader>
-
                     </Route>
                 </Switch>
 
