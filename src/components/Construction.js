@@ -2,6 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import bars from '../assets/img/construction/bars.svg'
 import barMask from '../assets/img/construction/barMask.svg'
+import Particles from 'react-tsparticles';
+import tsOption from './styles/TsOptions';
+
+
 function Construction() {
   return (
     <>
@@ -10,6 +14,7 @@ function Construction() {
         </Frame>
         <OverlayMsg>
            <h4>Sorry, this page is currently under construction.</h4> 
+           <Particles id="tsparticles" options={tsOption}/>
         </OverlayMsg>
     </>
   )
@@ -71,9 +76,11 @@ const OverlayMsg = styled.div`
     backdrop-filter: blur(6px);
     color: white;
     font-size: min(calc(0.8em + 0.8vw), 1.5em);
-    text-align: center;
-    line-height: 80vh;
-    /* z-index: 1; */
+    /* text-align: center; */
+    /* line-height: 80vh; */
+    display: grid;
+    place-items: center;
+    z-index: 1;
     ::before {
         content: '';
         position: absolute;
@@ -83,15 +90,19 @@ const OverlayMsg = styled.div`
         top: 0;
         background: var(--bg-color);
         opacity: 0.4;
-        /* z-index: 0; */
+        z-index: -1;
     }
     h4 {
         font-family: var(--font-cyber);
         font-weight: 400;
         color: white;
-        position: sticky;
-        top: min(calc(5vh + 8vw), 18vh);
+        /* position: sticky; */
+        /* top: min(calc(5vh + 8vw), 18vh); */
         letter-spacing: 0.1em;
+        max-width: 60vw;
+        line-height: initial;
+        margin-top: 5vw;
+        /* text-align: center; */
         /* opacity: 0.8; */
     }
 `
