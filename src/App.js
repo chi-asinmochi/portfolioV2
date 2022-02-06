@@ -1,5 +1,6 @@
 import LandingPage from "./pages/LandingPage";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/styles/Global"
 import DynamicHeader from "./components/DynamicHeader";
@@ -47,9 +48,9 @@ return (
                 <Switch>
                     <Route path={"/contact"}>
                         <DynamicHeader big={false} current='contact'></DynamicHeader>
+                        <Contact></Contact>
                     </Route>
                 </Switch>
-
             </>
         </ThemeProvider>
     </Router>

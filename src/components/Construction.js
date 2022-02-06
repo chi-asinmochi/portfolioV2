@@ -39,9 +39,9 @@ const Frame = styled.div`
         left: 0%;
         top: 0%;
         z-index: -1;
-        animation: shift-right linear 60s infinite;
+        animation: infinite-right linear 60s infinite;
     }
-    @keyframes shift-right {
+    @keyframes infinite-right {
         0% {
             mask-position: 1000% 30%;
         }
