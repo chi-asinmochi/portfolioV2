@@ -53,7 +53,7 @@ const projectData = [
             src: "https://codepen.io/shawn_chi/embed/OJxGeVO?default-tab=&theme-id=dark",
             link: "https://retool.com/startups/#playbooks",
         },
-        intro: "An animation for a card flipping interaction. Designed by Ettrics and was hand off to me for development. Finalized by Retool's internal engineers. ",
+        intro: "An animation for a card flipping interaction. Designed by Ettrics and was handed off to me for development. Finalized by Retool's internal engineers. ",
         slides: null
     },
     {

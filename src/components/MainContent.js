@@ -47,8 +47,8 @@ function MainSection({ projectRefs}) {
                                             </ProjectCover>
                                             <p>
                                                 {proj.intro}
-                                                <a href={proj.content.link} className='externalLink'>
-                                                    {proj.content.hasOwnProperty('link')? "View live" : null}
+                                                <a href={proj.content.link} target='_blank' className='externalLink'>
+                                                    {proj.content.hasOwnProperty('link')? "View live here" : null}
                                                 </a>
                                             </p>
                                         </ProjectWrapper>

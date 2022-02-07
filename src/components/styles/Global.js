@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
         --caution-yellow: #F8D34B;
         --font-cyber: ${({ theme }) => theme.font.cyber};
         --font-mono: ${({ theme }) => theme.font.mono};
+        --text-80: #ffffffba;
     }
     body {
         background-color: ${({ theme }) => theme.colors.background};

@@ -15,7 +15,9 @@ export const ProjectContainer = styled.div`
     /* background: pink; */
     p {
         margin-top: 2em;
-        opacity: 0.7;
+        color: var(--text-80);
+        font-size: 1.1em;
+        line-height: 1.5;   
     }
     @media (max-width: 800px) {
         width: 100%;
@@ -43,7 +45,13 @@ export const ProjectWrapper = styled.div`
     scroll-snap-align: center;
     p {
         transition: all 0.6s;
+        a.externalLink {
+            color: white;
+            text-decoration: underline;
+            opacity: 1;
+        }
     }
+
     scroll-snap-stop: always;       
 `
 
