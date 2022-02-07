@@ -10,6 +10,8 @@ const GlobalStyles = createGlobalStyle`
         font-size: calc(10px + 0.2vw);
         --big-logo: min(calc(2em + 5vw), 8em);
         --small-logo: calc(1.5em + 0.2vw);
+        --cyan: ${({ theme }) => theme.colors.cyan};
+        --pink: ${({ theme }) => theme.colors.pink};
         --bg-color: ${({ theme }) => theme.colors.background};
         --bg-trans: ${({ theme }) => theme.colors.backgroundTrans};
         --side-padding: 10vw;

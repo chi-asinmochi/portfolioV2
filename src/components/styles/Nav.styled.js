@@ -130,20 +130,32 @@ export const Menu = styled.ul`
         font-size: 1.2em;
 
         a {
-        text-decoration: none;
-        color: grey;
-        cursor: pointer;
-        filter: blur(1px);
-        transition: 0.3s all;   
+            text-decoration: none;
+            color: white;
+            opacity: 0.5;
+            cursor: pointer;
+            /* filter: blur(1px); */
+            transition: 0.3s all;   
+            font-weight: 400;
         }
 
-        a:hover, a.current {
+        a:hover:not(.current) {
+            /* background-color: var(--cyan); */
             color: white;
-            text-shadow: 0px 0px 6px cyan;
+            opacity: 1;
+            font-weight: 600;
+        }
+        
+        a.current {
+            color: white;
+            text-shadow: 1px 1px 0px var(--pink),
+                1px 0px 0px var(--cyan);
+
             /* font-size: 1.1em; */
             /* letter-spacing: 0.2em; */
             filter: blur(0px);
-            
+            font-weight: 600;
+            opacity: 1;
         }
     }
     li:last-of-type {
