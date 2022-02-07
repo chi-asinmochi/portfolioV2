@@ -24,7 +24,7 @@ const projectData = [
             type: 'image',
             cover: cover
         },
-        intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. ",
+        intro: "Wildfires.org is a website (in design and development phase) for a fire-tech startup that aims to mitigate the mega-fire crisis in US by visualizing the true impact of wildfires and understanding our progress of fuel treatment",
         slides: [
             {image: cover, text: '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
             {image: home, text: '2. skldfjgh;esrhfg;jkf;jalsrh;gfjhsd;jkfb;jgshdred et. Ac n At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
@@ -40,7 +40,7 @@ const projectData = [
             class: 'spline',
             src: 'https://my.spline.design/tree1-5982d22f322ef6c7b085c67988eb7d7f/',
         },
-        intro: "orem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et.",
+        intro: "An experimental attempt to visualize wildfire impact and treatment methods through 3D models",
         cover: cover,
         slides: null
     },
@@ -53,7 +53,7 @@ const projectData = [
             src: "https://codepen.io/shawn_chi/embed/OJxGeVO?default-tab=&theme-id=dark",
             link: "https://retool.com/startups/#playbooks",
         },
-        intro: "orem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et.",
+        intro: "An animation for a card flipping interaction. Designed by Ettrics and was hand off to me for development. Finalized by Retool's internal engineers. ",
         slides: null
     },
     {
@@ -63,7 +63,7 @@ const projectData = [
             type: 'image',
             cover: agents,
         },
-        intro: "orem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et.",
+        intro: "A design project for Fico's fraud protection program. This is a B2B enterprise application aimed for managerial employees at banking industries.",
         slides: [
             {image: dashboard, text: '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
             {image: agents, text: '2. skldfjgh;esrhfg;jkf;jalsrh;gfjhsd;jkfb;jgshdred et. Ac n At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
@@ -80,7 +80,7 @@ const projectData = [
             cover: covidCover,
             src: covidVid,
         },
-        intro: "orem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. ",
+        intro: "A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a good design practice for me.",
     },
 ]
 

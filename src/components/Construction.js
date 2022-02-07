@@ -94,11 +94,11 @@ const OverlayMsg = styled.div`
     }
     h4 {
         font-family: var(--font-cyber);
-        font-weight: 400;
+        font-weight: 600;
         color: white;
         /* position: sticky; */
         /* top: min(calc(5vh + 8vw), 18vh); */
-        letter-spacing: 0.1em;
+        letter-spacing: 0.15em;
         max-width: 60vw;
         line-height: initial;
         margin-top: 5vw;

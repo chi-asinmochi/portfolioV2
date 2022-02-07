@@ -118,6 +118,7 @@ export const Menu = styled.ul`
     align-items: center;
     justify-content: space-between;
     list-style: none;
+    font-family: var(--font-cyber);
     gap: 1em;
     .wrapper {
         display: flex;
