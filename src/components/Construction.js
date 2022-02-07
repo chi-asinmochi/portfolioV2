@@ -10,7 +10,7 @@ function Construction() {
   return (
     <>
         <Frame>
-            <Caution>Caution</Caution>
+            <Caution>&#128679; Caution</Caution>
         </Frame>
         <OverlayMsg>
            <h4>Sorry, this page is currently under construction.</h4> 
@@ -54,13 +54,20 @@ const Frame = styled.div`
             mask-position: 30% 30%;
         }
     }
+    @media (max-width: 600px) {
+        ::before {
+            animation: infinite-right linear 120s infinite;
+        }
+        
+    }
 `
 
 const Caution = styled.h1`
-    /* display: block; */
+    /* display: inline; */
+    white-space: nowrap;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: min(calc(3em + 5vw), 10em);
+    font-size: min(calc(2em + 5vw), 10em);
     padding: min(2vw, 0.5em);
     color: var(--caution-yellow);
     background: var(--bg-color);
