@@ -39,7 +39,7 @@ export const BG = styled.div`
     filter: blur(20px);
     opacity: 0.2;
     z-index: -1;
-    transition: all 2s;
+    transition: all 1s;
     /* z-index: 5; */
     
 `
