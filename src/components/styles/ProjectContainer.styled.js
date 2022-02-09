@@ -45,10 +45,13 @@ export const ProjectWrapper = styled.div`
     scroll-snap-align: center;
     p {
         transition: all 0.6s;
-        a.externalLink {
-            color: white;
+        a {
+            /* color: white; */
             text-decoration: underline;
             opacity: 1;
+        }
+        a:hover {
+            color: white;
         }
     }
 
@@ -68,7 +71,7 @@ export const ProjectCover = styled.div`
         /* z-index:2; */
         box-shadow: 0px 12px 30px black;
     }
-    &:hover:not(.iframe-frame) + p {
+    &:not(.iframe-iframe):hover + p {
         transform: translateY(1em);
     }
 

@@ -19,9 +19,10 @@ const GlobalStyles = createGlobalStyle`
         --font-cyber: ${({ theme }) => theme.font.cyber};
         --font-mono: ${({ theme }) => theme.font.mono};
         --text-80: #ffffffba;
+        --bg-gradient: linear-gradient(to bottom, #15151B , #372E72);
     }
     body {
-        background-color: ${({ theme }) => theme.colors.background};
+        background-image: linear-gradient(to bottom, var(--bg-color), #0B2039);
         width: 100vw;
         height: 100vh;
         font-family: ${({ theme }) => theme.font.mono}, monospace;
