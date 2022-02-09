@@ -30,14 +30,16 @@ export const BG = styled.div`
     /* height: 100%; */
     background: url(${({src}) => src}) no-repeat;
     background-size: contain;
+    background-position: center;
     position: fixed;
     top: 12%;
-    left: 35%;
+    left: 15%;
     width: 70%;
     height: 70%;
     filter: blur(20px);
-    opacity: 0.9;
+    opacity: 0.2;
     z-index: -1;
+    transition: all 2s;
     /* z-index: 5; */
     
 `

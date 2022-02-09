@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import MainContent from '../components/MainContent'
 import Picker from '../components/Picker'
 import styled from 'styled-components'
@@ -11,6 +11,8 @@ function Projects() {
     const sideBarRef = useRef(null);
     const titleRefs = useRef([])
     const projectRefs = useRef([])
+
+    const [scrollPos, setscrollPos] = useState(0)
 
     
 
@@ -46,6 +48,8 @@ function Projects() {
                         if (i == observedPos) {
                             // console.log(el.firstElementChild)
                             el.firstElementChild.classList.add('current')
+
+                            setscrollPos(observedPos)
                             // console.log( titleRefs.current[i], ' should be scrolled')
 
 
@@ -119,7 +123,7 @@ function Projects() {
         <>
             <PageLayout ref={pageRef}>
                 <Picker sideBarRef={sideBarRef} titleRefs={titleRefs} titleClickHandler={titleClickHandler}></Picker>
-                <MainContent projectRefs={projectRefs}></MainContent>
+                <MainContent projectRefs={projectRefs} scrollPos={scrollPos}></MainContent>
             </PageLayout>
         </>
 

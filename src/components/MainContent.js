@@ -7,20 +7,20 @@ import projectData from '../data/Project.data'
 
 export const ScrollContext = React.createContext()
 
-function MainSection({ projectRefs}) {
+function MainSection({ projectRefs, scrollPos}) {
 
     const containerRef = useRef(null)
     const mainRef = useRef(null)
 
     const [modalState, setModal] = useState({isActive: false, projNum: 0})
 
-
+    
 
     return (
         <>
             {modalState.isActive? <ModalComponent modalState={modalState} setModal={setModal}></ModalComponent> : null }
             <Main ref={mainRef} >
-                <BG src={WFCover}></BG>
+                <BG src={projectData[scrollPos].content.cover}></BG>
                 <ProjectContainer ref={containerRef}>
                     {
                         projectData.map((proj, i) => {

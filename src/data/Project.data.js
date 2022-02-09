@@ -15,6 +15,10 @@ import caseList from '../assets/img/fraudMgm/caseList.png'
 import covidVid from '../assets/video/covid_mockup.mp4'
 import covidCover from '../assets/img/contactTracing/covidCover.png'
 
+//iframes
+import treeFlame from '../assets/img/tree-flame.png'
+import carouselCover from '../assets/img/carousel-block.png'
+
 
 const projectData = [
     {
@@ -38,6 +42,7 @@ const projectData = [
         content: {
             type:'iframe',
             class: 'spline',
+            cover: treeFlame,
             src: 'https://my.spline.design/tree1-5982d22f322ef6c7b085c67988eb7d7f/',
         },
         intro: "An experimental attempt to visualize wildfire impact and treatment methods through 3D models",
@@ -50,6 +55,7 @@ const projectData = [
         content: {
             type: 'iframe',
             class: 'codePen',
+            cover: carouselCover,
             src: "https://codepen.io/shawn_chi/embed/OJxGeVO?default-tab=&theme-id=dark",
             link: "https://retool.com/startups/#playbooks",
         },
