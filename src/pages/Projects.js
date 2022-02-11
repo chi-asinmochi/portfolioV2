@@ -62,9 +62,10 @@ function Projects() {
                                 scrollPercent = 0.44
                                 break;
                             default:
+                                scrollPercent = 0.17
                                 break;
                         }
-                        sideBarRef.current.scrollLeft = scrollPercent * (sideBarRef.current.scrollWidth)
+                        sideBarRef.current.scrollLeft = observedPos/5 * (sideBarRef.current.scrollWidth)
                     }
                     titleRefs.current.forEach((el, i) => {
                         if (i == observedPos) {
@@ -73,7 +74,7 @@ function Projects() {
 
                             setscrollPos(observedPos)
                             
-                            // titleRefs.current[i].scrollIntoView({inline: 'center'})
+                            // titleRefs.current[i].scrollIntoView({inline: 'start'})
                             // console.log( titleRefs.current[i], ' should be scrolled')
 
 
@@ -125,6 +126,7 @@ function Projects() {
         projectRefs.current.forEach(proj => {
             projObserver.observe(proj)
         })
+        titleRefs.current[0].classList.add('current')
         // titleRefs.current.forEach(title => {
         //     titleObserver.observe(title)
         // })

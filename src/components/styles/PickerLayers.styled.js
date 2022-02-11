@@ -4,7 +4,7 @@ import indicator from '../../assets/icon/indicator.svg'
 
 export const Ul = styled.ul`
     --scroll-side-padding: 70vw;
-    position: absolute;
+    position: fixed;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,7 @@ export const Ul = styled.ul`
 
     @media (max-width: 800px) {
         pointer-events: auto;
+        scrollbar-width: none;  /* Firefox */
 
         width: 100%;
         /* height: 10rem; */
@@ -23,7 +24,7 @@ export const Ul = styled.ul`
         scroll-snap-type: x mandatory;
 
         scroll-behavior: smooth;
-        scroll-padding-left: var(--side-padding);
+
         overflow-y: hidden;
         overscroll-behavior: contain;
         position: fixed;
@@ -32,16 +33,29 @@ export const Ul = styled.ul`
         flex-direction: row;
         align-items: flex-end;
 
-        padding: 0 var(--scroll-side-padding);
+        padding: 0 var(--side-padding);
+        scroll-padding-left: var(--side-padding);
 
         &::-webkit-scrollbar {
             display: none;
         }
         &::after {
             content: '';
-            padding-right: var(--scroll-side-padding);
+            /* padding-right: var(--scroll-side-padding); */
         }
-
+        li {
+            /* padding-bottom: 1em;
+            width: 100%;     */
+        }
+        /* li:last-of-type::after {
+            position: static;
+            right: 0;
+            top: 0;
+            content: '';
+            width: 80vw;
+            height: 50px;
+            background: pink;
+        } */
     }
 
 
@@ -85,18 +99,20 @@ export const ProjectTitle = styled.h3`
         scroll-snap-align: start;
         scroll-snap-stop: always;
         
-        padding: 0 1.5em 0 0;
-        transition: 0.3s font-size 0.5s linear;
+        /* padding: 1.5em 0; */
+        width: 120vw;
+        transition: 0.3s transform linear;
         &.current {
-            transform: unset;
-            
-            font-size: 1.8em;
-            /* transform-origin: left;
+            transform: scale(1.2);
+            transform-origin: left;
+            /* font-size: 1.8em; */
+
             margin: 0 2em; */
         }
         &.current::before {
             display: none;
         }
+
     }
 
 
