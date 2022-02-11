@@ -46,39 +46,16 @@ function Projects() {
 
                     let  SITVSupported = false;
 
+                    
                     if (windowWidth < breakpoint) {
-                        let scrollPercent
-                        switch (observedPos) {
-                            case 0:
-                                scrollPercent = 0.17
-                                break;
-                            case 1:
-                                scrollPercent = 0.23
-                                break;
-                            case 2:
-                                scrollPercent = 0.28
-                                break;
-                            case 3:
-                                scrollPercent = 0.34
-                                break;
-                            case 4:
-                                scrollPercent = 0.44
-                                break;
-                            default:
-                                scrollPercent = 0.17
-                                break;
-                        }
-                        // sideBarRef.current.scrollLeft = observedPos/5 * (sideBarRef.current.scrollWidth)
-                    }
-                    try {
                         titleRefs.current[observedPos].scrollIntoView({inline: 'start', behavior: 'smooth'})
-                    } catch (err) {
-                        console.log(err)
+                                            setscrollPos(observedPos)
+                        setTimeout(() => {
+                            titleObserver.observe(titleRefs.current[observedPos])
+                        }, 500);
                     }
-                    setscrollPos(observedPos)
-                    setTimeout(() => {
-                        titleObserver.observe(titleRefs.current[observedPos])
-                    }, 500);
+                        
+
                     
 
 
