@@ -49,7 +49,7 @@ function MainSection({ projectRefs, scrollPos}) {
                                         <p>A design project for <a href='https://www.fico.com/' target="_blank">Fico</a>'s fraud protection program. This is a B2B enterprise application aimed for managerial employees at banking industries.</p> : null
                                     }
                                     {proj.id == 4? 
-                                        <p>A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a good design practice for me.</p> : null
+                                        <p>A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a fun practice for me.</p> : null
                                     }
                                     
                                 </ProjectWrapper>

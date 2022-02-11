@@ -7,7 +7,7 @@ export const Frame = styled.div`
 export const ProjectContainer = styled.div`
 
     float: right;
-    width: 60%;  
+    width: min(60%, 600px);  
     padding: 8vh 0 30vh 0;
     display: flex;
     gap: calc(15vh + 10vw);
@@ -37,7 +37,7 @@ export const BG = styled.div`
     width: 70%;
     height: 70%;
     filter: blur(20px);
-    opacity: 0.2;
+    opacity: 0.2    ;
     z-index: -1;
     transition: all 1s;
     /* z-index: 5; */
@@ -62,7 +62,7 @@ export const ProjectWrapper = styled.div`
 
 export const ProjectCover = styled.div`
     width: auto;
-    max-height: 70vh;
+    max-height: 60vh;
     display: flex;
     justify-content: center;
     /* overflow: clip; */
@@ -79,11 +79,9 @@ export const ProjectCover = styled.div`
 
     iframe {
         border: none;
-        height: 500px;
-
     }
     .spline {
-            width: 70%;
+            width: 100%;
             height: 350px;
             /* display: none; */
         }
@@ -92,6 +90,7 @@ export const ProjectCover = styled.div`
         width: 100%;
         border-radius: 8px;
         border: 1px solid #ffffff80;
+        height: 55vh;
     }
 
 `

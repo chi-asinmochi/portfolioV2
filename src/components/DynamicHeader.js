@@ -3,11 +3,20 @@ import { LogoText } from './styles/LogoText.styled'
 import { Link } from 'react-router-dom'
 import { TextFragment } from './styles/TextFragment.styled'
 import { Nav, Container, Logo, Menu, Hamburger } from './styles/Nav.styled'
+import useSound from 'use-sound'
+import sounds from '../assets/audio/data-process.wav' 
 
 
 const letters = '*+-/@_$[%£!XO1&>'
 
 function DynamicHeader({ big, current }) {
+
+    const [play] = useSound(sounds, {
+        sprite: {
+            in: [0, 320],
+            out: [560, 870],
+        },
+    })
     // console.log(big)
     const [text, setLogoText] = useState('shawnchi')
     const [shuffling, setShuffling] = useState(false)
@@ -16,6 +25,7 @@ function DynamicHeader({ big, current }) {
     const shuffle = (e) => {
         if (shuffling || !big)  {return}
         setShuffling(true)
+        play({id: 'in'})
         // console.log('shuffle called')   
         let i = 10
         const shuffler = setInterval(() => {
@@ -63,6 +73,7 @@ function DynamicHeader({ big, current }) {
         if (!big) {
             return
         }
+        play({id: 'in'})
         setShuffling(false)
         // console.log('shuffle ready')
         let i = 10
