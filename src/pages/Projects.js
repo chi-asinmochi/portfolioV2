@@ -45,19 +45,18 @@ function Projects() {
                     let observedPos = Number(entry.target.id)
 
                     let  SITVSupported = false;
-
+                    setscrollPos(observedPos)
                     
                     if (windowWidth < breakpoint) {
                         titleRefs.current[observedPos].scrollIntoView({inline: 'start', behavior: 'smooth'})
-                                            setscrollPos(observedPos)
+                        
                         setTimeout(() => {
                             titleObserver.observe(titleRefs.current[observedPos])
                         }, 500);
+                    } else {
+                        titleObserver.disconnect()
                     }
                         
-
-                    
-
 
                     titleRefs.current.forEach((el, i) => {
                         if (i == observedPos) {
@@ -140,6 +139,7 @@ function Projects() {
         // })
         return () => {
           projObserver.disconnect()
+          titleObserver.disconnect()
         //   titleObserver.disconnect()
         //   console.log('ob disconnected')
         };
