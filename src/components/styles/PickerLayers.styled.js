@@ -98,17 +98,21 @@ export const ProjectTitle = styled.h3`
         pointer-events: auto;
         scroll-snap-align: start;
         scroll-snap-stop: always;
+        transform: unset;
+        font-size: 2em;
+        font-weight: 900;
+        width: 150vw;
+
+        /* transform-origin: left; */
         
         /* padding: 1.5em 0; */
-        width: 120vw;
-        transition: 0.3s transform linear;
-        &.current {
-            transform: scale(1.2);
-            transform-origin: left;
-            /* font-size: 1.8em; */
 
-            margin: 0 2em; */
-        }
+        /* transition: 0.3s transform linear; */
+        &.current {
+            transform: unset;
+            font-size: 2em;
+            font-weight: 900;
+        }   
         &.current::before {
             display: none;
         }

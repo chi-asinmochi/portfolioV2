@@ -34,7 +34,7 @@ function MainSection({ projectRefs, scrollPos}) {
                                         
                                         {proj.content.type == 'image'? <IMG src={proj.content.cover}></IMG> : null}
                                         {proj.content.type == 'iframe'? <iframe src={proj.content.src} className={proj.content.class}></iframe> : null}
-                                        {proj.content.type == 'video'? <IMG src={proj.content.cover } width='400px' max-height='100%'></IMG> : null}
+                                        {proj.content.type == 'video'? <IMG src={proj.content.cover } width='300px' max-height='100%'></IMG> : null}
                                     </ProjectCover>
                                     {proj.id == 0? 
                                         <p>Wildfires.org is a website (in design and development phase) for a fire-tech startup that aims to mitigate the mega-fire crisis in US by visualizing the true impact of wildfires and understanding our progress of fuel treatment</p> : null

@@ -62,7 +62,7 @@ export const ProjectWrapper = styled.div`
 
 export const ProjectCover = styled.div`
     width: auto;
-    max-height: 60vh;
+    max-height: 55vh;
     display: flex;
     justify-content: center;
     /* overflow: clip; */
