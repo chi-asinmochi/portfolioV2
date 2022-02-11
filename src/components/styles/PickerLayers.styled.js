@@ -15,7 +15,7 @@ export const Ul = styled.ul`
     line-height: 2em;
 
     @media (max-width: 800px) {
-        pointer-events: auto;
+        pointer-events: none;
         scrollbar-width: none;  /* Firefox */
 
         width: 100%;
@@ -95,7 +95,7 @@ export const ProjectTitle = styled.h3`
     }
     @media (max-width: 800px) {
         vertical-align: text-bottom;
-        pointer-events: auto;
+        pointer-events: none;
         scroll-snap-align: start;
         scroll-snap-stop: always;
         transform: unset;

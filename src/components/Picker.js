@@ -17,9 +17,9 @@ function Picker({ titleRefs, titleClickHandler, sideBarRef}) {
     return (
 
         <Ul ref={sideBarRef} id='sideBar'
-            onScroll={(e)=> {
-                console.log(e.target.scrollLeft/ e.target.scrollWidth)
-            }}
+            // onScroll={(e)=> {
+            //     console.log(e.target.scrollLeft/ e.target.scrollWidth)
+            // }}
         >
             {
                 projectData.map(proj => {

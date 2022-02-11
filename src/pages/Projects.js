@@ -43,6 +43,9 @@ function Projects() {
                 if (entry.isIntersecting) {
                     
                     let observedPos = Number(entry.target.id)
+
+                    let  SITVSupported = false;
+
                     if (windowWidth < breakpoint) {
                         let scrollPercent
                         switch (observedPos) {
@@ -67,16 +70,23 @@ function Projects() {
                         }
                         // sideBarRef.current.scrollLeft = observedPos/5 * (sideBarRef.current.scrollWidth)
                     }
+                    try {
+                        titleRefs.current[observedPos].scrollIntoView({inline: 'start', behavior: 'smooth'})
+                    } catch (err) {
+                        console.log(err)
+                    }
+                    setscrollPos(observedPos)
+                    setTimeout(() => {
+                        titleObserver.observe(titleRefs.current[observedPos])
+                    }, 500);
+                    
+
+
                     titleRefs.current.forEach((el, i) => {
                         if (i == observedPos) {
                             // console.log(el.firstElementChild)
                             el.firstElementChild.classList.add('current')
-
-                            setscrollPos(observedPos)
                             
-                            titleRefs.current[i].scrollIntoView({inline: 'start', behavior: 'smooth'})
-                            // console.log( titleRefs.current[i], ' should be scrolled')
-
 
                         } else {
                             el.firstElementChild.classList.remove('current')
@@ -97,28 +107,49 @@ function Projects() {
       scrollRef.current = scrollPos
     }, [scrollPos])
 
-        // const titleObserver = new IntersectionObserver(
-    //     entries => {
-    //         entries.forEach(entry => {
-    //             if (entry.isIntersecting) {
-    //                 let scrollPos = entry.target.id
-    //                 titleRefs.current.forEach((el, i) => {
-    //                     if (i == scrollPos) {
-    //                         el.classList.add('current')
-    //                     } else {
-    //                         el.classList.remove('current')
-    //                     }
-    //                 })
-    //             } 
-    //             // else if (!entry.isIntersecting) {
-    //             // }
-    //         })
-    //     },
-    //     {
-    //         // root: graphFrameRef.current,
-    //         threshold: 0.8,
-    //     }
-    // )
+    const titleObserver = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    let observedPos = Number(entry.target.id.slice(-1))
+                    console.log('yes ', observedPos)
+                    titleObserver.disconnect()
+                } 
+                else if (!entry.isIntersecting) {
+                    let observedPos = Number(entry.target.id.slice(-1))
+                    console.log('no ', observedPos)
+                    
+                    let scrollPercent
+                    switch (observedPos) {
+                        case 0:
+                            scrollPercent = 0
+                            break;
+                        case 1:
+                            scrollPercent = 0.19
+                            break;
+                        case 2:
+                            scrollPercent = 0.39
+                            break;
+                        case 3:
+                            scrollPercent = 0.58
+                            break;
+                        case 4:
+                            scrollPercent = 0.78
+                            break;
+                        default:
+                            scrollPercent = 0
+                            break;
+                    }    
+                    sideBarRef.current.scrollLeft = scrollPercent * (sideBarRef.current.scrollWidth)
+                }
+            })
+        },
+        {
+            // root: graphFrameRef.current,
+            threshold: 0.5,
+        }
+    )
 
 
 
@@ -133,7 +164,7 @@ function Projects() {
         return () => {
           projObserver.disconnect()
         //   titleObserver.disconnect()
-          console.log('ob disconnected')
+        //   console.log('ob disconnected')
         };
       });
 
