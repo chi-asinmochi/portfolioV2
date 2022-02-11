@@ -11,8 +11,10 @@ function Projects() {
     const sideBarRef = useRef(null);
     const titleRefs = useRef([])
     const projectRefs = useRef([])
+    const scrollRef = useRef(0)
 
     const [scrollPos, setscrollPos] = useState(0)
+
 
     
 
@@ -23,10 +25,9 @@ function Projects() {
         windowWidth = window.innerWidth
     })
 
-    useEffect(() => {
-        sideBarRef.current.scrollLeft = 700
-        // console.log(sideBarRef.current.scrollLeft += 500)
-    },);
+    // useEffect(() => {
+    //     sideBarRef.current.scrollLeft = 0
+    // },);
     
 
     // console.log(sideBarRef.current)
@@ -40,9 +41,30 @@ function Projects() {
         entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    let observedPos = entry.target.id
+                    
+                    let observedPos = Number(entry.target.id)
                     if (windowWidth < breakpoint) {
-                        sideBarRef.current.scrollLeft = 30
+                        let scrollPercent
+                        switch (observedPos) {
+                            case 0:
+                                scrollPercent = 0.17
+                                break;
+                            case 1:
+                                scrollPercent = 0.23
+                                break;
+                            case 2:
+                                scrollPercent = 0.28
+                                break;
+                            case 3:
+                                scrollPercent = 0.34
+                                break;
+                            case 4:
+                                scrollPercent = 0.44
+                                break;
+                            default:
+                                break;
+                        }
+                        sideBarRef.current.scrollLeft = scrollPercent * (sideBarRef.current.scrollWidth)
                     }
                     titleRefs.current.forEach((el, i) => {
                         if (i == observedPos) {
@@ -50,6 +72,8 @@ function Projects() {
                             el.firstElementChild.classList.add('current')
 
                             setscrollPos(observedPos)
+                            
+                            // titleRefs.current[i].scrollIntoView({inline: 'center'})
                             // console.log( titleRefs.current[i], ' should be scrolled')
 
 
@@ -67,7 +91,12 @@ function Projects() {
             threshold: 1,
         }
     )
-    // const titleObserver = new IntersectionObserver(
+
+    useEffect(() => {
+      scrollRef.current = scrollPos
+    }, [scrollPos])
+
+        // const titleObserver = new IntersectionObserver(
     //     entries => {
     //         entries.forEach(entry => {
     //             if (entry.isIntersecting) {
@@ -121,7 +150,11 @@ function Projects() {
 
     return (
         <>
-            <PageLayout ref={pageRef}>
+            <PageLayout ref={pageRef}
+            // onScroll={(e) => {
+            //     console.log(e.target.scrollTop/ e.target.scrollHeight)
+            // }}
+            >
                 <Picker sideBarRef={sideBarRef} titleRefs={titleRefs} titleClickHandler={titleClickHandler}></Picker>
                 <MainContent projectRefs={projectRefs} scrollPos={scrollPos}></MainContent>
             </PageLayout>

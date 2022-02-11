@@ -20,9 +20,10 @@ export const Ul = styled.ul`
         width: 100%;
         /* height: 10rem; */
         overflow-x: scroll;
-        /* scroll-snap-type: x mandatory; */
+        scroll-snap-type: x mandatory;
+
         scroll-behavior: smooth;
-        scroll-padding-left: 5vw;
+        scroll-padding-left: var(--side-padding);
         overflow-y: hidden;
         overscroll-behavior: contain;
         position: fixed;
@@ -81,7 +82,8 @@ export const ProjectTitle = styled.h3`
     @media (max-width: 800px) {
         vertical-align: text-bottom;
         pointer-events: auto;
-        /* scroll-snap-align: center; */
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
         
         padding: 0 1.5em 0 0;
         transition: 0.3s font-size 0.5s linear;

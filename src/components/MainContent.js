@@ -55,53 +55,6 @@ function MainSection({ projectRefs, scrollPos}) {
                                 </ProjectWrapper>
                             )
 
-                            // switch (proj.content.type) {
-                            //     case 'image':
-                            //         return (
-                            //             <ProjectWrapper key={proj.id} ref={el => {projectRefs.current[i] = el}} id={proj.id}
-                            //             >
-                            //                 <ProjectCover  onClick={()=>{setModal(prev => {
-                            //                     return ({...prev, isActive: true, projNum: proj.id})
-                            //                 })}}>
-                            //                     <IMG src={proj.content.cover}></IMG>
-                            //                 </ProjectCover>
-                            //                 <p>{proj.intro}</p>
-                            //             </ProjectWrapper>
-                            //         )
-                            //         break;
-                            //     case 'iframe':
-                            //         return (
-                            //             <ProjectWrapper key={proj.id} ref={el => {projectRefs.current[i] = el}} id={proj.id}
-                            //             >
-                            //                 <ProjectCover className='iframe-frame'>
-                            //                     <iframe src={proj.content.src} className={proj.content.class}></iframe>
-                            //                 </ProjectCover>
-                            //                 <p>
-                            //                     {proj.intro}
-                            //                     <a href={proj.content.link} target='_blank' className='externalLink'>
-                            //                         {proj.content.hasOwnProperty('link')? "View live here" : null}
-                            //                     </a>
-                            //                 </p>
-                            //             </ProjectWrapper>
-                            //         )
-                            //         break;
-                            //         case 'video':
-                            //             return (
-                            //                 <ProjectWrapper key={proj.id} ref={el => {projectRefs.current[i] = el}} id={proj.id}
-                            //                 >
-                            //                     <ProjectCover onClick={()=>{setModal(prev => {
-                            //                         return ({...prev, isActive: true, projNum: proj.id})
-                            //                     })}}>
-                            //                         <IMG src={proj.content.cover } width='400px' max-height='100%'></IMG>
-                            //                     </ProjectCover>
-                            //                     <p>{proj.intro}</p>
-                            //                 </ProjectWrapper>
-                            //             )
-                            //             break;
-                            //     default:
-                            //         break;
-                            // }
-
                         })
                     }
 

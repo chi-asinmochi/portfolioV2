@@ -18,7 +18,7 @@ function Picker({ titleRefs, titleClickHandler, sideBarRef}) {
 
         <Ul ref={sideBarRef} id='sideBar'
             onScroll={(e)=> {
-                console.log(e.target.scrollLeft)
+                console.log(e.target.scrollLeft/ e.target.scrollWidth)
             }}
         >
             {

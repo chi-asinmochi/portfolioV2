@@ -3,7 +3,6 @@ import Construction from '../components/Construction'
 
 function Contact() {
 
-
     return (
         <>
             <Construction></Construction>
