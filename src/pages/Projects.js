@@ -74,7 +74,7 @@ function Projects() {
 
                             setscrollPos(observedPos)
                             
-                            titleRefs.current[i].scrollIntoView({inline: 'start'})
+                            titleRefs.current[i].scrollIntoView({inline: 'start', behavior: 'smooth'})
                             // console.log( titleRefs.current[i], ' should be scrolled')
 
 
