@@ -43,7 +43,7 @@ function MainSection({ projectRefs, scrollPos}) {
                                         <p>An experimental attempt to visualize wildfire impact and treatment methods through 3D models</p> : null
                                     }
                                     {proj.id == 2? 
-                                        <p>An animation for a card flipping interaction. Designed by <a href='https://ettrics.com/' target='_blank'>Ettrics</a> and was handed off to me for development. Finalized by <a href='https://retool.com/' target='_blank'>Retool</a>'s internal engineers. <a target='_blank' href={proj.content.link}>View live</a></p> : null
+                                        <p>Click on the logos to see cards flip. This is an interaction for <a href='https://retool.com/' target='_blank'>Retool</a>'s website designed by <a href='https://ettrics.com/' target='_blank'>Ettrics</a> and was handed off to me for development. View it live <a target='_blank' href={proj.content.link}>here</a></p> : null
                                     }
                                     {proj.id == 3? 
                                         <p>A design project for <a href='https://www.fico.com/' target="_blank">Fico</a>'s fraud protection program. This is a B2B enterprise application aimed for managerial employees at banking industries.</p> : null

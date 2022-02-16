@@ -20,8 +20,11 @@ const GlobalStyles = createGlobalStyle`
         --font-mono: ${({ theme }) => theme.font.mono};
         --text-80: #ffffffba;
         --bg-gradient: linear-gradient(to bottom, #15151B , #372E72);
+        
+        
     }
     body {
+        background: black;
         background-image: linear-gradient(to bottom, var(--bg-color), #0B2039);
         width: 100vw;
         height: 100vh;
@@ -30,12 +33,9 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 300;
     }
     #root {
-        /* position: fixed; */
-        /* background: pink; */
         width: 100%;
         height: 100%;
         overflow: scroll;
-        
     }
     h1, h2, h3 {
         font-family: ${({ theme }) => theme.font.cyber}, sans-serif;

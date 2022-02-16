@@ -24,10 +24,10 @@ export const ProjectContainer = styled.div`
         float: unset;
     }
 
+
 `
 export const BG = styled.div`
     width: 110%;
-    /* height: 100%; */
     background: url(${({src}) => src}) no-repeat;
     background-size: contain;
     background-position: center;
@@ -37,10 +37,10 @@ export const BG = styled.div`
     width: 70%;
     height: 70%;
     filter: blur(20px);
-    opacity: 0.2    ;
+    opacity: 0.2;
     z-index: -1;
     transition: all 1s;
-    /* z-index: 5; */
+
     
 `
 export const ProjectWrapper = styled.div`

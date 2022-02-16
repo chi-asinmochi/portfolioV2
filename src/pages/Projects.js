@@ -56,7 +56,7 @@ function Projects() {
                     } else {
                         titleObserver.disconnect()
                     }
-                        
+                    
 
                     titleRefs.current.forEach((el, i) => {
                         if (i == observedPos) {
