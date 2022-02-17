@@ -10,7 +10,7 @@ function Construction() {
   return (
     <>
         <Frame>
-            <Caution>&#128679; Caution</Caution>
+            <Caution>&#128679; Oops You Got Me</Caution>
         </Frame>
         <OverlayMsg>
            <h4>Sorry, this page is currently under construction.</h4> 
@@ -67,7 +67,7 @@ const Caution = styled.h1`
     white-space: nowrap;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: min(calc(2em + 5vw), 10em);
+    font-size: min(calc(0.6em + 5.5vw), 10em);
     padding: min(2vw, 0.5em);
     color: var(--caution-yellow);
     background: var(--bg-color);
