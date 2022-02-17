@@ -44,7 +44,7 @@ const Frame = styled.div`
         left: 0%;
         top: 0%;
         z-index: -1;
-        animation: infinite-right linear 60s infinite;
+        animation: infinite-right linear 30s infinite;
     }
     @keyframes infinite-right {
         0% {

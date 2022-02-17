@@ -24,7 +24,7 @@ function About() {
                 <Wrapper>
                     <h1>A Designer Who Codes</h1>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. I should probably say something humble yet imporessive here.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. I should probably say something imporessive here.
                     </p>
                 </Wrapper>
             </Main>
