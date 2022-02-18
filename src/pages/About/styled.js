@@ -16,7 +16,7 @@ export const Frame = styled.div`
     img {
 
         position: absolute;
-        height: min(100vh, calc(80vh + 10vw));
+        height: min(100vh,calc(60vh + 20vw));
         width: 100%;
         top: -30%;
         object-fit: cover;
@@ -76,7 +76,7 @@ export const Frame = styled.div`
         img {
             width: auto;
             top: -30%;
-            left: 8%;
+            left: calc(-120px + 30vw);
             height: 120%;
         }
     }
