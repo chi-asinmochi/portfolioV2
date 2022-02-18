@@ -80,7 +80,7 @@ const OverlayMsg = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(calc(1.5px + 0.4vw));
     color: white;
     font-size: min(calc(0.8em + 0.8vw), 1.5em);
     /* text-align: center; */

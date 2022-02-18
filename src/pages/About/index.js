@@ -11,12 +11,10 @@ function About() {
     return (
         <>
            
-            <Particles
+            {/* <Particles
                     id="tsparticles"
-                    // init={particlesInit}
-                    // loaded={particlesLoaded}
                     options={tsOption}
-            />
+            /> */}
         
             {/* <Construction></Construction>  */}
             <Main>
@@ -24,7 +22,7 @@ function About() {
                 <Wrapper>
                     <h1>A Designer Who Codes</h1>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. I should probably say something imporessive here.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. I should probably say something impressive here.
                     </p>
                 </Wrapper>
             </Main>
@@ -41,10 +39,11 @@ const Main = styled.main`
     display: flex;
     letter-spacing: 0.3em;
     justify-content: space-between;
+    overflow-x: hidden;
 
     @media (max-width: 800px) {
         flex-wrap: wrap;
-        gap: 30vh;
+        /* gap: 30vh; */
 
     }
 `
