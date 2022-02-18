@@ -11,18 +11,19 @@ export const Frame = styled.div`
     position: relative;
     width: min(40%, 700px);
     height: 100%;
+    overflow: show;
 
     img {
 
         position: absolute;
-        height: 100vh;
+        height: min(100vh, calc(80vh + 10vw));
         width: 100%;
         top: -30%;
         object-fit: cover;
         transition: all 1s;
         opacity: 1;
     }
-    ::before {
+    /* ::before {
         content: '';
         background: url('${halo}');
         background-size: contain;
@@ -33,7 +34,7 @@ export const Frame = styled.div`
         left: -10%;
         top: 0;
 
-    }
+    } */
     :hover > img {
         /* transform: rotateY(60deg); */
         opacity: 1;
