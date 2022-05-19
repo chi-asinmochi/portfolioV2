@@ -21,9 +21,9 @@ function About() {
                 <Portrait></Portrait>
                 <Wrapper>
                     <h1>A Designer Who Codes</h1>
-                    <p>
+                    {/* <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. I should probably say something impressive here.
-                    </p>
+                    </p> */}
                 </Wrapper>
             </Main>
             

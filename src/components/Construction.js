@@ -106,7 +106,7 @@ const OverlayMsg = styled.div`
         /* position: sticky; */
         /* top: min(calc(5vh + 8vw), 18vh); */
         letter-spacing: 0.15em;
-        max-width: 60vw;
+        max-width: 70vw;
         line-height: initial;
         margin-top: 5vw;
         /* text-align: center; */
