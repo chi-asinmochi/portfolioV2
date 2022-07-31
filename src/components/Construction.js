@@ -10,7 +10,7 @@ function Construction() {
   return (
     <>
         <Frame>
-            <Caution>&#128679; Oops You Got Me</Caution>
+            <Caution>&#128679; construction</Caution>
         </Frame>
         <OverlayMsg>
            <h4>Sorry, this page is currently under construction.</h4> 

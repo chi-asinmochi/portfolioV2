@@ -22,7 +22,7 @@ function About() {
                 <Wrapper>
                     <h1>A Designer Who Codes</h1>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. I should probably say something impressive here.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Thinking of something catchy.
                     </p>
                 </Wrapper>
             </Main>
@@ -52,7 +52,7 @@ const Wrapper = styled.div`
     width: 45%;
     h1 {
         font-size: 2.5em;
-        margin-bottom: 1.8em;
+        margin-bottom: 1em;
     }
     p {
         font-family: var(--font-cyber);
