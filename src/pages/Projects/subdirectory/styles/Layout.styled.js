@@ -93,7 +93,7 @@ export const Anchor = styled.div`
 export const LabelStack = styled.div`
     display: flex;
     gap: 4em;
-    /* margin: 1em 0;  */
+    flex-wrap: wrap;
     h5 {
         color: var(--blue700);
         font-weight: 500;

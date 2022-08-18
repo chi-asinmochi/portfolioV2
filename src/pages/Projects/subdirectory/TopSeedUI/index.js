@@ -244,7 +244,7 @@ const TopSeedUI = () => {
                     <SubSection>
                         <h2 id='section-12' ref={el => {anchorRefs.current[11] = el}}>Concluding Thoughts</h2>
                         <MediumText>
-                            There are many more UX methodologies out there other than the ones mentioned in this case study. If given more time and more resources, we could have tried more research methods and carried out procedures more rigorously. However, for the first release, we are quite content with this current conceptual model we have. In the next part I will share about how my process for creating the UIs and also how adopting an agile approach helped ease the pressure on design.                         
+                            There are many more UX methodologies out there other than the ones mentioned in this case study. If given more time and more resources, we could have tried more research methods and carried out procedures more rigorously. However, for the first release, we are quite content with this current conceptual model we have. In the next part I will share about my process for creating the UIs and also how adopting an agile approach helped ease the pressure on design.                         
                         </MediumText>
 
                     </SubSection>
@@ -302,4 +302,3 @@ const TopSeedUI = () => {
 
 
 export default TopSeedUI
-

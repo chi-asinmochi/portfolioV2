@@ -6,7 +6,9 @@ export const Footer = styled.footer`
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    box-shadow: 0 -12px 24px #42ffc61A; 
+    box-shadow: 0 -12px 24px #42ffc61A;
+    flex-wrap: wrap;
+    gap: 1em;
 
     p {
             opacity: 0.7;
@@ -17,6 +19,12 @@ export const Footer = styled.footer`
         color: var(--blue700);
         opacity: 1;
     }
+    & > div {
+        margin-right: 4em;
+    }
 
+    /* @media (max-width: 700px) {
+        flex-wrap: wrap;
+    } */
 
 `

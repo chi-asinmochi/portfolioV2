@@ -8,6 +8,9 @@ export const Sidebar = styled.nav`
     display: grid;
     place-items: center;
 
+    @media (max-width: 700px) {
+            display: none;
+        }
 `
 export const NavWrapper = styled.div`
     h4 {
