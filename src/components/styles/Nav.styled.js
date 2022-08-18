@@ -5,11 +5,11 @@ export const Nav = styled.nav`
     display: ${({big}) => big? 'grid' : ''};
     place-content: ${({big}) => big? 'center' : ''};
     height: ${({big}) => big? '100%' : 'auto'};
-    position: ${({big}) => big? '' : 'fixed'};
+    position: ${({big}) => big? '' : 'sticky'};
     top: 0;
     z-index: 10;
     width: ${({big}) => big? 'auto' : '100%'};
-    background-image: ${({big, theme}) => big? `transparent` : 'linear-gradient(to bottom, var(--bg-color), var(--bg-trans))'};
+    background-image: ${({big}) => big? `transparent` : 'linear-gradient(to bottom, var(--bg-color), var(--bg-trans))'};
     @media (max-width: 800px) {
         padding-top: 4vh;
     }
@@ -62,7 +62,7 @@ export const Logo = styled.div`
         position: absolute;
         width: 100%;
         height: 1%;
-        background-color: ${({ theme }) => theme.colors.background};
+        background-color: var(--bg-color);
         z-index: 4;
         opacity: 0.3;
     }
@@ -127,7 +127,7 @@ export const Menu = styled.ul`
     }
     li {
         padding: 1em 2em;
-        font-size: 1.2em;
+        font-size: 1.1em;
 
         a {
             text-decoration: none;

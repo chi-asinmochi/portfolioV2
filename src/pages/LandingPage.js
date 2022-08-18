@@ -1,7 +1,9 @@
 import React from 'react'
 import Particles from 'react-tsparticles'
 import particleImg from '../assets/img/particle.svg'
+import DynamicHeader from '../components/DynamicHeader'
 import tsOption from '../components/styles/TsOptions'
+
 
 function LandingPage() {
 
@@ -19,6 +21,7 @@ function LandingPage() {
 
     return (
         <>
+            <DynamicHeader big={true} current='home'></DynamicHeader>
             <Particles
                     id="tsparticles"
                     // init={particlesInit}

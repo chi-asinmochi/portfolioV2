@@ -5,23 +5,21 @@ export const Frame = styled.div`
 
 `
 export const ProjectContainer = styled.div`
-
-    float: right;
+    
     width: min(60%, 600px);  
-    padding: 8vh 0 30vh 0;
+    padding: 0vh 0 30vh 0;
     display: flex;
     gap: calc(15vh + 10vw);
     flex-direction: column;
     /* background: pink; */
     p {
-        margin-top: 2em;
+        /* margin-top: 2em; */
         color: var(--text-80);
-        font-size: 1.1em;
-        line-height: 1.5;   
+        font-size: 1rem;
+        /* line-height: 1.5;    */
     }
     @media (max-width: 800px) {
         width: 100%;
-        float: unset;
     }
 
 
@@ -45,6 +43,9 @@ export const BG = styled.div`
 `
 export const ProjectWrapper = styled.div`
     scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
     p {
         transition: all 0.6s;
         a {
@@ -67,14 +68,15 @@ export const ProjectCover = styled.div`
     justify-content: center;
     /* overflow: clip; */
     /* height: 500px;  */
+    transition: all 0.6s;
 
     &:hover > img {
         transform: scale(1.05);
         /* z-index:2; */
         box-shadow: 0px 12px 30px black;
     }
-    &:not(.iframe-iframe):hover + p {
-        transform: translateY(1em);
+    &:not(.iframe-iframe):hover {
+        margin-bottom: 1em;
     }
 
     iframe {
@@ -84,7 +86,6 @@ export const ProjectCover = styled.div`
             width: 100%;
             height: 350px;
             /* display: none; */
-        }
     }
     .codePen {
         width: 100%;
@@ -102,7 +103,20 @@ export const IMG = styled.img`
     border-radius: 6px;
     cursor: pointer;
 
-    /* display: none; */
+`
 
+export const BadgeWrapper = styled.div`
+    display: flex;
+    margin-top: 1em;
+    gap: 1em;
+`
+
+export const Badge = styled.div`
+    padding: 0.4em 0.8em;
+    border: 1px solid #FFFFFF90;
+    border-radius: 4px;
+    background-color: #FFFFFF20;
+`
+export const ButtonText = styled.a`
 
 `

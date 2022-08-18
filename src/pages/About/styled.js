@@ -18,7 +18,7 @@ export const Frame = styled.div`
         position: absolute;
         height: min(100vh,calc(60vh + 20vw));
         width: 100%;
-        top: -30%;
+        top: -20%;
         object-fit: cover;
         transition: all 1s;
         opacity: 1;

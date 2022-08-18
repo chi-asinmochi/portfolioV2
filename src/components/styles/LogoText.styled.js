@@ -12,7 +12,7 @@ export const LogoText = styled.h1`
         position: relative;
         animation: main-glitch linear 1.5s infinite; 
         width: 8em;
-        text-align: end;
+        /* text-align: end; */
         text-shadow: 3px 6px 30px rgb(242, 61, 224, 0.4),
             -3px -3px 10px rgb(81, 245, 255, 0.5);
     }

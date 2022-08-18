@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState, } from 'react'
 import styled from 'styled-components'
-import { ProjectContainer, BG, ProjectWrapper, ProjectCover, IMG } from './styles/ProjectContainer.styled'
-import WFCover from '../assets/img/WFCover.svg'
-import ModalComponent from './ModalComponent'
-import projectData from '../data/Project.data'
+import { ProjectContainer, BG, ProjectWrapper, ProjectCover, Badge, IMG, BadgeWrapper } from './ProjectContainer.styled'
+// import WFCover from '../assets/img/WFCover.svg'
+import ModalComponent from '../../../components/ModalComponent'
+import projectData from '../../../data/Project.data'
+import ButtonText from '../../../components/ButtonText'
 
 export const ScrollContext = React.createContext()
 
@@ -24,7 +25,10 @@ function MainSection({ projectRefs, scrollPos}) {
                 <ProjectContainer ref={containerRef}>
                     {
                         projectData.map((proj, i) => {
+                            
                             return (
+
+
                                 <ProjectWrapper key={proj.id} ref={el => {projectRefs.current[i] = el}} id={proj.id}
                                 >
                                     
@@ -36,6 +40,15 @@ function MainSection({ projectRefs, scrollPos}) {
                                         {proj.content.type == 'iframe'? <iframe src={proj.content.src} className={proj.content.class}></iframe> : null}
                                         {proj.content.type == 'video'? <IMG src={proj.content.cover } width='300px' max-height='100%'></IMG> : null}
                                     </ProjectCover>
+
+                                    <BadgeWrapper>
+                                        {('badge' in proj)? proj.badge.map((item) => {
+                                            return (
+                                                <Badge>{item}</Badge>
+                                            )
+                                        }): null}
+                                    </BadgeWrapper>
+
                                     {proj.id == 0? 
                                         <p>Wildfires.org is a website (in design and development phase) for a fire-tech startup that aims to mitigate the mega-fire crisis in US by visualizing the true impact of wildfires and understanding our progress of fuel treatment</p> : null
                                     }
@@ -51,12 +64,16 @@ function MainSection({ projectRefs, scrollPos}) {
                                     {proj.id == 4? 
                                         <p>A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a fun practice for me.</p> : null
                                     }
+
+                                    <ButtonText text='Read More' alignment='end' to='/projects/topseedui'></ButtonText>
                                     
                                 </ProjectWrapper>
-                            )
 
-                        })
+                                
+                            )
+                        })  
                     }
+
 
                 </ProjectContainer>
             </Main>
@@ -67,8 +84,13 @@ function MainSection({ projectRefs, scrollPos}) {
 export default MainSection
 
 const Main = styled.main`
+    display: flex;
+    justify-content: flex-end;
     position: relative;
-    padding-top: 15vh;
+    padding-top: 10vh;
+
+    /* overflow: clip; */
+
     @media (max-width: 800px) {
         width: 100%;
     }

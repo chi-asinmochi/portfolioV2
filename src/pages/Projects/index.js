@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react'
-import MainContent from '../components/MainContent'
-import Picker from '../components/Picker'
+import MainContent from './components/MainContent'
+import Picker from '../../components/Picker'
 import styled from 'styled-components'
-
-
+import ProjectDisplay from './components/ProjectDisplay'
+import projectData from '../../data/Project.data'
+import DynamicHeader from '../../components/DynamicHeader'
 
 function Projects() {
 
@@ -25,17 +26,6 @@ function Projects() {
         windowWidth = window.innerWidth
     })
 
-    // useEffect(() => {
-    //     sideBarRef.current.scrollLeft = 0
-    // },);
-    
-
-    // console.log(sideBarRef.current)
-    // if (sideBarRef.current != null) {
-
-    // }
-
-    // console.log(titleRefs.current)
 
     const projObserver = new IntersectionObserver(
         entries => {
@@ -160,13 +150,12 @@ function Projects() {
 
     return (
         <>
+            <DynamicHeader big={false} current='project'></DynamicHeader>
             <PageLayout ref={pageRef}
-            // onScroll={(e) => {
-            //     console.log(e.target.scrollTop/ e.target.scrollHeight)
-            // }}
             >
                 <Picker sideBarRef={sideBarRef} titleRefs={titleRefs} titleClickHandler={titleClickHandler}></Picker>
                 <MainContent projectRefs={projectRefs} scrollPos={scrollPos}></MainContent>
+                {/* <ProjectDisplay content={projectData[0].content} stuff={stuff}></ProjectDisplay> */}
             </PageLayout>
         </>
 
@@ -177,13 +166,13 @@ export default Projects
 
 const PageLayout = styled.div`
     padding: 0 var(--side-padding);
-    display: flex;
-    /* overflow: scroll; */
-    scroll-snap-type: y mandatory;
+    /* display: flex; */
+    /* overflow: hidden; */
+
     /* scroll-padding-top: 15vh; */
     /* display: none; */
-    height: 100vh;
-    overflow: scroll;
+    /* height: 100vh; */
+    /* overflow: scroll; */
 
 ` 
 

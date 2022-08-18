@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const TextFragment = styled.h1`
     color: ${
-        ({ theme, bottom }) => bottom? theme.colors.pink : theme.colors.cyan
+        ({ bottom }) => bottom? 'var(--pink)' : 'var(--cyan)'
     };
-    font-family: ${({ theme }) => theme.font.cyber}, sans-serif;
+    font-family: var(--font-cyber), sans-serif;
     /* font-size: min(calc(2em + 5vw), 8em); */
     letter-spacing: 0.2em;
     font-weight: 900;
     text-transform: uppercase;
     margin-right: -0.2em;
     width: 8em;
-    text-align: end;
+    /* text-align: end; */
     position: absolute;
     z-index: 2;
     top: ${

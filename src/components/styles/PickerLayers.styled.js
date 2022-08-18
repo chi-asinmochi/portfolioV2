@@ -8,7 +8,7 @@ export const Ul = styled.ul`
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    /* gap: 0.1rem; */
     z-index: 1;
     pointer-events: none;
     top: 20%;
@@ -62,10 +62,10 @@ export const Ul = styled.ul`
 
 `
 
-export const ProjectTitle = styled.h3`
+export const ProjectTitle = styled.h5`
 
     font-weight: 400;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     white-space: nowrap;
     opacity: 0.6;
     transition: all 0.6s;
@@ -110,7 +110,7 @@ export const ProjectTitle = styled.h3`
         /* transition: 0.3s transform linear; */
         &.current {
             transform: unset;
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: 900;
         }   
         &.current::before {

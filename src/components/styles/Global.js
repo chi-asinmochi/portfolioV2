@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import interFont from '../../assets/font/Inter-V.ttf'
+
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -6,18 +8,29 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         margin: 0;
     }
+    /* @font-face {
+        font-family: "custom-inter";
+        src: url(${interFont});
+    } */
     html {
-        font-size: calc(10px + 0.2vw);
-        --big-logo: min(calc(2em + 5vw), 8em);
-        --small-logo: calc(1.5em + 0.2vw);
-        --cyan: ${({ theme }) => theme.colors.cyan};
-        --pink: ${({ theme }) => theme.colors.pink};
-        --bg-color: ${({ theme }) => theme.colors.background};
-        --bg-trans: ${({ theme }) => theme.colors.backgroundTrans};
+        font-size: min(14px, calc(10px + 0.4vw));
+        --big-logo: min(calc(1.8em + 5vw), 8em);
+        --small-logo: calc(1.4em + 0.2vw);
+        --cyan: #51F5FF;
+        --blue700: #739FAD;
+        --blue500: #AAD8E7;
+        --blue800: #29334A;
+        --pink: #FF49A1;
+        --neon-green: #87FFDB;
+        --purple500: #BB83CF;
+        --purple700: #59576F;
+        --bg-color: #18242c;
+        --bg-trans: #15151B00;
         --side-padding: 10vw;
         --caution-yellow: #F8D34B;
-        --font-cyber: ${({ theme }) => theme.font.cyber};
-        --font-mono: ${({ theme }) => theme.font.mono};
+        --font-cyber: 'Orbitron';
+        --font-mono: 'Overpass Mono';
+        --font-inter: 'inter';
         --text-80: #ffffffba;
         --bg-gradient: linear-gradient(to bottom, #15151B , #372E72);
         
@@ -29,7 +42,7 @@ const GlobalStyles = createGlobalStyle`
         width: 100vw;
         height: 100vh;
         overflow-x: clip;
-        font-family: ${({ theme }) => theme.font.mono}, monospace;
+        font-family: var(--font-inter), monospace;
         color: white;
         font-weight: 300;
     }
@@ -37,16 +50,39 @@ const GlobalStyles = createGlobalStyle`
         width: 100%;
         height: 100%;
         overflow: scroll;
+        scroll-behavior: smooth;
+        scroll-padding-top: 20vh;
+        scroll-snap-type: y mandatory;
+        scroll-snap-stop: always;
     }
-    h1, h2, h3 {
-        font-family: ${({ theme }) => theme.font.cyber}, sans-serif;
+    h1, h2, h3, h4, h5 {
+        font-family: var(--font-cyber), sans-serif;
     }
     h1 {
-        /* font-size: min(calc(2em + 5vw), 8em); */
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.9rem;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    h4 {
+        font-weight: 500;
+        font-size: 1.15rem;
+    }
+    h5 {
+        font-weight: 400;
+        font-size: 1.05rem;
     }
     a {
         text-decoration: none;
         color: inherit;
+    }
+    p {
+        line-height: 1.6;
     }
 
     @media (max-width: 1000px) {
