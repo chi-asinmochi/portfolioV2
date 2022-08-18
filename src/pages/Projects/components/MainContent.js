@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import { ProjectContainer, BG, ProjectWrapper, ProjectCover, Badge, IMG, BadgeWrapper } from './ProjectContainer.styled'
 // import WFCover from '../assets/img/WFCover.svg'
 import ModalComponent from '../../../components/ModalComponent'
-import projectData from '../../../data/Project.data'
+import projectData from '../../../assets/data/Project.data'
 import ButtonText from '../../../components/ButtonText'
+import { Link } from 'react-router-dom'
 
 export const ScrollContext = React.createContext()
 
@@ -31,15 +32,21 @@ function MainSection({ projectRefs, scrollPos}) {
 
                                 <ProjectWrapper key={proj.id} ref={el => {projectRefs.current[i] = el}} id={proj.id}
                                 >
-                                    
-                                    <ProjectCover className={proj.content.type == 'iframe'? 'iframe-iframe' : null}  onClick={()=>{setModal(prev => {
-                                        return ({...prev, isActive: true, projNum: proj.id})
-                                    })}}>
-                                        
-                                        {proj.content.type == 'image'? <IMG src={proj.content.cover}></IMG> : null}
-                                        {proj.content.type == 'iframe'? <iframe src={proj.content.src} className={proj.content.class}></iframe> : null}
-                                        {proj.content.type == 'video'? <IMG src={proj.content.cover } width='300px' max-height='100%'></IMG> : null}
-                                    </ProjectCover>
+                                    <Link to={proj.id==0? '/projects/topseedui' : ''} >
+                                        <ProjectCover className={proj.content.type == 'iframe'? 'iframe-iframe' : null}  onClick={()=>{
+                                            if (proj.id != 0) {
+                                                setModal(prev => {
+                                                    return ({...prev, isActive: true, projNum: proj.id})
+                                                })
+                                            }
+                                        }}>
+                                            
+                                            {proj.content.type == 'image'? <IMG src={proj.content.cover}></IMG> : null}
+                                            {proj.content.type == 'iframe'? <iframe src={proj.content.src} className={proj.content.class}></iframe> : null}
+                                            {proj.content.type == 'video'? <IMG src={proj.content.cover } width='300px' max-height='100%'></IMG> : null}
+                                        </ProjectCover>
+                                    </Link>
+
 
                                     <BadgeWrapper>
                                         {('badge' in proj)? proj.badge.map((item) => {
@@ -50,7 +57,7 @@ function MainSection({ projectRefs, scrollPos}) {
                                     </BadgeWrapper>
 
                                     {proj.id == 0? 
-                                        <p>Wildfires.org is a website (in design and development phase) for a fire-tech startup that aims to mitigate the mega-fire crisis in US by visualizing the true impact of wildfires and understanding our progress of fuel treatment</p> : null
+                                        <p>TopSeed is a web application for facilitating the sale of pedigree kittens. This case study details the methodologies used in early research and ideation phases.</p> : null
                                     }
                                     {proj.id == 1? 
                                         <p>An experimental attempt to visualize wildfire impact and treatment methods through 3D models</p> : null
@@ -65,7 +72,9 @@ function MainSection({ projectRefs, scrollPos}) {
                                         <p>A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a fun practice for me.</p> : null
                                     }
 
-                                    <ButtonText text='Read More' alignment='end' to='/projects/topseedui'></ButtonText>
+                                    {proj.action === 'read'? <ButtonText text='Read More' alignment='end' active={true} to='/projects/topseedui'></ButtonText> : null}
+                                    {proj.action === 'coming'? <ButtonText text='Coming Soon' alignment='end' active={false} to=''></ButtonText> : null}
+                                    
                                     
                                 </ProjectWrapper>
 

@@ -1,8 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import { Ul, ScrollLayer, ProjectTitle } from './styles/PickerLayers.styled'
-import projectData from '../data/Project.data'
-
+import projectData from '../assets/data/Project.data';
 
 
 function Picker({ titleRefs, titleClickHandler, sideBarRef}) {

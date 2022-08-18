@@ -9,7 +9,6 @@ import { LogoText } from '../../../../components/styles/LogoText.styled'
 import { Link } from 'react-router-dom'
 // import AnchorLink from '../Components/AnchorLink'
 
-import projectData from '../../../../data/Project.data'
 import userTable from './assets/user-table.svg'
 import userStory from './assets/user-story.svg'
 import storyMap from './assets/story-map.png'

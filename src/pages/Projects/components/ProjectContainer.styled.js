@@ -45,7 +45,7 @@ export const ProjectWrapper = styled.div`
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: 1em;
     p {
         transition: all 0.6s;
         a {
@@ -63,7 +63,7 @@ export const ProjectWrapper = styled.div`
 
 export const ProjectCover = styled.div`
     width: auto;
-    max-height: 55vh;
+    max-height: 50vh;
     display: flex;
     justify-content: center;
     /* overflow: clip; */
@@ -71,15 +71,16 @@ export const ProjectCover = styled.div`
     transition: all 0.6s;
 
     &:hover > img {
-        transform: scale(1.05);
+        transform: translateY(-2%) scale(1.05);
         /* z-index:2; */
         box-shadow: 0px 12px 30px black;
     }
     &:not(.iframe-iframe):hover {
-        margin-bottom: 1em;
+        /* margin-bottom: 1em; */
     }
 
     iframe {
+        max-height: 100%;
         border: none;
     }
     .spline {
@@ -91,14 +92,14 @@ export const ProjectCover = styled.div`
         width: 100%;
         border-radius: 8px;
         border: 1px solid #ffffff80;
-        height: 55vh;
+        height: 50vh;
     }
 
 `
 export const IMG = styled.img`
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     transition: all 0.6s;
     border-radius: 6px;
     cursor: pointer;
@@ -108,7 +109,7 @@ export const IMG = styled.img`
 export const BadgeWrapper = styled.div`
     display: flex;
     margin-top: 1em;
-    gap: 1em;
+    gap: 0.6em;
 `
 
 export const Badge = styled.div`
@@ -116,6 +117,7 @@ export const Badge = styled.div`
     border: 1px solid #FFFFFF90;
     border-radius: 4px;
     background-color: #FFFFFF20;
+    font-size: 0.9rem;
 `
 export const ButtonText = styled.a`
 

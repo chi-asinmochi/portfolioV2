@@ -51,9 +51,9 @@ const GlobalStyles = createGlobalStyle`
         height: 100%;
         overflow: scroll;
         scroll-behavior: smooth;
-        scroll-padding-top: 20vh;
+        scroll-padding-top: 5vh;
         scroll-snap-type: y mandatory;
-        scroll-snap-stop: always;
+        /* scroll-snap-stop: always; */
     }
     h1, h2, h3, h4, h5 {
         font-family: var(--font-cyber), sans-serif;

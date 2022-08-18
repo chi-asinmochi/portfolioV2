@@ -2,8 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import MainContent from './components/MainContent'
 import Picker from '../../components/Picker'
 import styled from 'styled-components'
-import ProjectDisplay from './components/ProjectDisplay'
-import projectData from '../../data/Project.data'
+
 import DynamicHeader from '../../components/DynamicHeader'
 
 function Projects() {

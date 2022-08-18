@@ -72,7 +72,7 @@ export const GraphFrame = styled.div`
     }
 
     img {
-        width: 100%;
+        max-width: 100%;
         max-height: 100%;
         object-fit: contain;
         scroll-snap-align: center;

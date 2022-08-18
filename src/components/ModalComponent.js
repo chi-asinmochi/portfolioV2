@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Modal, ModalContainer, GraphFrame, Overlay, SliderControl, TextFrame, Slot } from './styles/Modal.styled'
 // import cover from '../assets/img/WFChart.png'
-import projectData from '../data/Project.data'
+import projectData from '../assets/data/Project.data'
 import styled from 'styled-components'
 
 export default function ModalComponent({ modalState, setModal }) {
