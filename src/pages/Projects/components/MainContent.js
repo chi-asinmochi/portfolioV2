@@ -41,9 +41,9 @@ function MainSection({ projectRefs, scrollPos}) {
                                             }
                                         }}>
                                             
-                                            {proj.content.type == 'image'? <IMG src={proj.content.cover}></IMG> : null}
+                                            {proj.content.type == 'image'? <IMG src={proj.content.cover} width={'100%'}></IMG> : null}
                                             {proj.content.type == 'iframe'? <iframe src={proj.content.src} className={proj.content.class}></iframe> : null}
-                                            {proj.content.type == 'video'? <IMG src={proj.content.cover } width='300px' max-height='100%'></IMG> : null}
+                                            {proj.content.type == 'video'? <IMG src={proj.content.cover } width={'auto'}></IMG> : null}
                                         </ProjectCover>
                                     </Link>
 

@@ -62,8 +62,8 @@ export const ProjectWrapper = styled.div`
 `
 
 export const ProjectCover = styled.div`
-    width: auto;
-    max-height: 50vh;
+    width: 100%;
+    height: 45vh;
     display: flex;
     justify-content: center;
     /* overflow: clip; */
@@ -80,7 +80,7 @@ export const ProjectCover = styled.div`
     }
 
     iframe {
-        max-height: 100%;
+        height: 100%;
         border: none;
     }
     .spline {
@@ -92,13 +92,13 @@ export const ProjectCover = styled.div`
         width: 100%;
         border-radius: 8px;
         border: 1px solid #ffffff80;
-        height: 50vh;
+        height: 100%;
     }
 
 `
 export const IMG = styled.img`
-    max-width: 100%;
-    max-height: 100%;
+    width: ${({ width }) => width};
+    height: 100%;
     object-fit: cover;
     transition: all 0.6s;
     border-radius: 6px;

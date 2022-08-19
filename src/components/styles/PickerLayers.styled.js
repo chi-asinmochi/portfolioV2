@@ -33,6 +33,9 @@ export const Ul = styled.ul`
         flex-direction: row;
         align-items: flex-end;
 
+        background-color: #18242c66;
+        /* backdrop-filter: blur(2px); */
+
         padding: 0 var(--side-padding);
         scroll-padding-left: var(--side-padding);
 
