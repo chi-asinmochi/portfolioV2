@@ -65,7 +65,7 @@ export const ProjectWrapper = styled.div`
 
 export const ProjectCover = styled.div`
     width: 100%;
-    height: 45vh;
+    height: min(calc(40vh + 5vw), 50vh);
     display: flex;
     justify-content: center;
     /* overflow: clip; */
