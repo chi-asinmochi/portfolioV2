@@ -42,7 +42,7 @@ export const BG = styled.div`
     
 `
 export const ProjectWrapper = styled.div`
-    scroll-snap-align: center;
+    scroll-snap-align: end;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -59,6 +59,8 @@ export const ProjectWrapper = styled.div`
     }
 
     scroll-snap-stop: always;       
+
+
 `
 
 export const ProjectCover = styled.div`
