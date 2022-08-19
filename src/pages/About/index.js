@@ -41,7 +41,7 @@ const Main = styled.main`
     display: flex;
     letter-spacing: 0.3em;
     justify-content: space-between;
-    /* overflow-x: visible; */
+    overflow-x: clip;
 
     @media (max-width: 800px) {
         flex-wrap: wrap;

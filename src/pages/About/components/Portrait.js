@@ -5,6 +5,7 @@ import picture from '../assets/profile-pic.png'
 import picture2 from '../assets/picture-v1.png'
 import shapes from '../assets/shapes.svg'
 import selfie from '../assets/portrait.png'
+import selfie2 from '../assets/portrait2.png'
 
 
 
@@ -48,7 +49,7 @@ const Portrait = () => {
     return (
         <Frame onMouseEnter={()=>hoverHandler(true)} onMouseLeave={()=>hoverHandler(false)}>
             {/* <Polygon> */}
-                <img src={selfie}></img>
+                <img src={selfie2}></img>
                 
             {/* </Polygon> */}
 
