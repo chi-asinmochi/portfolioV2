@@ -2,9 +2,9 @@ import React from 'react'
 import Construction from '../../components/Construction'
 import styled from 'styled-components'
 import Portrait from './components/Portrait'
-import Particles from 'react-tsparticles'
-import tsOption from '../../components/styles/TsOptions'
 import DynamicHeader from '../../components/DynamicHeader'
+import ButtonText from '../../components/ButtonText'
+import resume from './assets/Chi_Resume.pdf'
 
 function About() {
 
@@ -22,10 +22,17 @@ function About() {
             <Main>
                 <Portrait></Portrait>
                 <Wrapper>
-                    <h1>A Designer Who Codes</h1>
+                    <h1>A UX Generalist</h1>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Thinking of something catchy.
+                        Being someone who enjoys doing a bit of everything, I have juggled between fields, from research to design to development. Sometimes it’s a curse and sometimes a blessing. Either way it’s shaped me into who I am today.
                     </p>
+                    <ButtonText text={'Resume'} active={true} 
+                        onClick={(e) => {
+                            e.preventDefault()
+                            window.open(resume)
+                        }}>
+
+                    </ButtonText>
                 </Wrapper>
             </Main>
             
@@ -39,7 +46,7 @@ const Main = styled.main`
     height: 80vh;
     padding: 0 var(--side-padding);
     display: flex;
-    letter-spacing: 0.3em;
+    letter-spacing: unset;
     justify-content: space-between;
     overflow-x: clip;
 
@@ -50,18 +57,21 @@ const Main = styled.main`
     }
 `
 const Wrapper = styled.div`
-    margin: auto 0 auto auto;
+    margin: 20vh 0 auto auto;
     width: 45%;
     h1 {
-        font-size: 2.5em;
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
     }
     p {
-        font-family: var(--font-cyber);
         font-size: 1.2em;
         line-height: 2;
+        opacity: 0.9;
+    }
+    a {
+        margin-top: 2em;
     }
     @media (max-width: 800px) {
+        margin: auto;
         width: 100%;
         padding-bottom: 15vh;
     }

@@ -35,8 +35,8 @@ export const Frame = styled.div`
         top: 0;
 
     } */
-    :hover > img {
-        /* transform: rotateY(60deg); */
+    &:hover > img {
+        transform: rotateY(160deg);
         opacity: 1;
     }
 

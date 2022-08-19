@@ -121,6 +121,3 @@ export const Badge = styled.div`
     background-color: #FFFFFF20;
     font-size: 0.9rem;
 `
-export const ButtonText = styled.a`
-
-`
