@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
         height: 100%;
         overflow: scroll;
         scroll-behavior: smooth;
-        scroll-padding-bottom: 20vh;
+        scroll-padding-bottom: 18vh;
         scroll-snap-type: y mandatory;
         /* scroll-snap-stop: always; */
     }
