@@ -27,11 +27,8 @@ const TopSeedUI = () => {
     const [currentAnchor, setAnchor] = useState(0)
 
     const root = document.getElementById('root')
-    // root.onscroll = () => {
-    //     if (root.scrollTop < 10) {
-    //         setAnchor(0)
-    //     }
-    // }
+    root.style.scrollPaddingBottom = 0;
+    root.style.scrollPaddingTop = '18vh';
 
 
     const anchorObserver = new IntersectionObserver(
@@ -57,7 +54,7 @@ const TopSeedUI = () => {
 
             anchorObserver.observe(anchor)
 
-            console.log(anchor.innerHTML)
+
         })
 
     }, [])

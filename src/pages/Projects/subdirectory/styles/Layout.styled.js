@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Layout = styled.div`
+    .root {
+        display: none;
+    }
     scroll-behavior: smooth;
     padding: 0 var(--side-padding);
     display: flex;
@@ -10,7 +13,7 @@ export const Layout = styled.div`
 
         display: flex;
         flex-direction: column;
-        gap: 3em; 
+        gap: 6em; 
 
 
 

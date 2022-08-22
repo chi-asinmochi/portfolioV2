@@ -78,12 +78,10 @@ function Projects() {
 
                 if (entry.isIntersecting) {
                     let observedPos = Number(entry.target.id.slice(-1))
-                    console.log('yes ', observedPos)
                     titleObserver.disconnect()
                 } 
                 else if (!entry.isIntersecting) {
                     let observedPos = Number(entry.target.id.slice(-1))
-                    console.log('no ', observedPos)
                     
                     let scrollPercent
                     switch (observedPos) {
@@ -137,12 +135,10 @@ function Projects() {
 
       const titleClickHandler = (e) => {
         let clickedPos = Number(e.target.id.slice(-1))
-        console.log('clcked id ', clickedPos)
         // setClickState(i)
         projectRefs.current.forEach((proj, i)=> {
             if (i == clickedPos) {
                 proj.scrollIntoView({behavior: 'smooth'})
-                console.log(`scroll ${proj.id} into view`)
             }
         })
     }
@@ -154,7 +150,7 @@ function Projects() {
             >
                 <Picker sideBarRef={sideBarRef} titleRefs={titleRefs} titleClickHandler={titleClickHandler}></Picker>
                 <MainContent projectRefs={projectRefs} scrollPos={scrollPos}></MainContent>
-                {/* <ProjectDisplay content={projectData[0].content} stuff={stuff}></ProjectDisplay> */}
+
             </PageLayout>
         </>
 
