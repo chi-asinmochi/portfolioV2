@@ -21,7 +21,7 @@ export const Frame = styled.div`
         top: -20%;
         object-fit: cover;
         transition: all 0.8s;
-        opacity: 1;
+        opacity: 0.8;
     }
     /* ::before {
         content: '';
@@ -36,8 +36,9 @@ export const Frame = styled.div`
 
     } */
     &:hover > img {
-        transform: rotateY(20deg);
+        transform: rotateY(15deg);
         opacity: 1;
+        /* box-shadow: 0px 4px 30px pink; */
     }
 
 
