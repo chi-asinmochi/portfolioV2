@@ -59,21 +59,6 @@ const projectData = [
         action: 'none',
     },
     {
-        id: 2,
-        title: 'Card Animation',
-        content: {
-            type: 'iframe',
-            class: 'codePen',
-            cover: carouselCover,
-            src: "https://codepen.io/shawn_chi/embed/OJxGeVO?default-tab=&theme-id=dark",
-            link: "https://retool.com/startups/#playbooks",
-        },
-        badge: ['Front-End', 'Web Animations API',],
-        intro: "An animation for a card flipping interaction. Designed by Ettrics and was handed off to me for development. Finalized by Retool's internal engineers. ",
-        slides: null,
-        action: 'none',
-    },
-    {
         id: 3,
         title: 'Fraud Management App',
         content: {
@@ -92,6 +77,21 @@ const projectData = [
         action: 'coming',
     },
     {
+        id: 2,
+        title: 'Card Animation',
+        content: {
+            type: 'iframe',
+            class: 'codePen',
+            cover: carouselCover,
+            src: "https://codepen.io/shawn_chi/embed/OJxGeVO?default-tab=&theme-id=dark",
+            link: "https://retool.com/startups/#playbooks",
+        },
+        badge: ['Front-End', 'Web Animations API',],
+        intro: "An animation for a card flipping interaction. Designed by Ettrics and was handed off to me for development. Finalized by Retool's internal engineers. ",
+        slides: null,
+        action: 'none',
+    },
+    {
         id: 4,
         title: 'Contract Tracing App',
         content: {
@@ -99,7 +99,7 @@ const projectData = [
             cover: covidCover,
             src: covidVid,
         },
-        badge: ['UI', 'Prototyping', 'Sound Design'],
+        badge: ['UI', 'Prototyping', 'SFX'],
         intro: "A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a good design practice for me.",
         action: 'none',
     },

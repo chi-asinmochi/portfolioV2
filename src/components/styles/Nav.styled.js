@@ -30,6 +30,9 @@ export const Container = styled.div`
     .home-link {
         display: flex;
     }
+    & > a {
+        cursor: ${({big}) => big? 'default' : 'pointer'};
+    }
 `
 export const Logo = styled.div`
     --Blur: ${({ big }) => big? 'blur(4px)' : 'blur(1px)'};
@@ -54,9 +57,6 @@ export const Logo = styled.div`
         }
         }
     }
-    &:hover {
-        cursor: ${({big}) => big? 'default' : 'pointer'};
-    }
     &::before, &::after {
         content: "";
         position: absolute;
@@ -68,7 +68,8 @@ export const Logo = styled.div`
     }
     &::before {
         /* width: 70%; */
-        height: 1%;
+        height: 4%;
+        /* background-color: var(--blue500); */
         left: 0;
         /* bottom: 60%; */
         animation: glitch-up linear 8s infinite reverse 
@@ -86,25 +87,27 @@ export const Logo = styled.div`
         }
         28% {
             height: 1%;
+            /* background-color: var(--bg-color); */
         }
         29% {
-            height: 5%;
+            height: 100%;
+            /* background-color: var(--blue800); */
         }
         30%{
             height: 1%;
+            /* background-color: var(--bg-color); */
         }
         59% {
             bottom: 50%;
-            /* width: 100%; */
+            background-color: var(--bg-color);
         }
         60% {
             bottom: 20%;
-            /* width: 30%; */
+            background-color: var(--pink);
         }
         61% {
             bottom: 60%;
-            /* opacity: 0.3; */
-            /* width: 100%; */
+            background-color: var(--bg-color);
         }
         100% {
             bottom: 90%;
