@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export const Layout = styled.div`
-    .root {
-        display: none;
-    }
+
     scroll-behavior: smooth;
     padding: 0 var(--side-padding);
     display: flex;
@@ -104,8 +102,8 @@ export const LabelStack = styled.div`
     }
     p {
         opacity: 0.8;
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-size: 1.1rem;
+        /* font-weight: 500; */
         color: white
     }
 `
@@ -131,7 +129,7 @@ export const Divider = styled.div`
     height: 1px;
     width: 100%;
     background-color: white;
-    /* margin: 2em 0; */
+    margin-top: -2em;
     opacity: 0.1;
 `
 
