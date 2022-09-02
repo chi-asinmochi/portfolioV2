@@ -67,7 +67,7 @@ const tsOption =   {
         enable: true,
         outMode: "none",
         random: false,
-        speed: 3000,
+        speed: 1000,
         straight: true,
         noise: {
             enable: true,
@@ -87,13 +87,13 @@ const tsOption =   {
     number: {
         density: {
         enable: true,
-        area: 600,
+        area: 300,
         },
-        value: 4,
+        value: 1,
     },
     opacity: {
         random: true,
-        value: 0.3,
+        value: 0.4,
     },
     shape: {
         // type: 'image',
@@ -114,7 +114,7 @@ const tsOption =   {
     },
     size: {
         random: true,
-        value: 60,
+        value: 30,
     },
     },
     detectRetina: true,
