@@ -59,7 +59,7 @@ const projectData = [
         action: 'none',
     },
     {
-        id: 3,
+        id: 2,
         title: 'Fraud Management App',
         content: {
             type: 'image',
@@ -77,7 +77,7 @@ const projectData = [
         action: 'coming',
     },
     {
-        id: 2,
+        id: 3,
         title: 'Card Animation',
         content: {
             type: 'iframe',
