@@ -59,8 +59,6 @@ export const ProjectWrapper = styled.div`
     }
 
     scroll-snap-stop: always;       
-
-
 `
 
 export const ProjectCover = styled.div`

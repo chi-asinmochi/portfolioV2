@@ -16,6 +16,9 @@ function Projects() {
     const [scrollPos, setscrollPos] = useState(0)
 
 
+    const root = document.getElementById('root')
+    root.style.scrollPaddingBottom = 'max(calc(20vh - 5vw), 12vh)'
+    root.style.scrollSnapType = 'y mandatory'
     
 
     let windowWidth = window.innerWidth

@@ -11,14 +11,12 @@ export const Layout = styled.div`
 
         display: flex;
         flex-direction: column;
-        gap: 6em; 
-
-
+        gap: 3em; 
 
         section {
             display: flex;
             flex-direction: column;
-            gap: 2em;
+            gap: 1em;
 
             h2 {
                 /* opacity: 0.9; */
@@ -37,6 +35,7 @@ export const SubSection = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1em;
+    margin-bottom: 1em;
 `
 export const Title = styled.div`
     /* padding: 0.5em 0 0.8em 0;  */
@@ -55,33 +54,37 @@ export const Illustration = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.6em;
     margin-bottom: 1em;
+    transition: all 0.3s;
 
     img {
         width: 100%;
         border-radius: 8px;
         box-shadow: ${({ cover }) => cover? '0px 4px 16px #ffffff4D' : ''};
         opacity: ${({ bright }) => bright? 1 : 0.8};
-        transition: all 0.3s;
+
     }
     img:hover {
         opacity: 1;
     }
 
+
+
 `
 export const Description = styled.p`
     font-size: 1rem;
-    /* font-style: oblique; */
+    font-family: var(--font-italic);
     font-weight: 300;
     opacity: 0.7;
+
 ` 
 
 export const MediumText = styled.p`
 
     font-size: 1.2rem;
     opacity: 0.8;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
     line-height: 180%;
 
 `
@@ -116,12 +119,12 @@ export const HighlightBox = styled.div`
     p:first-of-type {
         font-weight: 500;
         font-size: 1.2rem;
-        padding-bottom: 0.6em;
+        padding-bottom: 0.3em;
         color: var(--purple500);
     }
     p:last-of-type {
         font-weight: 300;
-        font-size: 1.1rem;
+        font-size: 1rem;
         opacity: 0.8;
     }
 `

@@ -23,8 +23,5 @@ export const Footer = styled.footer`
         margin-right: 4em;
     }
 
-    /* @media (max-width: 700px) {
-        flex-wrap: wrap;
-    } */
 
 `

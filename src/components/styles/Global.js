@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
         --caution-yellow: #F8D34B;
         --font-cyber: 'Orbitron';
         --font-mono: 'Overpass Mono';
+        --font-italic: 'Open Sans';
         --font-inter: 'inter';
         --text-80: #ffffffba;
         --bg-gradient: linear-gradient(to bottom, #15151B , #372E72);
@@ -51,8 +52,6 @@ const GlobalStyles = createGlobalStyle`
         height: 100%;
         overflow: scroll;
         scroll-behavior: smooth;
-        scroll-padding-bottom: max(calc(20vh - 5vw), 12vh);
-        scroll-snap-type: y mandatory;
         /* scroll-snap-stop: always; */
     }
     h1, h2, h3, h4, h5 {

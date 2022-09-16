@@ -7,7 +7,7 @@ import DynamicHeader from "./components/DynamicHeader";
 import Projects from "./pages/Projects";
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
-import TopSeedUI from "./pages/Projects/subdirectory/TopSeedUI";
+import TopSeed from "./pages/Projects/subdirectory/TopSeed";
 
 // const theme = {
 //     colors: {
@@ -39,7 +39,7 @@ return (
             
                 <Route path="/projects" >
                     <Route index element={<Projects/>}/>
-                    <Route path='topseedui' element={<TopSeedUI/>}/>
+                    <Route path='topseedui' element={<TopSeed/>}/>
                     {/* <DynamicHeader big={false} current='project'></DynamicHeader> */}
                     
                 </Route>

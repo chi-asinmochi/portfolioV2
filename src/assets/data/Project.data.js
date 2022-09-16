@@ -5,7 +5,8 @@
 // import blocks from '../img/wildfire/block2.png'
 
 //Topseed
-import flowChart from '../../pages/Projects/subdirectory/TopSeedUI/assets/flow-diagram.png'
+import flowChart from '../../pages/Projects/subdirectory/TopSeed/assets/flow-diagram.png'
+import tsCover from '../../pages/Projects/subdirectory/TopSeed/assets/cat-profile.png'
 
 //Fraud mgm
 import agents from '../img/fraudMgm/Agents.png'
@@ -26,16 +27,17 @@ import carouselCover from '../img/carousel-block.png'
 
 
 
+
+
 const projectData = [
     {
         id: 0,
-        title: 'TopSeed Pt.1',
+        title: 'TopSeed',
         content: {
             type: 'image',
-            cover: flowChart,
+            cover: tsCover,
         },
-        badge: ['UX', 'Research', 'Methodologies'],
-        intro: "TopSeed is a web application for facilitating the sale of pedigree kittens. This case study details the methodologies used in early research and ideation phases.",
+        badge: ['UI/UX', 'C2C'],
         // slides: [
         //     {image: home, text: '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
         //     {image: homeChart, text: '2. skldfjgh;esrhfg;jkf;jalsrh;gfjhsd;jkfb;jgshdred et. Ac n At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
@@ -54,7 +56,6 @@ const projectData = [
             src: 'https://my.spline.design/tree1-5982d22f322ef6c7b085c67988eb7d7f/',
         },
         badge: ['3D Design', 'Interactive'],
-        intro: "An experimental attempt to visualize wildfire impact and treatment methods through 3D models",
         slides: null,
         action: 'none',
     },
@@ -65,8 +66,7 @@ const projectData = [
             type: 'image',
             cover: agents,
         },
-        badge: ['UI/UX', 'Mockup'],
-        intro: "A design project for Fico's fraud protection program. This is a B2B enterprise application aimed for managerial employees at banking industries.",
+        badge: ['Data Visualization', 'B2B', 'UI'],
         slides: [
             {image: dashboard, text: '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
             {image: agents, text: '2. skldfjgh;esrhfg;jkf;jalsrh;gfjhsd;jkfb;jgshdred et. Ac n At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
@@ -87,7 +87,6 @@ const projectData = [
             link: "https://retool.com/startups/#playbooks",
         },
         badge: ['Front-End', 'Web Animations API',],
-        intro: "An animation for a card flipping interaction. Designed by Ettrics and was handed off to me for development. Finalized by Retool's internal engineers. ",
         slides: null,
         action: 'none',
     },
@@ -100,7 +99,6 @@ const projectData = [
             src: covidVid,
         },
         badge: ['UI', 'Prototyping', 'SFX'],
-        intro: "A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a good design practice for me.",
         action: 'none',
     },
 ]

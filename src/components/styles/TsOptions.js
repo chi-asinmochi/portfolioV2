@@ -87,7 +87,7 @@ const tsOption =   {
     number: {
         density: {
         enable: true,
-        area: 300,
+        area: 600,
         },
         value: 1,
     },

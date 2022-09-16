@@ -57,16 +57,16 @@ function MainSection({ projectRefs, scrollPos}) {
                                     </BadgeWrapper>
 
                                     {proj.id == 0? 
-                                        <p>TopSeed is a web application for facilitating the sale of pedigree kittens. This case study details the methodologies used in early research and ideation phases.</p> : null
+                                        <p>TopSeed is a web application for facilitating the sale of pedigree kittens. This case study goes over the design thinking behind the buyer-facing side of the product.</p> : null
                                     }
                                     {proj.id == 1? 
                                         <p>An experimental attempt to visualize wildfire impact and treatment methods through 3D models</p> : null
                                     }
                                     {proj.id == 2? 
-                                        <p>Click on the logos to see cards flip. This is an interaction for <a href='https://retool.com/' target='_blank'>Retool</a>'s website designed by <a href='https://ettrics.com/' target='_blank'>Ettrics</a> and was handed off to me for development. View it live <a target='_blank' href={proj.content.link}>here</a></p> : null
+                                        <p>A design project for <a href='https://www.fico.com/' target="_blank">Fico</a>'s fraud protection program. This is a B2B enterprise application aimed for managerial employees at banking industries.</p> : null
                                     }
                                     {proj.id == 3? 
-                                        <p>A design project for <a href='https://www.fico.com/' target="_blank">Fico</a>'s fraud protection program. This is a B2B enterprise application aimed for managerial employees at banking industries.</p> : null
+                                        <p>Click on the logos to see cards flip. This is an interaction for <a href='https://retool.com/' target='_blank'>Retool</a>'s website designed by <a href='https://ettrics.com/' target='_blank'>Ettrics</a> and was handed off to me for development. View it live <a target='_blank' href={proj.content.link}>here</a></p> : null
                                     }
                                     {proj.id == 4? 
                                         <p>A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a fun practice for me.</p> : null

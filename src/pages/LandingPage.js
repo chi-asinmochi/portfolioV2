@@ -22,12 +22,12 @@ function LandingPage() {
     return (
         <>
             <DynamicHeader big={true} current='home'></DynamicHeader>
-            <Particles
+            {/* <Particles
                     id="tsparticles"
                     // init={particlesInit}
                     // loaded={particlesLoaded}
                     options={tsOption}
-            />
+            /> */}
         </>
     )
 }
