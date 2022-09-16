@@ -32,7 +32,7 @@ function MainSection({ projectRefs, scrollPos}) {
 
                                 <ProjectWrapper key={proj.id} ref={el => {projectRefs.current[i] = el}} id={proj.id}
                                 >
-                                    <Link to={proj.id==0? '/projects/topseedui' : ''} >
+                                    <Link to={proj.id==0? '/projects/topseed' : ''} >
                                         <ProjectCover className={proj.content.type == 'iframe'? 'iframe-iframe' : null}  onClick={()=>{
                                             if (proj.id != 0) {
                                                 setModal(prev => {
@@ -41,9 +41,9 @@ function MainSection({ projectRefs, scrollPos}) {
                                             }
                                         }}>
                                             
-                                            {proj.content.type == 'image'? <IMG src={proj.content.cover} width={'100%'}></IMG> : null}
-                                            {proj.content.type == 'iframe'? <iframe src={proj.content.src} className={proj.content.class}></iframe> : null}
-                                            {proj.content.type == 'video'? <IMG src={proj.content.cover } width={'auto'}></IMG> : null}
+                                            {proj.content.type == 'image'? <IMG loading='lazy' src={proj.content.cover} width={'100%'}></IMG> : null}
+                                            {proj.content.type == 'iframe'? <iframe loading='lazy' src={proj.content.src} className={proj.content.class}></iframe> : null}
+                                            {proj.content.type == 'video'? <IMG loading='lazy' src={proj.content.cover } width={'auto'}></IMG> : null}
                                         </ProjectCover>
                                     </Link>
 
@@ -72,7 +72,7 @@ function MainSection({ projectRefs, scrollPos}) {
                                         <p>A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a fun practice for me.</p> : null
                                     }
 
-                                    {proj.action === 'read'? <ButtonText text='Read More' alignment='end' active={true} to='/projects/topseedui'></ButtonText> : null}
+                                    {proj.action === 'read'? <ButtonText text='Read More' alignment='end' active={true} to='/projects/topseed'></ButtonText> : null}
                                     {proj.action === 'coming'? <ButtonText text='Coming Soon' alignment='end' active={false} to=''></ButtonText> : null}
                                     
                                     

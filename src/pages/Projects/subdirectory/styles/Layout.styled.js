@@ -61,10 +61,12 @@ export const Illustration = styled.div`
 
     img {
         width: 100%;
-        border-radius: 8px;
+        border-radius: var(--rounded);
         box-shadow: ${({ cover }) => cover? '0px 4px 16px #ffffff4D' : ''};
         opacity: ${({ bright }) => bright? 1 : 0.8};
+        background: grey;
 
+        animation: skeleton 1s alternate linear infinite;
     }
     img:hover {
         opacity: 1;
@@ -120,7 +122,7 @@ export const LabelStack = styled.div`
 export const HighlightBox = styled.div`
     padding: 1.5em 2em;
     background-color: var(--blue800);
-    border-radius: 6px;
+    border-radius: var(--rounded);
     border-left: 4px solid var(--purple500);
 
     p:first-of-type {

@@ -6,10 +6,10 @@
 
 //Topseed
 import flowChart from '../../pages/Projects/subdirectory/TopSeed/assets/flow-diagram.png'
-import tsCover from '../../pages/Projects/subdirectory/TopSeed/assets/cat-profile.png'
+import tsCover from '../../pages/Projects/subdirectory/TopSeed/assets/cat-profile-tiny.png'
 
 //Fraud mgm
-import agents from '../img/fraudMgm/Agents.png'
+import agents from '../img/fraudMgm/agents-tiny.png'
 import analytics from '../img/fraudMgm/analytics.png'
 import caseDetail from '../img/fraudMgm/caseDetail.png'
 import dashboard from '../img/fraudMgm/dashboard.png'
@@ -17,7 +17,7 @@ import caseList from '../img/fraudMgm/caseList.png'
 
 //contact tracing
 import covidVid from '../video/covid_mockup.mp4'
-import covidCover from '../img/contactTracing/covidCover.png'
+import covidCover from '../img/contactTracing/covidCover-tiny.png'
 
 //iframes
 import treeFlame from '../img/tree-flame.png'

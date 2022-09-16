@@ -71,6 +71,8 @@ export const ProjectCover = styled.div`
     transition: all 0.6s;
 
 
+
+
     &:hover > img {
         transform: translateY(-2%) scale(1.05);
         /* z-index:2; */
@@ -90,7 +92,7 @@ export const ProjectCover = styled.div`
     }
     .codePen {
         width: 100%;
-        border-radius: 8px;
+        border-radius: var(--rounded);
         border: 1px solid #ffffff80;
         height: 100%;
     }
@@ -101,8 +103,9 @@ export const IMG = styled.img`
     height: 100%;
     object-fit: cover;
     transition: all 0.6s;
-    border-radius: 6px;
     cursor: pointer;
+    border-radius: var(--rounded);
+    animation: skeleton 1s alternate infinite;
 
 `
 
