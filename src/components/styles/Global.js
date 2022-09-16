@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
         --caution-yellow: #F8D34B;
         --font-cyber: 'Orbitron';
         --font-mono: 'Overpass Mono';
-        --font-italic: 'Open Sans';
+        --font-italic: 'Open Sans', 'sans serif';
         --font-inter: 'inter';
         --text-80: #ffffffba;
         --bg-gradient: linear-gradient(to bottom, #15151B , #372E72);

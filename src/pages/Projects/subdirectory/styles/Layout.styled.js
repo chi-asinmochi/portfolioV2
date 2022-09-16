@@ -29,6 +29,7 @@ export const Layout = styled.div`
             }
             
         }
+
     }   
 ` 
 export const SubSection = styled.div`
@@ -78,16 +79,21 @@ export const Description = styled.p`
     font-weight: 300;
     opacity: 0.7;
 
+    a {
+        text-decoration: underline;
+    }
+
 ` 
 
 export const MediumText = styled.p`
 
     font-size: 1.2rem;
     opacity: 0.8;
-    /* margin-bottom: 1em; */
     line-height: 180%;
 
+
 `
+
 
 export const Anchor = styled.div`
     /* position: fixed; */

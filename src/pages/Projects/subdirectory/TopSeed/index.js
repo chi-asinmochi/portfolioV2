@@ -118,7 +118,7 @@ const TopSeed = () => {
                         </HighlightBox>
                         <Illustration padding='0'>
                             <img src={ticaScreenshot} alt="" />
-                            <Description>A list of registered breeders on the website of The International Cat Association (TICA).</Description>
+                            <Description>A list of registered breeders on the website of <a href='https://tica.org/ragdoll-breeders' target='_blank'>The International Cat Association (TICA).</a></Description>
                         </Illustration>
                     </SubSection>
                     <SubSection>
@@ -130,7 +130,7 @@ const TopSeed = () => {
                         </HighlightBox>
                         <Illustration padding='0'>
                             <img src={catterScreenshot} alt="" />
-                            <Description>This breeder’s website only display a picture and a line of text for each available kitten. (From BlueEyedFrisco)</Description>
+                            <Description>This breeder’s website only display a picture and a line of text for each available kitten. (From <a href='https://www.blueeyedfrisco.com/available-kittens-cats' target='_blank'>BlueEyedFrisco</a>)</Description>
                         </Illustration>
                     </SubSection>
 
@@ -272,7 +272,7 @@ const TopSeed = () => {
 
                         <Illustration padding='0'>
                             <img src={priceChart} alt="" />
-                            <Description>Illustration of the price offering chart. The user is able to infer their price ranking among all the applicants by interaction with the chart.</Description>
+                            <Description>Illustrations of the price offering chart. The user is able to infer their price ranking among all the applicants by interaction with the chart.</Description>
                         </Illustration>
 
                     </SubSection>
