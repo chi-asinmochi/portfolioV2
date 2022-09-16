@@ -98,6 +98,7 @@ export const LabelStack = styled.div`
     display: flex;
     gap: 4em;
     flex-wrap: wrap;
+    margin-top: 2em;
     h5 {
         color: var(--blue700);
         font-weight: 500;
@@ -132,7 +133,7 @@ export const Divider = styled.div`
     height: 1px;
     width: 100%;
     background-color: white;
-    margin-top: -2em;
+    margin: -1em 0 1em 0;
     opacity: 0.1;
 `
 
