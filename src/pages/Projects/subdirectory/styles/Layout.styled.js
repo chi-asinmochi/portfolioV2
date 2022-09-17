@@ -78,6 +78,7 @@ export const Illustration = styled.div`
 export const Description = styled.p`
     font-size: 1rem;
     font-family: var(--font-italic);
+    font-style: italic;
     font-weight: 300;
     opacity: 0.7;
 

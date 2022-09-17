@@ -47,7 +47,7 @@ const TopSeed = () => {
                 
             })
     }, {
-        rootMargin: `-${window.innerHeight * 0.2}px 0px -${window.innerHeight * 0.40}px 0px`,
+        rootMargin: `-${window.innerHeight * 0.18}px 0px -${window.innerHeight * 0.40}px 0px`,
         threshold: 0.5,
     })
 
@@ -326,7 +326,7 @@ const TopSeed = () => {
 
                     <SubSection>
                         <MediumText>
-                        Although I am content with the concepts and design we came up with for the first release, I wasn't always certain about the decisions we made throughout the process, wishing we had a dedicated marketing or research team to provide insights. I suppose this is just one of the many challenges small start-ups like us need to deal with. That said, I am grateful we had these well-tested UX methodologies to follow such that even on a low budget, we can be confident that our ideas were examined and developed through critical thinking.
+                        Although we didn’t have a dedicated UX research or marketing team to provide insights for every step we took due to limited time and resources, I am grateful that we were able to to turn ideas into thoughtful designs in such a short period of time on a low budget.
                         </MediumText>
 
                     </SubSection>

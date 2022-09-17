@@ -7,11 +7,7 @@ import projectData from '../assets/data/Project.data';
 function Picker({ titleRefs, titleClickHandler, sideBarRef}) {
 
     // const scrollPos = useContext(ScrollContext)
-    useEffect(() => {
-        console.log('title rendered')
-    },);
-    
-    console.log('titles rendered')
+
 
     return (
 
