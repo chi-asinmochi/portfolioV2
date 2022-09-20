@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Portrait from './components/Portrait'
 import DynamicHeader from '../../components/DynamicHeader'
 import ButtonText from '../../components/ButtonText'
-import resume from './assets/Chi_Resume.pdf'
+import resume from './assets/Shawn-Chi-Resume.pdf'
 
 function About() {
 
