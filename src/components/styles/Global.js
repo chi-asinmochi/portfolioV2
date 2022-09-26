@@ -17,8 +17,8 @@ const GlobalStyles = createGlobalStyle`
         --big-logo: min(calc(1.8em + 5vw), 8em);
         --small-logo: calc(1.4em + 0.2vw);
         --cyan: #51F5FF;
-        --blue700: #739FAD;
-        --blue500: #AAD8E7;
+        --blue700: #A1BFD0;
+        --blue500: #BFDBFE;
         --blue800: #29334A;
         --pink: #FF49A1;
         --neon-green: #87FFDB;

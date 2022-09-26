@@ -134,13 +134,13 @@ export const Menu = styled.ul`
 
         a {
             text-decoration: none;
-            color: white;
-            opacity: 0.8;
+            color: var(--blue500);
+            opacity: 1;
             font-size: ${({ big }) => big? '1.1em' : '1em'};
             cursor: pointer;
             /* filter: blur(1px); */
             transition: 0.3s all;   
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: 0.05em
 
             
@@ -150,7 +150,7 @@ export const Menu = styled.ul`
             /* background-color: var(--cyan); */
             color: white;
             opacity: 1;
-            font-weight: 400;
+            /* font-weight: 400; */
 
             text-shadow: ${({big}) => big? 'var(--glitch-shadow)' : '' };
 
@@ -163,7 +163,7 @@ export const Menu = styled.ul`
 
             /* font-size: 1.1em; */
             /* letter-spacing: 0.2em; */
-            font-weight: 400;
+            /* font-weight: 400; */
             opacity: 1;
 
         }
