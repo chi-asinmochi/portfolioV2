@@ -2,9 +2,6 @@ import styled from "styled-components"
 
 export const Nav = styled.nav`
 /* width: 8em; */
-    display: ${({big}) => big? 'grid' : ''};
-    place-content: ${({big}) => big? 'center' : ''};
-    height: ${({big}) => big? '100%' : 'auto'};
     position: ${({big}) => big? '' : 'sticky'};
     top: 0;
     z-index: 10;
@@ -19,13 +16,14 @@ export const Nav = styled.nav`
 `
 export const Container = styled.div`
     margin-top: ${
-        ({ big }) => big ? 'min(calc(-200px + 8vw), -100px)' : '0'
+        ({ big }) => big ? '0' : '0'
     };
-    width: ${({big}) => big? 'auto' : '100%'};
+    width: ${({big}) => big? 'min-content' : '100%'};
     display: flex;
     flex-direction: ${({big}) => big? 'column' : 'row'};
     /* gap: 10px; */
     justify-content: ${({big}) => big? '' : 'space-between'};
+    gap: ${({big}) => big? '' : ''};
     padding: 1.5em var(--side-padding);
     .home-link {
         display: flex;
@@ -35,7 +33,7 @@ export const Container = styled.div`
     }
 `
 export const Logo = styled.div`
-    --Blur: ${({ big }) => big? 'blur(4px)' : 'blur(1px)'};
+    --Blur: ${({ big }) => big? 'blur(8px)' : 'blur(4px)'};
     & {
         margin: auto;
         position: relative;
@@ -50,11 +48,11 @@ export const Logo = styled.div`
         }
         30% {
             filter: blur(0px);
+
         }
         100% {
-            0% {
             filter: blur(0px);
-        }
+
         }
     }
     &::before, &::after {
@@ -116,7 +114,7 @@ export const Logo = styled.div`
 `
 
 export const Menu = styled.ul`
-    align-self: ${({big}) => big? 'flex-end' : 'center'};
+    align-self: ${({big}) => big? 'flex-start' : 'center'};
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -131,39 +129,53 @@ export const Menu = styled.ul`
     li {
         padding: 1em 2em;
         font-size: 1.1em;
+        --glitch-shadow: 1px 1px 0px var(--pink),
+                0px -1px 0px var(--cyan);     
 
         a {
             text-decoration: none;
             color: white;
-            opacity: 0.5;
+            opacity: 0.8;
+            font-size: ${({ big }) => big? '1.1em' : '1em'};
             cursor: pointer;
             /* filter: blur(1px); */
             transition: 0.3s all;   
             font-weight: 400;
+            letter-spacing: 0.05em
+
+            
         }
 
         a:hover:not(.current) {
             /* background-color: var(--cyan); */
             color: white;
             opacity: 1;
-            font-weight: 600;
+            font-weight: 400;
+
+            text-shadow: ${({big}) => big? 'var(--glitch-shadow)' : '' };
+
         }
         
         a.current {
             color: white;
-            text-shadow: 1px 1px 0px var(--pink),
-                1px 0px 0px var(--cyan);
+            text-shadow: var(--glitch-shadow);
+            /* letter-spacing: 0.1em; */
 
             /* font-size: 1.1em; */
             /* letter-spacing: 0.2em; */
-            filter: blur(0px);
-            font-weight: 600;
+            font-weight: 400;
             opacity: 1;
+
         }
     }
     li:last-of-type {
         padding-right: 0;
     }
+    li:first-of-type {
+        padding-left: 0;
+    }
+    
+
     
 
     @media (max-width: ${({ big }) => big? '0px':'800px'}) {

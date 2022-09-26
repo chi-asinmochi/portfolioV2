@@ -5,10 +5,12 @@ import { TextFragment } from './styles/TextFragment.styled'
 import { Nav, Container, Logo, Menu, Hamburger } from './styles/Nav.styled'
 import useSound from 'use-sound'
 import sounds from '../assets/audio/data-process.wav' 
+import TypeWriter from './TypeWriter'
 
 
 const letters = '*+-/@_$[%£!XO1&>'
 
+const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design of digital interfaces. This website is built with React JS and styled components. Please feel free to poke around. Cheers!'
 function DynamicHeader({ big, current }) {
 
     const [play] = useSound(sounds, {
@@ -103,6 +105,7 @@ function DynamicHeader({ big, current }) {
     return (
         <Nav big = {big}>
             <Container big={big} >
+
                 <Link to='/' className='home-link'>
                     <Logo className={current=='project'? 'current' : ''} big={big}
                         onMouseLeave={shuffleReady}
@@ -127,6 +130,9 @@ function DynamicHeader({ big, current }) {
                     </div>
 
                 </Menu>
+
+                {big? <TypeWriter text={typeWriterText} margin='2em 0 0 0'/> : null}
+
             </Container>
         </Nav>
     )

@@ -34,6 +34,7 @@ const GlobalStyles = createGlobalStyle`
         --font-inter: 'inter';
         --text-80: #ffffffba;
         --bg-gradient: linear-gradient(to bottom, #15151B , #372E72);
+        
 
         --rounded: min(calc(4px + 0.3vw), 6px);
         
