@@ -41,6 +41,7 @@ const TypeWriter = ({ text, margin }) => {
                 }, Math.random()*70 + 30)
             } else {
                 clearInterval(typeInterval)
+                boxRef.current.style.cursor = 'initial'
             }
         }
 
