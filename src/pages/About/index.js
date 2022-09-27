@@ -22,10 +22,31 @@ function About() {
             <Main>
                 <Portrait></Portrait>
                 <Wrapper>
-                    <h1>A UX Generalist</h1>
-                    <p>
-                        Being someone who enjoys doing a bit of everything, I have juggled between fields, from research to design to development. Sometimes it’s a curse and sometimes a blessing. Either way it’s shaped me into who I am today.
-                    </p>
+                    <Container>
+                        <BeveledBG/>
+                        <VFlex>
+                            <OutlinedText>Design</OutlinedText>
+                            <OutlinedText>X</OutlinedText>
+                            <OutlinedText>Engineering</OutlinedText>
+                        </VFlex>
+                        <VFlex>
+                            <Entry>
+                                <Label>Name</Label>
+                                <p>Shawn Chi</p>
+                            </Entry>
+                            <Entry>
+                                <Label>Name</Label>
+                                <p>Shawn Chi</p>
+                            </Entry>
+                            <Entry>
+                                <Label>Name</Label>
+                                <p>Shawn Chi</p>
+                            </Entry>
+                        </VFlex>
+
+
+                    </Container>
+
                     <ButtonText text={'Resume'} active={true} 
                         onClick={(e) => {
                             e.preventDefault()
@@ -75,7 +96,36 @@ const Wrapper = styled.div`
         width: 100%;
         padding-bottom: 15vh;
     }
+`
+const Container = styled.div`
 
+`
+const BeveledBG = styled.div`
+
+` 
+
+const OutlinedText = styled.h1`
+
+`
+
+const Label = styled.h4`
+
+`
+const VFlex = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+const HFlex = styled.div`
+    display: flex;
+    flex-direction: row;
+`
+const Entry = styled(HFlex)`
+    gap: 1em;
+    align-items: start;
+    line-height: 1.4;
+    p {
+        line-height: 1.4;
+    }
 `
 
 export default About
