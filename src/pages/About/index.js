@@ -273,7 +273,8 @@ const Bar = styled.div`
 `
 const BarLabelWrapper = styled(VFlex)`
     display: none;
-    /* margin-bottom: -6em; */
+    margin-top: 0.2em;
+    gap: 0.2em;
 
     span:nth-of-type(1) {
         color: var(--grey100);
