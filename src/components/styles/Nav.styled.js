@@ -134,7 +134,7 @@ export const Menu = styled.ul`
 
         a {
             text-decoration: none;
-            color: var(--blue500);
+            color: #E2E8F0;
             opacity: 1;
             font-size: ${({ big }) => big? '1.1em' : '1em'};
             cursor: pointer;
@@ -148,7 +148,7 @@ export const Menu = styled.ul`
 
         a:hover:not(.current) {
             /* background-color: var(--cyan); */
-            color: white;
+            color: pink;
             opacity: 1;
             /* font-weight: 400; */
 
