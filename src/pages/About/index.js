@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import Construction from '../../components/Construction'
 import styled from 'styled-components'
 import Portrait from './components/Portrait'
@@ -6,8 +6,38 @@ import DynamicHeader from '../../components/DynamicHeader'
 import ButtonText from '../../components/ButtonText'
 import resume from './assets/Shawn-Chi-Resume.pdf'
 
+
 function About() {
 
+    const mobileLabelRef = useRef(null)
+    const barLabelRefs = useRef([])
+
+    useEffect(() => {
+
+        const checkLabelWidth = () => {
+
+            barLabelRefs.current.forEach(el => el.style.display = 'initial')
+            mobileLabelRef.current.style.display = 'none'
+
+            barLabelRefs.current.forEach(el => {
+                let labelWidth = el.getBoundingClientRect().width
+                let barWidth = el.parentNode.getBoundingClientRect().width
+                console.log(labelWidth, barWidth)
+
+                if (labelWidth > barWidth) {
+                    barLabelRefs.current.forEach(el => {el.style.display = 'none'})
+                    mobileLabelRef.current.style.display = 'flex'
+                }
+            })
+        }
+
+        checkLabelWidth()
+        window.onresize = () => {
+            checkLabelWidth()
+        }
+
+    }, [])
+    
 
     return (
         <>
@@ -55,15 +85,20 @@ function About() {
                             </Entry>
                             <Entry>
                                 <Label>Specialization</Label>
-                                <BarChart>
-                                    <Bar/>
-                                    <Bar/>
-                                    <Bar/>
-                                </BarChart>
+                                <BarChartWrapper>
+                                    <BarChart>
+                                        <Bar><span ref={(el) => {barLabelRefs.current[0] = el}}>Research</span></Bar>
+                                        <Bar><span ref={(el) => {barLabelRefs.current[1] = el}}>Design</span></Bar>
+                                        <Bar><span ref={(el) => {barLabelRefs.current[2] = el}}>Front-end</span></Bar>
+                                    </BarChart>
+                                    <BarLabelWrapper ref={mobileLabelRef} >
+                                        <span>Research</span>
+                                        <span>Design</span>
+                                        <span>Front-end</span>
+                                    </BarLabelWrapper>
+                                </BarChartWrapper>
                             </Entry>
                         </Entries>
-
-
                     </Container>
 
                     <ButtonText text={'PDF Resume'} active={true} alignment={'end'}
@@ -195,29 +230,61 @@ const Label = styled.h4`
     text-align: end;
     color: var(--grey100);
 `
+const BarChartWrapper = styled(VFlex)`
+    width: 100%;
+    /* gap: 2em; */
+`
+
 const BarChart = styled(HFlex)`
-    align-self: center;
+    /* align-self: center; */
+    margin: 0.6em 0 0.6em 0;
     gap: 4px;
     width: 100%;
     
     div:nth-of-type(1) {
         width: 15%;
         background: var(--grey100);
+        color: var(--grey100);
     }
     div:nth-of-type(2) {
         width: 50%;
         background: var(--neon-green);
+        color: var(--neon-green);
     }
     div:nth-of-type(3) {
         width: 35%;
         background: var(--purple500);
+        color: var(--purple500);
     }
 `
 const Bar = styled.div`
     background: var(--blue700);
     height: 3px;
     border-radius: 6px;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: 0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: noWrap;
+    }
 `
+const BarLabelWrapper = styled(VFlex)`
+    display: none;
+    /* margin-bottom: -6em; */
+
+    span:nth-of-type(1) {
+        color: var(--grey100);
+    }
+    span:nth-of-type(2) {
+        color: var(--neon-green);
+    }
+    span:nth-of-type(3) {
+        color: var(--purple500);
+    }
+` 
 
 
 export default About
