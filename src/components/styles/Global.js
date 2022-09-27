@@ -22,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
         --blue800: #29334A;
         --pink: #FF49A1;
         --neon-green: #87FFDB;
+        --purple200: #DDD6FE;
         --purple500: #BB83CF;
         --purple700: #59576F;
         --bg-color: #18242c;
@@ -34,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
         --font-inter: 'inter';
         --text-80: #ffffffba;
         --bg-gradient: linear-gradient(to bottom, #15151B , #372E72);
-        
+        --grey100: #F3F4F6;
 
         --rounded: min(calc(4px + 0.3vw), 6px);
         

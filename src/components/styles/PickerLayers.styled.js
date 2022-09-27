@@ -70,7 +70,7 @@ export const ProjectTitle = styled.h5`
     font-weight: 400;
     /* font-size: 1.1rem; */
     white-space: nowrap;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: all 0.6s;
     pointer-events: auto;
     cursor: pointer;
