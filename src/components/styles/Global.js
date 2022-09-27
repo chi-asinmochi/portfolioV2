@@ -46,7 +46,7 @@ const GlobalStyles = createGlobalStyle`
         background-image: linear-gradient(to bottom, var(--bg-color), #0B2039);
         width: 100vw;
         height: 100vh;
-        overflow-x: clip;
+        overflow-x: hidden;
         font-family: var(--font-inter), monospace;
         color: white;
         font-weight: 300;
