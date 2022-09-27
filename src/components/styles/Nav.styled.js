@@ -148,13 +148,14 @@ export const Menu = styled.ul`
 
         a:hover:not(.current) {
             /* background-color: var(--cyan); */
-            color: pink;
             opacity: 1;
             /* font-weight: 400; */
-
-            text-shadow: ${({big}) => big? 'var(--glitch-shadow)' : '' };
-
+            color: pink;
+            filter: drop-shadow(2px 4px 8px #ffffff2c);
+            text-shadow: var(--glitch-shadow);
         }
+
+        
         
         a.current {
             color: white;

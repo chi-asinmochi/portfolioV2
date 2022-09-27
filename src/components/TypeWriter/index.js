@@ -43,6 +43,7 @@ const TypeWriter = ({ text, margin }) => {
                 clearInterval(typeInterval)
                 boxRef.current.style.cursor = 'initial'
                 injectionRef.current.classList.add('done')
+
             }
         }
 
@@ -82,15 +83,17 @@ const Box = styled.div`
         color: var(--blue500);
         font-family: var(--font-cyber);
         font-weight: 300;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.1em;
         line-height: 200%;
         font-size: 0.9em;
-        transition: 0.6s all;
+        white-space: pre-line;
     }
     p.done {
-        opacity: 0.7;
+        /* color: var(--blue700); */
+        opacity: 0.6;
+        transition: 1s all;
     }
-    p:hover {
+    p.done:hover {
         opacity: 1;
     }
 `
@@ -124,7 +127,7 @@ const TypeHead = styled.span`
             opacity: 0;
         }
         100% {
-            opacity: 0.8;
+            opacity: 1;
         }
     }
 `

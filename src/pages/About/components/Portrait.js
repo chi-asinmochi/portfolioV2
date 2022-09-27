@@ -37,9 +37,7 @@ const Portrait = () => {
 
     }
 
-    useEffect(() => {
-        console.log(blur)
-    }, [blur])
+
     
 
 
