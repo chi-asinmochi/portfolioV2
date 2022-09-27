@@ -175,7 +175,7 @@ const BeveledBG = styled.div`
 ` 
 
 const OutlinedText = styled.h1`
-    font-size: 5em;
+    font-size: min(calc(3em + 1vw),5em);
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke-width: 1px;
@@ -188,7 +188,7 @@ const OutlinedText = styled.h1`
 const HeadingWrapper = styled(VFlex)`
     position: relative;
     top: 0;
-    left: -3.5em;
+    left: max(calc(-2em - 2vw), -3.5em);
     line-height: 0.6;
     margin-bottom: 1em;
 
@@ -197,11 +197,11 @@ const HeadingWrapper = styled(VFlex)`
     }
     h1:nth-of-type(2) {
         -webkit-text-stroke-color: var(--blue700);
-        font-size: 7em;
+        font-size: min(calc(5em + 2vw),7em);
         font-weight: 900;
         position: absolute;
         z-index: -1;
-        left: 2.5em;
+        left: 2em;
         top: 0.3em;
     }
     h1:nth-of-type(3) {
