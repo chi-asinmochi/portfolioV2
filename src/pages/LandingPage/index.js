@@ -56,7 +56,7 @@ const NeonFrame = styled.div`
     animation: flicker 3s infinite alternate;
 
     @media (max-width: 450px) {
-        height: 90%;
+        height: 98%;
         width: 98%;
     }
 
