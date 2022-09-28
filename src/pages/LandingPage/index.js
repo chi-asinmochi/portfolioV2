@@ -55,6 +55,11 @@ const NeonFrame = styled.div`
     filter: drop-shadow(0px 0px 16px var(--pink));
     animation: flicker 3s infinite alternate;
 
+    @media (max-width: 450px) {
+        height: 90%;
+        width: 98%;
+    }
+
 
     @keyframes flicker {
         0% {
