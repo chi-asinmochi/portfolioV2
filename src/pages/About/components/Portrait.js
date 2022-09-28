@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { Frame } from '../styled'
+import { Frame } from '../styled/Portrait.styled'
 
 import selfie2 from '../assets/portrait-pink.png'
 

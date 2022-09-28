@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import mask from './assets/mask.svg'
-import halo from './assets/halo.svg'
+import mask from '../assets/mask.svg'
+import halo from '../assets/halo.svg'
 
 export const Frame = styled.div`
     /* --dimensions: calc(300px + 20vw);

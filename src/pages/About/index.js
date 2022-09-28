@@ -1,20 +1,28 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Construction from '../../components/Construction'
 import styled from 'styled-components'
 import Portrait from './components/Portrait'
 import DynamicHeader from '../../components/DynamicHeader'
 import ButtonText from '../../components/ButtonText'
 import resume from './assets/Shawn-Chi-Resume.pdf'
+import { Container, Entries, Entry, BeveledBG, HeadingWrapper, OutlinedText, Label, BarLabelWrapper, Bar, BarChart, BarChartWrapper, } from './styled/MyStats.styled'
 
 
 function About() {
 
     const mobileLabelRef = useRef(null)
     const barLabelRefs = useRef([])
+    const containerRef = useRef(null)
+    const [wrap, setWrap] = useState(false)
 
     useEffect(() => {
 
         const checkLabelWidth = () => {
+
+            setWrap(false)
+            if (containerRef.current.getBoundingClientRect().width < 450) {
+                setWrap(true)
+            } 
 
             barLabelRefs.current.forEach(el => el.style.display = 'initial')
             mobileLabelRef.current.style.display = 'none'
@@ -22,13 +30,14 @@ function About() {
             barLabelRefs.current.forEach(el => {
                 let labelWidth = el.getBoundingClientRect().width
                 let barWidth = el.parentNode.getBoundingClientRect().width
-                console.log(labelWidth, barWidth)
 
                 if (labelWidth > barWidth) {
                     barLabelRefs.current.forEach(el => {el.style.display = 'none'})
                     mobileLabelRef.current.style.display = 'flex'
+
                 }
             })
+
         }
 
         checkLabelWidth()
@@ -52,14 +61,14 @@ function About() {
             <Main>
                 <Portrait></Portrait>
                 <Wrapper>
-                    <Container>
+                    <Container ref={containerRef}>
                         <BeveledBG/>
                         <HeadingWrapper>
                             <OutlinedText>Design</OutlinedText>
                             <OutlinedText>X</OutlinedText>
                             <OutlinedText>Engineering</OutlinedText>
                         </HeadingWrapper>
-                        <Entries>
+                        <Entries wrapping = {wrap? true : false}>
                             <Entry>
                                 <Label>Name</Label>
                                 <p>Shawn Chi</p>
@@ -114,14 +123,6 @@ function About() {
     )
 }
 
-const VFlex = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-const HFlex = styled.div`
-    display: flex;
-    flex-direction: row;
-`
 
 const Main = styled.main`
     /* background: yellow; */
@@ -159,133 +160,6 @@ const Wrapper = styled.div`
         padding-bottom: 15vh;
     }
 `
-const Container = styled.div`
-    position: relative;
-    padding: 3em 1.5em;
-
-`
-const BeveledBG = styled.div`
-    background: linear-gradient(to bottom, rgba(123, 191, 253, 0.2), rgba(200, 255, 242, 0));
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(3em 0%, 100% 0, 100% 100%, 0 100%, 0% 3em);
-` 
-
-const OutlinedText = styled.h1`
-    font-size: min(calc(3em + 1vw),5em);
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-
-`
-
-
-
-const HeadingWrapper = styled(VFlex)`
-    position: relative;
-    top: 0;
-    left: max(calc(-2em - 2vw), -3.5em);
-    line-height: 0.6;
-    margin-bottom: 1em;
-
-    h1:nth-of-type(1) {
-        -webkit-text-stroke-color: var(--neon-green);
-    }
-    h1:nth-of-type(2) {
-        -webkit-text-stroke-color: var(--blue700);
-        font-size: min(calc(5em + 2vw),7em);
-        font-weight: 900;
-        position: absolute;
-        z-index: -1;
-        left: 2em;
-        top: 0.3em;
-    }
-    h1:nth-of-type(3) {
-        -webkit-text-stroke-color: var(--purple200);
-    }
-`
-const Entries = styled(VFlex)`
-    gap: 0.8em;
-`
-
-const Entry = styled(HFlex)`
-    gap: 1.5em;
-    align-items: start;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    p {
-        line-height: 1.4;
-        color: var(--blue500);
-    }
-`
-const Label = styled.h4`
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    width: 8.5em;
-    flex-shrink: 0;
-    text-align: end;
-    color: var(--grey100);
-`
-const BarChartWrapper = styled(VFlex)`
-    width: 100%;
-    /* gap: 2em; */
-`
-
-const BarChart = styled(HFlex)`
-    /* align-self: center; */
-    margin: 0.6em 0 0.6em 0;
-    gap: 4px;
-    width: 100%;
-    
-    div:nth-of-type(1) {
-        width: 15%;
-        background: var(--grey100);
-        color: var(--grey100);
-    }
-    div:nth-of-type(2) {
-        width: 50%;
-        background: var(--neon-green);
-        color: var(--neon-green);
-    }
-    div:nth-of-type(3) {
-        width: 35%;
-        background: var(--purple500);
-        color: var(--purple500);
-    }
-`
-const Bar = styled.div`
-    background: var(--blue700);
-    height: 3px;
-    border-radius: 6px;
-    position: relative;
-
-    span {
-        position: absolute;
-        top: 0.5em;
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: noWrap;
-    }
-`
-const BarLabelWrapper = styled(VFlex)`
-    display: none;
-    margin-top: 0.2em;
-    gap: 0.2em;
-
-    span:nth-of-type(1) {
-        color: var(--grey100);
-    }
-    span:nth-of-type(2) {
-        color: var(--neon-green);
-    }
-    span:nth-of-type(3) {
-        color: var(--purple500);
-    }
-` 
 
 
 export default About
