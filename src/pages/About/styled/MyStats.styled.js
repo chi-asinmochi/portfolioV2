@@ -86,6 +86,9 @@ export const Entries = styled(VFlex)`
         h4 {
             text-align: ${({ wrapping }) => wrapping? 'start' : 'end'};
         }
+        p {
+            width: ${({ wrapping }) => wrapping? '100%' : 'auto'};
+        }
     }
 `
 

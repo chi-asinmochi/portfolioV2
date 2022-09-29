@@ -90,7 +90,7 @@ function About() {
                             </Entry>
                             <Entry>
                                 <Label>Bio</Label>
-                                <p>An experienced designer with solid understanding of UX principles and research methodologies. Skilled in HTML5, Cascading Style Sheets (CSS), Modern Javascript, and React.</p>
+                                <p>An experienced designer with a solid understanding of UX principles and research methodologies. Skilled in HTML5, Cascading Style Sheets (CSS), Modern Javascript, and React.</p>
                             </Entry>
                             <Entry>
                                 <Label>Specialization</Label>
