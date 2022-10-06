@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     } */
     html {
         font-size: min(14px, calc(11px + 0.4vw));
-        --big-logo: min(calc(1.8em + 5vw), 8em);
+        --big-logo: min(calc(1.8em + 4vw), 6em);
         --small-logo: calc(1.4em + 0.2vw);
         --cyan: #51F5FF;
         --blue700: #A1BFD0;

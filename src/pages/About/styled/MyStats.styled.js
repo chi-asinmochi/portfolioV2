@@ -105,6 +105,7 @@ export const Entry = styled(HFlex)`
 `
 export const Label = styled.h4`
     font-size: 1rem;
+    line-height: 2;
     letter-spacing: 0.05em;
     width: 8.5em;
     flex-shrink: 0;

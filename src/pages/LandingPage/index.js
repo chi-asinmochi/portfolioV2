@@ -45,11 +45,12 @@ const Wrapper = styled.div`
 `
 const NeonFrame = styled.div`
     position: fixed;
+    z-index: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     border: 4px var(--grey100) solid;
     border-radius: 8px;
     filter: drop-shadow(0px 0px 16px var(--pink));

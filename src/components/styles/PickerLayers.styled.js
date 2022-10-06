@@ -68,9 +68,10 @@ export const Ul = styled.ul`
 export const ProjectTitle = styled.h5`
 
     font-weight: 400;
+    letter-spacing: 0.05em;
     /* font-size: 1.1rem; */
     white-space: nowrap;
-    opacity: 0.7;
+    opacity: 0.8;
     transition: all 0.6s;
     pointer-events: auto;
     cursor: pointer;
@@ -80,7 +81,8 @@ export const ProjectTitle = styled.h5`
     }
     &.current {
         opacity: 1;
-        transform: translateX(3rem) scale(1.2);
+        color: white;
+        transform: translateX(2rem) scale(1.2);
         transform-origin: left;
         font-weight: 700;
         position: relative;
