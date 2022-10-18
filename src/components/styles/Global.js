@@ -50,9 +50,11 @@ const GlobalStyles = createGlobalStyle`
         font-family: var(--font-inter), monospace;
         color: white;
         font-weight: 300;
+        display: grid;
+        justify-content: center;
     }
     #root {
-        width: 100%;
+        width: min(100vw, 1600px);
         height: 100%;
         overflow: scroll;
         scroll-behavior: smooth;

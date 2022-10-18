@@ -25,6 +25,7 @@ export default Construction;
 
 const Frame = styled.div`
     position: absolute;
+    width: min(100%, 1400px);
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -67,7 +68,7 @@ const Caution = styled.h1`
     white-space: nowrap;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: min(calc(0.6em + 5.5vw), 10em);
+    font-size: min(calc(0.6em + 5.5vw), 8em);
     padding: min(2vw, 0.5em);
     color: var(--caution-yellow);
     background: var(--bg-color);

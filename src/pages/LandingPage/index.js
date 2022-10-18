@@ -49,7 +49,7 @@ const NeonFrame = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 80%;
+    width: min(80%, 1200px);
     height: 80%;
     border: 4px var(--grey100) solid;
     border-radius: 8px;
