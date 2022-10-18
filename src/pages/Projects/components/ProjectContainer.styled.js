@@ -14,8 +14,8 @@ export const ProjectContainer = styled.div`
     /* background: pink; */
     p {
         /* margin-top: 2em; */
-        color: var(--text-80);
-        font-size: 1rem;
+        color: white;
+        font-size: 0.9rem;
         /* line-height: 1.5;    */
     }
     @media (max-width: 800px) {

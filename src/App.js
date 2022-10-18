@@ -39,7 +39,7 @@ return (
             
                 <Route path="/projects" >
                     <Route index element={<Projects/>}/>
-                    <Route path='topseed' element={<TopSeed/>}/>
+                    <Route path='topseed' element={<TopSeed style={{display: 'none'}}/>}/>
                     {/* <DynamicHeader big={false} current='project'></DynamicHeader> */}
                     
                 </Route>

@@ -59,7 +59,6 @@ const Frame = styled.div`
         ::before {
             animation: infinite-right linear 120s infinite;
         }
-        
     }
 `
 

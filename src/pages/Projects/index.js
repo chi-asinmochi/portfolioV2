@@ -164,13 +164,7 @@ export default Projects
 
 const PageLayout = styled.div`
     padding: 0 var(--side-padding);
-    /* display: flex; */
-    /* overflow: hidden; */
 
-    /* scroll-padding-top: 15vh; */
-    /* display: none; */
-    /* height: 100vh; */
-    /* overflow: scroll; */
 
 ` 
 

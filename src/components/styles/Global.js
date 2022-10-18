@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
         --cyan: #51F5FF;
         --blue700: #A1BFD0;
         --blue500: #BFDBFE;
+        --blue400: #BFDBFE;
         --blue800: #29334A;
         --pink: #FF49A1;
         --neon-green: #87FFDB;
@@ -36,6 +37,10 @@ const GlobalStyles = createGlobalStyle`
         --text-80: #ffffffba;
         --bg-gradient: linear-gradient(to bottom, #15151B , #372E72);
         --grey100: #F3F4F6;
+        --grey800: #1F2937;
+        --blueGrey300: #CBD5E1;
+        --blueGrey500: #64748B;
+        --blueGrey600: #475569;
 
         --rounded: min(calc(4px + 0.3vw), 6px);
         
@@ -46,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
         background-image: linear-gradient(to bottom, var(--bg-color), #0B2039);
         width: 100vw;
         height: 100vh;
-        overflow-x: hidden;
+        overflow: hidden;
         font-family: var(--font-inter), monospace;
         color: white;
         font-weight: 300;
@@ -55,8 +60,9 @@ const GlobalStyles = createGlobalStyle`
     }
     #root {
         width: min(100vw, 1600px);
-        height: 100%;
+        /* height: 100%; */
         overflow: scroll;
+        overflow-x: hidden;
         scroll-behavior: smooth;
         /* scroll-snap-stop: always; */
     }
@@ -88,6 +94,7 @@ const GlobalStyles = createGlobalStyle`
     }
     p {
         line-height: 1.6;
+        font-weight: 300;
     }
     
     @keyframes skeleton {
