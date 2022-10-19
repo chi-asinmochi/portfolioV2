@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
         --blueGrey600: #475569;
         --max-content-width: 1800px;
 
-        --rounded: min(calc(4px + 0.3vw), 6px);
+        --rounded: min(calc(4px + 0.3vw), 8px);
         
         @media (max-width: 1000px) {
             --side-padding-sm: var(--side-padding);

@@ -26,6 +26,7 @@ import application from '../TopSeed/assets/application.svg'
 import bid from '../TopSeed/assets/bid.svg'
 import congrats from '../TopSeed/assets/congrats.svg'
 import progress from '../TopSeed/assets/progress.svg'
+import catProfile from '../TopSeed/assets/cat-profile.svg'
 
 
 
@@ -39,7 +40,7 @@ const TopSeed = () => {
         <Main>
             <Hero>
                 <VFlex spacing={'4em'} style={{width: '18em'}}>
-                    <img src={logo}  style={{width: '6em', marginBottom: '-2em'}} alt="" />
+                    <img src={logo}  style={{width: '6em', margin: '0 0 -2em -1em'}} alt="" />
                     <VFlex spacing={'0.2em'} >
                         <h1>TopSeed</h1>
                         <h3>C2C Pet eCommerce of pedigree kittens</h3>
@@ -56,7 +57,7 @@ const TopSeed = () => {
                     </VFlex>
                 </VFlex>
                 <HeroImg>
-                    <img src={cover} alt="" />
+                    <img src={catProfile} alt="" />
                 </HeroImg>
             </Hero>
 
@@ -104,7 +105,7 @@ const TopSeed = () => {
             </Improve>
 
             <SummarySection red={false}>
-                <h1>Solution</h1>
+                <h1>Solutions</h1>
                 <ol>
                     <li>
                         <div><span>1</span></div>

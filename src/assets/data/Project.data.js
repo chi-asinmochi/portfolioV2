@@ -6,7 +6,7 @@
 
 //Topseed
 import flowChart from '../../pages/Projects/subdirectory/TopSeed/assets/flow-diagram.png'
-import tsCover from '../../pages/Projects/subdirectory/TopSeed/assets/cat-profile-tiny.png'
+import tsCover from '../../pages/Projects/subdirectory/TopSeed/assets/cat-profile.svg'
 
 //Fraud mgm
 import agents from '../img/fraudMgm/agents-tiny.png'

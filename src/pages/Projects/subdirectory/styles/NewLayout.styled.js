@@ -52,16 +52,15 @@ export const Picture = styled.div`
         width: 100%;
         /* height: 110%; */
         object-fit: fill;
-        border-radius: 12px;
+        border-radius: var(--rounded);
     }
 `
 
 export const Hero = styled.section`
     width: 100%;
     background-color: var(--grey100);
-    border-radius: 12px;
-    padding: 6vw;
-    padding-top: 2em;
+    border-radius: var(--rounded);
+    padding: 4vw 6vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -189,8 +188,9 @@ export const CopyText = styled(Flex)`
 `
 export const SummarySection = styled.section`
     background-color: ${({ red }) => red? '#FFBEDE1A' : '#87FFDB0D'};
-    border-radius: 12px;
+    border-radius: var(--rounded);
     padding: 6em 15vw;
+    min-height: 80vh;
 
 
 
@@ -199,6 +199,7 @@ export const SummarySection = styled.section`
         margin-bottom: 1em;
         position: relative;
         width: 100%;
+        /* max-width: 800px; */
         text-align: ${({ red }) => red? 'start' : 'end'};
 
 
@@ -218,6 +219,7 @@ export const SummarySection = styled.section`
         
     }
     ol {
+        /* max-width: 800px; */
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -284,7 +286,7 @@ export const InfoArchSection = styled.section`
     padding-bottom: 1em;
     background-color: #1F2937;
 
-    border-radius: 12px;
+    border-radius: var(--rounded);
     gap: 4em;
     display: flex;
     flex-direction: column;
@@ -312,10 +314,10 @@ export const InfoArchSection = styled.section`
 `
 export const VisualSection = styled.section`
     padding: 4em;
-    padding-bottom: 2em;
+    padding-bottom: 4em;
     background-color: var(--grey100);
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: var(--rounded);
     color: var(--grey800);
     position: relative;
     display: flex;
@@ -434,7 +436,7 @@ export const ApplicationSectionOne = styled.section`
     padding-top: 8em;
     background-color: #1F2937;
     overflow: clip;
-    border-radius: 12px;
+    border-radius: var(--rounded);
     gap: 4em;
     display: flex;
     flex-direction: column;
