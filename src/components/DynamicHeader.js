@@ -10,8 +10,8 @@ import TypeWriter from './TypeWriter'
 
 const letters = '*+-/@_$[%£!XO1&>'
 
-const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design of digital interfaces. This website is built from scratch with React and styled-components. Bear in mind it is still a work in progress but please feel free to poke around nonetheless. Cheers!'
-function DynamicHeader({ big, current }) {
+const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design of digital interfaces. Fun fact, this website is built from scratch by me with React. While it\'s still a WIP, please feel free to poke around nonetheless. Cheers!'
+function DynamicHeader({ big, current, smPadding }) {
 
     const [play] = useSound(sounds, {
         sprite: {
@@ -104,7 +104,7 @@ function DynamicHeader({ big, current }) {
 
     return (
         <Nav big = {big}>
-            <Container big={big} >
+            <Container big={big} smPadding={smPadding}>
 
                 <Link to='/' className='home-link'>
                     <Logo className={current=='project'? 'current' : ''} big={big}

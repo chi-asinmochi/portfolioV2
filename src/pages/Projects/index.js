@@ -164,6 +164,8 @@ export default Projects
 
 const PageLayout = styled.div`
     padding: 0 var(--side-padding);
+    width: 100%;
+    max-width: var(--max-content-width);
 
 
 ` 

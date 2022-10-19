@@ -15,7 +15,7 @@ export const ProjectContainer = styled.div`
     p {
         /* margin-top: 2em; */
         color: white;
-        font-size: 0.9rem;
+        /* font-size: 1rem; */
         /* line-height: 1.5;    */
     }
     @media (max-width: 800px) {

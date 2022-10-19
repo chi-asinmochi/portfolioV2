@@ -110,7 +110,7 @@ const Main = styled.main`
     justify-content: flex-end;
     position: relative;
     padding-top: 10vh;
-
+    max-width: var(--max-content-width);
     /* overflow: clip; */
 
     @media (max-width: 800px) {

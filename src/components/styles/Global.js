@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
         --bg-color: #18242c;
         --bg-trans: #15151B00;
         --side-padding: 10vw;
+        --side-padding-sm: 5vw;
         --caution-yellow: #F8D34B;
         --font-cyber: 'Orbitron';
         --font-mono: 'Overpass Mono';
@@ -41,10 +42,13 @@ const GlobalStyles = createGlobalStyle`
         --blueGrey300: #CBD5E1;
         --blueGrey500: #64748B;
         --blueGrey600: #475569;
+        --max-content-width: 1800px;
 
         --rounded: min(calc(4px + 0.3vw), 6px);
         
-        
+        @media (max-width: 1000px) {
+            --side-padding-sm: var(--side-padding);
+        }
     }
     body {
         background: black;
@@ -59,12 +63,15 @@ const GlobalStyles = createGlobalStyle`
         justify-content: center;
     }
     #root {
-        width: min(100vw, 1600px);
+        width: 100vw;
         /* height: 100%; */
         overflow: scroll;
         overflow-x: hidden;
         scroll-behavior: smooth;
         /* scroll-snap-stop: always; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     h1, h2, h3, h4, h5 {
         font-family: var(--font-cyber), sans-serif;

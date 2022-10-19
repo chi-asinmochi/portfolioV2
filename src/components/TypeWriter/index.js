@@ -38,7 +38,7 @@ const TypeWriter = ({ text, margin }) => {
             if (i+1 < str.length) {
                 typeInterval =  setTimeout(() => {
                     type(str, i + 1)
-                }, Math.random()*60 + 20)
+                }, Math.random()*60 + 15)
             } else {
                 clearInterval(typeInterval)
                 boxRef.current.style.cursor = 'initial'

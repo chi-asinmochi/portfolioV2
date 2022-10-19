@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const Flex = styled.div`
     display: flex;
-    gap: ${({spacing}) => spacing};
-    flex-direction: ${({direction}) => direction};
+    gap: ${({ spacing }) => spacing};
+    flex-direction: ${({ direction }) => direction};
 `
 
 export const VFlex = styled(Flex)`

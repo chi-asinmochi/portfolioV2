@@ -6,6 +6,9 @@ export const Nav = styled.nav`
     top: 0;
     z-index: 10;
     width: ${({big}) => big? 'auto' : '100%'};
+    /* display: grid;
+    place-items: center; */
+    max-width: var(--max-content-width);
     background-image: ${({big}) => big? `transparent` : 'linear-gradient(to bottom, var(--bg-color), var(--bg-trans))'};
     @media (max-width: 800px) {
         padding-top: 4vh;
@@ -15,6 +18,7 @@ export const Nav = styled.nav`
 /* background-color: red; */
 `
 export const Container = styled.div`
+    max-width: var(--max-content-width);
     margin-top: ${
         ({ big }) => big ? '0' : '0'
     };
@@ -24,7 +28,7 @@ export const Container = styled.div`
     /* gap: 10px; */
     justify-content: ${({big}) => big? '' : 'space-between'};
     gap: ${({big}) => big? '' : ''};
-    padding: 1.5em var(--side-padding);
+    padding: 1.5em ${({ smPadding }) => smPadding? 'var(--side-padding-sm)' : 'var(--side-padding)'} ;
     .home-link {
         display: flex;
     }
