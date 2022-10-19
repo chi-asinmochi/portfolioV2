@@ -314,7 +314,7 @@ export const VisualSection = styled.section`
     padding: 4em;
     padding-bottom: 2em;
     background-color: var(--grey100);
-    overflow: clip;
+    overflow: hidden;
     border-radius: 12px;
     color: var(--grey800);
     position: relative;
