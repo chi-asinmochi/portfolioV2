@@ -103,7 +103,7 @@ const TopSeed = () => {
                 </CopyText>
             </Improve>
 
-            <SummarySection red={false} style={{minHeight: '80vh', display: 'grid', placeContent: 'center'}}>
+            <SummarySection red={false}>
                 <h1>Solution</h1>
                 <ol>
                     <li>
@@ -215,7 +215,7 @@ const TopSeed = () => {
             </ApplicationSectionTwo>
             <EndingSection>
                 <VFlex>
-                    <h1>Some Self reflection</h1>
+                    <h2>Some Self reflection</h2>
                     <p>The project was a good reminder to never jump into design too early.</p>
                 </VFlex>
                 <HFlex>

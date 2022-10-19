@@ -23,7 +23,8 @@ export const Main = styled.main`
         line-height: 1.5;
     }
     h1 {
-        font-size: 3em;
+        font-size: 3.8em;
+        font-weight: 800;
     }
     h2 {
         font-size: 2em;
@@ -56,6 +57,7 @@ export const Picture = styled.div`
 `
 
 export const Hero = styled.section`
+    width: 100%;
     background-color: var(--grey100);
     border-radius: 12px;
     padding: 6vw;
@@ -191,6 +193,7 @@ export const SummarySection = styled.section`
     padding: 6em 15vw;
 
 
+
     h1 {
         color: ${({ red }) => red? '#D3BCDB' : '#87FFDB'};
         margin-bottom: 1em;
@@ -198,17 +201,21 @@ export const SummarySection = styled.section`
         width: 100%;
         text-align: ${({ red }) => red? 'start' : 'end'};
 
+
         &::before {
             content: '';
             position: absolute;
             background-image: url(${({ red }) => red? redBand : greenBand});
             background-repeat: no-repeat;
+            background-position: ${({ red }) => red? 'left' : 'right'};
             width: 100%;
-            height: 1.5em;
+            height: 1em;
             left: ${({ red }) => red? 0 : 'unset'};
             right: ${({ red }) => red? 'unset' : 0};
-            bottom: 0.2em;
+            /* transform: translateX(-100%); */
+            bottom: 0.3em;
         }
+        
     }
     ol {
         list-style: none;
