@@ -8,6 +8,10 @@
 import flowChart from '../../pages/Projects/subdirectory/TopSeed/assets/flow-diagram.png'
 import tsCover from '../../pages/Projects/subdirectory/TopSeed/assets/cat-profile.svg'
 
+//Segment
+import segment from '../img/segment/video.MP4'
+import segmentStatic from '../img/segment/segment-static.svg'
+
 //Fraud mgm
 import agents from '../img/fraudMgm/agents-tiny.png'
 import analytics from '../img/fraudMgm/analytics.png'
@@ -48,20 +52,25 @@ const projectData = [
     },
     {
         id: 1,
-        title: '3D Object',
+        title: 'Segment',
         content: {
-            type:'iframe',
-            class: 'spline',
-            cover: treeFlame,
-            src: 'https://my.spline.design/tree1-5982d22f322ef6c7b085c67988eb7d7f/',
+            type: 'gif',
+            cover: segment,
+            staticCover: segmentStatic,
+            src: segment,
         },
-        badge: ['3D Design', 'Interactive'],
-        slides: null,
-        action: 'none',
+        badge: ['Design System'],
+        // slides: [
+        //     {image: home, text: '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
+        //     {image: homeChart, text: '2. skldfjgh;esrhfg;jkf;jalsrh;gfjhsd;jkfb;jgshdred et. Ac n At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
+        //     {image: cover, text: '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
+        //     {image: blocks, text: '4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
+        // ],
+        action: 'coming',
     },
     {
         id: 2,
-        title: 'Fraud Management App',
+        title: 'FICO',
         content: {
             type: 'image',
             cover: agents,
@@ -75,10 +84,24 @@ const projectData = [
             {image: analytics, text: '4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
         ],
         action: 'coming',
+
     },
     {
         id: 3,
-        title: 'Card Animation',
+        title: 'Wildfire',
+        content: {
+            type:'iframe',
+            class: 'spline',
+            cover: treeFlame,
+            src: 'https://my.spline.design/tree1-5982d22f322ef6c7b085c67988eb7d7f/',
+        },
+        badge: ['3D Design', 'Interactive'],
+        slides: null,
+        action: 'none',
+    },
+    {
+        id: 4,
+        title: 'Retool',
         content: {
             type: 'iframe',
             class: 'codePen',
@@ -91,7 +114,7 @@ const projectData = [
         action: 'none',
     },
     {
-        id: 4,
+        id: 5,
         title: 'Contract Tracing App',
         content: {
             type: 'video',

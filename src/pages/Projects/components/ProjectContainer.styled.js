@@ -70,16 +70,21 @@ export const ProjectCover = styled.div`
     /* height: 500px;  */
     transition: all 0.6s;
 
+    > video {
+        transition: all 0.6s;
+        border-radius: var(--rounded);
+        width: 100%;
+        object-fit: cover;
+        cursor: default;
+    }
 
 
-
-    &:hover > img {
+    &:hover > img, :hover > video {
         transform: translateY(-2%) scale(1.05);
         /* z-index:2; */
         box-shadow: 0px 12px 30px black;
     }
-    &:not(.iframe-iframe):hover {
-    }
+
 
     iframe {
         height: 100%;
