@@ -187,7 +187,7 @@ export const CopyText = styled(Flex)`
     }
 `
 export const SummarySection = styled.section`
-    background-color: ${({ red }) => red? '#FFBEDE1A' : '#87FFDB0D'};
+    background-color: ${({ red }) => red? '#f09ac41a' : '#87FFDB0D'};
     border-radius: var(--rounded);
     padding: 6em 15vw;
     min-height: 80vh;

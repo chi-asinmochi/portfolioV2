@@ -65,24 +65,24 @@ export const Ul = styled.ul`
 
 `
 
-export const ProjectTitle = styled.h5`
+export const ProjectTitle = styled.h4`
 
     font-weight: 400;
     letter-spacing: 0.05em;
-    /* font-size: 1.1rem; */
+    font-size: 1.2em;
     white-space: nowrap;
-    opacity: 0.8;
+    color: var(--blueGrey300);
     transition: all 0.6s;
     pointer-events: auto;
     cursor: pointer;
-    padding: 1em 0;
+    padding: 0.8em 0;
     &:hover {
         opacity: 1;
     }
     &.current {
         opacity: 1;
         color: white;
-        transform: translateX(2rem) scale(1.2);
+        transform: translateX(2em) scale(1.2);
         transform-origin: left;
         font-weight: 700;
         position: relative;
