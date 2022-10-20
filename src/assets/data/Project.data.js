@@ -6,7 +6,7 @@
 
 //Topseed
 import flowChart from '../../pages/Projects/subdirectory/TopSeed/assets/flow-diagram.png'
-import tsCover from '../../pages/Projects/subdirectory/TopSeed/assets/cat-profile.svg'
+import tsCover from '../img/cat-profile-min.jpg'
 
 //Segment
 import segment from '../img/segment/video.MP4'
