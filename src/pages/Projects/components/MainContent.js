@@ -58,7 +58,7 @@ function MainSection({ projectRefs, scrollPos}) {
                                             }
                                         }}>
                                             {proj.content.type == 'image'? <IMG loading='lazy' src={proj.content.cover} width={'100%'}></IMG> : null}
-                                            {proj.content.type == 'gif'? <video loading='lazy' autoPlay muted loop><source src={proj.content.src} type='video/mp4'></source></video> : null}
+                                            {proj.content.type == 'gif'? <video loading='lazy' autoPlay muted loop playsInline><source src={proj.content.src} type='video/mp4'></source></video> : null}
                                             {proj.content.type == 'iframe'? <iframe ref={el => {iframeRefs.current[proj.id] = el}} src={proj.content.src} className={proj.content.class}></iframe> : null}
                                             {proj.content.type == 'video'? <IMG loading='lazy' src={proj.content.cover } width={'auto'}></IMG> : null}
                                         </ProjectCover>
