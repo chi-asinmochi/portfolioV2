@@ -26,7 +26,7 @@ import application from '../TopSeed/assets/application.svg'
 import bid from '../TopSeed/assets/bid.svg'
 import congrats from '../TopSeed/assets/congrats.svg'
 import progress from '../TopSeed/assets/progress.svg'
-import catProfile from '../TopSeed/assets/cat-profile.svg'
+import catProfile from '../TopSeed/assets/cat-profile-min.png'
 
 
 

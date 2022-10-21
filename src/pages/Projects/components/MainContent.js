@@ -51,7 +51,7 @@ function MainSection({ projectRefs, scrollPos}) {
                                 >
                                     <Link to={proj.id==0? '/projects/topseed' : ''} >
                                         <ProjectCover className={proj.content.type == 'iframe'? 'iframe-iframe' : null}  onClick={()=>{
-                                            if (proj.id === 2) {
+                                            if (proj.id === 2 || proj.id === 5) {
                                                 setModal(prev => {
                                                     return ({...prev, isActive: true, projNum: proj.id})
                                                 })
