@@ -5,7 +5,7 @@ import greenBand from '../TopSeed/assets/green-band.svg'
 
 
 export const Main = styled.main`
-    overflow-x: clip;
+    /* overflow-x: hidden; */
     --side-padding: var(--side-padding-sm);
     width: 100%;
     max-width: var(--max-content-width);
@@ -39,13 +39,13 @@ export const Main = styled.main`
 
     section:not(section:first-of-type) {
         width: 100%;
-        /* overflow-x: clip; */
+        /* overflow-x: hidden; */
     }
 
 ` 
 export const Picture = styled.div`
 
-    /* overflow: clip; */
+    /* overflow: hidden; */
 
     filter: drop-shadow(0px 12px 60px rgba(22, 25, 99, 0.25));
     img {
@@ -280,11 +280,12 @@ export const SummarySection = styled.section`
 `
 
 export const InfoArchSection = styled.section`
-    overflow: clip;
+    overflow: hidden;
     width: 100%;
     padding: 4em;
     padding-bottom: 1em;
     background-color: #1F2937;
+
 
     border-radius: var(--rounded);
     gap: 4em;
@@ -435,7 +436,7 @@ export const ApplicationSectionOne = styled.section`
     padding: 6em;
     padding-top: 8em;
     background-color: #1F2937;
-    overflow: clip;
+    overflow: hidden;
     border-radius: var(--rounded);
     gap: 4em;
     display: flex;
