@@ -82,15 +82,15 @@ const TopSeed = () => {
                     <li>
                         <div><span>2</span></div>
                         <VFlex>
-                            <p>Risky offline payments</p>
+                            <p>Risky payment methods</p>
                             <p>Payments between buyers and breeders take many form from cash to checks to wire transfer to Venmo. Both parties are at risk of fraud when transactions are unregulated and not monitored. </p>
                         </VFlex>
                     </li>
                     <li>
                         <div><span>3</span></div>
                         <VFlex >
-                            <p>Kittens lack description and individuality</p>
-                            <p>One litter can have 3-8 kittens and a breeder may not have the time and knowledge to create a strong online presence for every kitten, especially when they could be taking care of multiple litters at the same time.</p>
+                            <p>Ineffective communication</p>
+                            <p>Most of the communication between the buyer and the breeder takes place through emails. A buyer’s inquiry can easily get lost in a busy breeder’s inbox.</p>
                         </VFlex>
                     </li>
                 </ol>
@@ -145,7 +145,7 @@ const TopSeed = () => {
                 <VFlex>
                     <CopyText>
                         <h2>Visualization like no other</h2>
-                        <p>To stress the individuality of each kitten, I researched the common traits that can be quantified and compared with. Inspired by game character profile, the radar chart offers a delightful way to quickly gauge the value of each trait.</p>
+                        <p>To stress the individuality of each kitten, I researched the common traits that can be quantified and compared with. Inspired by game character profiles, the radar chart offers a delightful way to quickly gauge the value of each trait.</p>
                     </CopyText>
                     <Picture>
                         <img src={radar1} alt="" />
@@ -226,7 +226,7 @@ const TopSeed = () => {
                     </CopyText>
                     <CopyText sm={true}>
                         <h4>Lessons</h4>
-                        <p>I should always design with scalability in mind and don’t rush into high-fidelity details too soon. Sometimes all I needed was a user flow to examine the feasibility of a concept or to communicate ideas across teams.</p>
+                        <p>I should always design with scalability in mind and don’t rush into high-fidelity details too soon. Sometimes all I needed was a user flow to examine the feasibility of a concept or to communicate ideas with others.</p>
                     </CopyText>
                 </HFlex>
             </EndingSection>
