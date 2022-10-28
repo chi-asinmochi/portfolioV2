@@ -25,7 +25,6 @@ const TypeWriter = ({ text, margin }) => {
         spaceHolderRef.current.style.position = 'absolute'
 
         const stringArr = [...text]
-        console.log(stringArr)
 
         let typeInterval
 

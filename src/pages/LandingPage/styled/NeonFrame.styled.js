@@ -1,4 +1,4 @@
-
+import styled from "styled-components"
 
 export const NeonFrame = styled.div`
     position: fixed;
