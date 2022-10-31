@@ -8,7 +8,6 @@ import useSound from 'use-sound'
 import sounds from '../assets/audio/data-process.wav' 
 import TypeWriter from './TypeWriter'
 
-HashLink
 
 const letters = '*+-/@_$[%£!XO1&>'
 
@@ -28,8 +27,6 @@ function DynamicHeader({ big, current, smPadding, inView }) {
 
     const homeRef = useRef(null)
     const projectsRef = useRef(null)
-
-
 
 
     const shuffle = (e) => {
