@@ -13,9 +13,10 @@ export const Ul = styled.ul`
     z-index: 1;
     pointer-events: none;
     top: 20%;
+    left: var(--side-padding);
     line-height: 2em;
     opacity: ${({inView}) => inView? 1 : 0};
-    /* transition: all ease-out 0.6s; */
+    /* transition: all ease-out 0.4s; */
 
     @media (max-width: 800px) {
         pointer-events: none;

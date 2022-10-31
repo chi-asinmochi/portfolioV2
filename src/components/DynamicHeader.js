@@ -90,7 +90,6 @@ function DynamicHeader({ big, current, smPadding, inView }) {
                     let arr = [...prev].map(l => 
                         letters[parseInt(Math.random()*100%letters.length)]
                     )
-                    // console.log('render')
                     return arr
                 })
                 i--
@@ -129,7 +128,7 @@ function DynamicHeader({ big, current, smPadding, inView }) {
                         <div className='line'></div>
                     </Hamburger>}
                     <div className='wrapper'>
-                        <li><HashLink id='projects' className={current=='project'? 'current' : ''} to='/#projects' smooth ref={projectsRef}>Projects</HashLink></li>
+                        <li><Link id='projects' className={current=='project'? 'current' : ''} to='/#projects' smooth >Projects</Link></li>
                         <li><Link id='about' className={current=='about'? 'current' : ''} to='/about'>About</Link></li>
                         <li><Link id='contact' className={current=='contact'? 'current' : ''} to='/contact'>Contact</Link></li>
                     </div>

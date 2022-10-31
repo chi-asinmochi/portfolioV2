@@ -19,22 +19,24 @@ function LandingPage() {
     const projectsObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                setView(true)
+                setView(false)
                 // location.hash = '#project'
                 // console.log(entry.target, inView)
             } else {
-                setView(false)
+                setView(true)
                 // console.log(inView)
                 // location.hash = '#home'
             }
         })
     },{
-        threshold: 0.6,
+        threshold: 0.3,
     })
         
 
     useEffect(() => {
-        projectsObserver.observe(projectsRef.current)
+        projectsObserver.observe(heroRef.current)
+        console.log(projectsRef.current, heroRef.current)
+
     }, [])
     
     useEffect(() => {

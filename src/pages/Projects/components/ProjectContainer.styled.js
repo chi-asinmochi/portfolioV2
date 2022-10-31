@@ -5,7 +5,6 @@ export const Frame = styled.div`
 
 `
 export const ProjectContainer = styled.div`
-    
     width: min(60%, 600px);  
     padding: 20vh 0 0 0;
     display: flex;

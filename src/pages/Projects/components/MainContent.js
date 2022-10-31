@@ -9,32 +9,21 @@ import { Link } from 'react-router-dom'
 
 export const ScrollContext = React.createContext()
 
-function MainSection({ projectRefs, scrollPos, inView}) {
+function MainSection({ projectsRef, projectRefs, scrollPos, inView}) {
 
     const containerRef = useRef(null)
-    const mainRef = useRef(null)
+    // const mainRef = useRef(null)
 
     const [modalState, setModal] = useState({isActive: false, projNum: 0})
 
     const iframeRefs = useRef([])
 
-
-    // console.log(iframeRefs)
-    useEffect(() => {
-        iframeRefs.current.forEach(iframe => {
-            console.log(iframe)
-            iframe.addEventListener('load', (e) => {
-                console.log('done')
-            })
-        })
-    }, [iframeRefs.current])
-    
     
 
     return (
         <>
             {modalState.isActive? <ModalComponent modalState={modalState} setModal={setModal}></ModalComponent> : null }
-            <Main ref={mainRef} >
+            <Main id='projects' ref={projectsRef} >
                 <BG inView={inView}
                     src={
                     projectData[scrollPos].content.type === 'gif'?
@@ -107,7 +96,7 @@ function MainSection({ projectRefs, scrollPos, inView}) {
                         })  
                     }
 
-                    <div className='empty-space' style={{opacity: 0}}>empty</div>
+                    <div className='empty-space' style={{opacity: 0}}>empty yo</div>
                 </ProjectContainer>
             </Main>
         </>
@@ -117,13 +106,12 @@ function MainSection({ projectRefs, scrollPos, inView}) {
 export default MainSection
 
 const Main = styled.main`
+    padding: 0 var(--side-padding);
     width: 100%;
-    height: 100%;
+    max-width: var(--max-content-width);
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 10vh;
-
-    max-width: var(--max-content-width);
+    /* padding-bottom: 10vh; */
 
 
     @media (max-width: 800px) {

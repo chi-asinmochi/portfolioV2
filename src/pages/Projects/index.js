@@ -146,11 +146,11 @@ function Projects({ projectsRef, inView }) {
     return (
         <>
             <DynamicHeader big={false} current='project' inView={inView}></DynamicHeader>
-            <PageLayout id='projects' ref={projectsRef}>
+            {/* <PageLayout id='projects' ref={projectsRef}> */}
                 <Picker sideBarRef={sideBarRef} titleRefs={titleRefs} titleClickHandler={titleClickHandler} inView={inView}></Picker>
-                <MainContent inView={inView} projectRefs={projectRefs} scrollPos={scrollPos}></MainContent>
+                <MainContent projectsRef={projectsRef} inView={inView} projectRefs={projectRefs} scrollPos={scrollPos}></MainContent>
 
-            </PageLayout>
+            {/* </PageLayout> */}
         </>
 
     )

@@ -73,6 +73,7 @@ const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         align-items: center;
+        scroll-padding-bottom : max(calc(20vh - 5vw), 12vh);
         
         > * {
             flex-shrink: 0;
