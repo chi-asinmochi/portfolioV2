@@ -7,7 +7,7 @@ function Contact() {
 
     return (
         <>
-            <DynamicHeader big={false} current='contact'></DynamicHeader>
+            <DynamicHeader big={false} current='contact' inView={true}></DynamicHeader>
             <Construction></Construction>
         </>
     )

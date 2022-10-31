@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const Nav = styled.nav`
 /* width: 8em; */
+    opacity: ${({inView}) => inView? '1' : '0'};
     position: ${({big}) => big? '' : 'sticky'};
     top: 0;
     z-index: 10;

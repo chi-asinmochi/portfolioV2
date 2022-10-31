@@ -57,7 +57,7 @@ function About() {
             /> */}
         
             {/* <Construction></Construction>  */}
-            <DynamicHeader big={false} current='about'></DynamicHeader>
+            <DynamicHeader big={false} current='about' inView={true}></DynamicHeader>
             <Main>
                 <Portrait></Portrait>
                 <Wrapper>

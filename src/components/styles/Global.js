@@ -64,14 +64,19 @@ const GlobalStyles = createGlobalStyle`
     }
     #root {
         width: 100vw;
-        /* height: 100%; */
+        height: 100%;
         overflow: scroll;
         overflow-x: hidden;
-        scroll-behavior: smooth;
+        /* scroll-behavior: smooth; */
         /* scroll-snap-stop: always; */
+        scroll-snap-type: y mandatory;
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+        > * {
+            flex-shrink: 0;
+        }
     }
     h1, h2, h3, h4, h5 {
         font-family: var(--font-cyber), sans-serif;

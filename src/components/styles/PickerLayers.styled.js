@@ -3,6 +3,7 @@ import indicator from '../../assets/icon/indicator.svg'
 
 
 export const Ul = styled.ul`
+    width: max-content;
     --scroll-side-padding: 70vw;
     position: fixed;
     list-style: none;
@@ -13,6 +14,8 @@ export const Ul = styled.ul`
     pointer-events: none;
     top: 20%;
     line-height: 2em;
+    opacity: ${({inView}) => inView? 1 : 0};
+    /* transition: all ease-out 0.6s; */
 
     @media (max-width: 800px) {
         pointer-events: none;
@@ -27,7 +30,7 @@ export const Ul = styled.ul`
 
         overflow-y: hidden;
         overscroll-behavior: contain;
-        position: fixed;
+        /* position: fixed; */
         top: 12%;
         left: 0;
         flex-direction: row;

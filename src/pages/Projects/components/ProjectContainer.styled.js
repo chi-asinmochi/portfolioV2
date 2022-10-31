@@ -7,7 +7,7 @@ export const Frame = styled.div`
 export const ProjectContainer = styled.div`
     
     width: min(60%, 600px);  
-    padding: 0vh 0 30vh 0;
+    padding: 20vh 0 0 0;
     display: flex;
     gap: calc(15vh + 10vw);
     flex-direction: column;
@@ -23,6 +23,7 @@ export const ProjectContainer = styled.div`
     }
 
 
+
 `
 export const BG = styled.div`
     width: 110%;
@@ -35,14 +36,14 @@ export const BG = styled.div`
     width: 70%;
     height: 70%;
     filter: blur(20px);
-    opacity: 0.2;
     z-index: -1;
     transition: all 1s;
+    opacity: ${({inView}) => inView? 0.2 : 0}
 
     
 `
 export const ProjectWrapper = styled.div`
-    scroll-snap-align: end;
+
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -57,7 +58,7 @@ export const ProjectWrapper = styled.div`
             color: white;
         }
     }
-
+    scroll-snap-align: end;
     scroll-snap-stop: always;       
 `
 

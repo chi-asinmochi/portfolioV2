@@ -1,17 +1,19 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { LogoText } from './styles/LogoText.styled' 
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import { TextFragment } from './styles/TextFragment.styled'
 import { Nav, Container, Logo, Menu, Hamburger } from './styles/Nav.styled'
 import useSound from 'use-sound'
 import sounds from '../assets/audio/data-process.wav' 
 import TypeWriter from './TypeWriter'
 
+HashLink
 
 const letters = '*+-/@_$[%£!XO1&>'
 
 const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design of digital interfaces. Fun fact, this website is built with React from scratch. While it\'s still a WIP, please feel free to poke around nonetheless. Cheers!'
-function DynamicHeader({ big, current, smPadding }) {
+function DynamicHeader({ big, current, smPadding, inView }) {
 
     const [play] = useSound(sounds, {
         sprite: {
@@ -23,6 +25,15 @@ function DynamicHeader({ big, current, smPadding }) {
     const [text, setLogoText] = useState('shawnchi')
     const [shuffling, setShuffling] = useState(false)
     const menuRef = useRef(null);
+
+    const homeRef = useRef(null)
+    const projectsRef = useRef(null)
+
+    useEffect( () => {
+        homeRef.current.href = '/#home'
+        projectsRef.current.href = '/#projects'
+    },[])
+
 
     const shuffle = (e) => {
         if (shuffling || !big)  {return}
@@ -103,10 +114,10 @@ function DynamicHeader({ big, current, smPadding }) {
     }
 
     return (
-        <Nav big = {big}>
+        <Nav big = {big} inView={inView}>
             <Container big={big} smPadding={smPadding}>
 
-                <Link to='/' className='home-link'>
+                <HashLink to='/#home' smooth ref={homeRef} className='home-link'>
                     <Logo className={current=='project'? 'current' : ''} big={big}
                         onMouseLeave={shuffleReady}
                         onMouseEnter={shuffle}
@@ -116,7 +127,7 @@ function DynamicHeader({ big, current, smPadding }) {
                         <TextFragment bottom={false}>{text}</TextFragment>
                         <LogoText text={text}>{text} </LogoText>
                     </Logo>
-                </Link>
+                </HashLink>
 
                 <Menu big={big} ref={menuRef}>
                     {big? null :
@@ -124,7 +135,7 @@ function DynamicHeader({ big, current, smPadding }) {
                         <div className='line'></div>
                     </Hamburger>}
                     <div className='wrapper'>
-                        <li><Link id='projects' className={current=='project'? 'current' : ''} to='/projects'>Projects</Link></li>
+                        <li><HashLink id='projects' className={current=='project'? 'current' : ''} to='/#projects' smooth ref={projectsRef}>Projects</HashLink></li>
                         <li><Link id='about' className={current=='about'? 'current' : ''} to='/about'>About</Link></li>
                         <li><Link id='contact' className={current=='contact'? 'current' : ''} to='/contact'>Contact</Link></li>
                     </div>

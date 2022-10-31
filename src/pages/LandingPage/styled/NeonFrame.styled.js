@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const NeonFrame = styled.div`
-    position: fixed;
+    position: absolute;
     z-index: 0;
     top: 50%;
     left: 50%;

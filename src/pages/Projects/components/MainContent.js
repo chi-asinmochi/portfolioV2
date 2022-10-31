@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 export const ScrollContext = React.createContext()
 
-function MainSection({ projectRefs, scrollPos}) {
+function MainSection({ projectRefs, scrollPos, inView}) {
 
     const containerRef = useRef(null)
     const mainRef = useRef(null)
@@ -35,7 +35,8 @@ function MainSection({ projectRefs, scrollPos}) {
         <>
             {modalState.isActive? <ModalComponent modalState={modalState} setModal={setModal}></ModalComponent> : null }
             <Main ref={mainRef} >
-                <BG src={
+                <BG inView={inView}
+                    src={
                     projectData[scrollPos].content.type === 'gif'?
                     projectData[scrollPos].content.staticCover :
                     projectData[scrollPos].content.cover}>
@@ -98,7 +99,7 @@ function MainSection({ projectRefs, scrollPos}) {
                                     {proj.action === 'read'? <ButtonText text='Read more' alignment='end' active={true} to='/projects/topseed'></ButtonText> : null}
                                     {proj.action === 'coming'? <ButtonText text='Details coming soon' alignment='end' active={false} to=''></ButtonText> : null}
                                     
-                                    
+
                                 </ProjectWrapper>
 
                                 
@@ -106,7 +107,7 @@ function MainSection({ projectRefs, scrollPos}) {
                         })  
                     }
 
-
+                    <div className='empty-space' style={{opacity: 0}}>empty</div>
                 </ProjectContainer>
             </Main>
         </>
@@ -116,12 +117,14 @@ function MainSection({ projectRefs, scrollPos}) {
 export default MainSection
 
 const Main = styled.main`
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    padding-top: 10vh;
+    padding-bottom: 10vh;
+
     max-width: var(--max-content-width);
-    /* overflow: clip; */
+
 
     @media (max-width: 800px) {
         width: 100%;

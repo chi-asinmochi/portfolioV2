@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import bars from '../assets/img/construction/bars.svg'
 import barMask from '../assets/img/construction/barMask.svg'
-import Particles from 'react-tsparticles';
-import tsOption from './styles/TsOptions';
+// import Particles from 'react-tsparticles';
+// import tsOption from './styles/TsOptions';
 
 
 function Construction() {
@@ -14,7 +14,7 @@ function Construction() {
         </Frame>
         <OverlayMsg>
            <h4>Sorry, this page is currently under construction.</h4> 
-           <Particles id="tsparticles" options={tsOption}/>
+           {/* <Particles id="tsparticles" options={tsOption}/> */}
         </OverlayMsg>
     </>
   )
@@ -80,6 +80,7 @@ const OverlayMsg = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     backdrop-filter: blur(calc(1.5px + 0.4vw));
     color: white;
     font-size: min(calc(0.8em + 0.8vw), 1.5em);

@@ -1,14 +1,51 @@
-import React from 'react'
+import { useEffect, useRef, useState } from 'react'
 import DynamicHeader from '../../components/DynamicHeader'
 import tsOption from '../../components/styles/TsOptions'
 import styled from 'styled-components'
 import TypeWriter from '../../components/TypeWriter'
 import { NeonFrame } from './styled/NeonFrame.styled'
-
+import { Hero } from './Hero'
+import Projects from '../Projects'
+import { useLocation } from 'react-router-dom'
 
 function LandingPage() {
 
+    const projectsRef = useRef(null)
+    const heroRef = useRef(null)
+    const [inView, setView] = useState(false)
+
+    const location = useLocation()
+
+    const projectsObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setView(true)
+                // location.hash = '#project'
+                // console.log(entry.target, inView)
+            } else {
+                setView(false)
+                // console.log(inView)
+                // location.hash = '#home'
+            }
+        })
+    },{
+        threshold: 0.8,
+    })
         
+
+    useEffect(() => {
+        projectsObserver.observe(projectsRef.current)
+    }, [])
+    
+    useEffect(() => {
+        if (location.hash === '#projects'){
+            projectsRef.current.scrollIntoView({block: 'start', behavior: 'smooth'})
+        } else if (location.hash === '#home') {
+            heroRef.current.scrollIntoView({block: 'start', behavior: 'smooth'})    
+        }
+
+    }, [location])
+    
     // const particlesInit = (main) => {
     //     console.log(main);
     
@@ -18,31 +55,19 @@ function LandingPage() {
     // const particlesLoaded = (container) => {
     //     console.log(container);
     
-
+    const root = document.getElementById('root')
+    // root.style.scrollPaddingBottom = 'max(calc(20vh - 5vw), 12vh)'
+    // root.style.scrollSnapType = 'y mandatory'
 
     return (
         <>  
-            <NeonFrame/>
-            <Wrapper>
-                <DynamicHeader big={true} current='home'></DynamicHeader>
-                {/* <Particles
-                        id="tsparticles"
-                        // init={particlesInit}
-                        // loaded={particlesLoaded}
-                        options={tsOption}
-                /> */}
-            </Wrapper>
-
+            <Hero heroRef={heroRef}></Hero>
+            <Projects projectsRef={projectsRef} inView={inView}></Projects>
         </>
     )
 }
 
-const Wrapper = styled.div`
-    height: 90%;
-    display: grid;
-    place-content: center;
 
-`
 
 export default LandingPage
 

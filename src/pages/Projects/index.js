@@ -5,9 +5,8 @@ import styled from 'styled-components'
 
 import DynamicHeader from '../../components/DynamicHeader'
 
-function Projects() {
+function Projects({ projectsRef, inView }) {
 
-    const pageRef = useRef(null);
     const sideBarRef = useRef(null);
     const titleRefs = useRef([])
     const projectRefs = useRef([])
@@ -16,9 +15,7 @@ function Projects() {
     const [scrollPos, setscrollPos] = useState(0)
 
 
-    const root = document.getElementById('root')
-    root.style.scrollPaddingBottom = 'max(calc(20vh - 5vw), 12vh)'
-    root.style.scrollSnapType = 'y mandatory'
+
     
 
     let windowWidth = window.innerWidth
@@ -148,11 +145,11 @@ function Projects() {
 
     return (
         <>
-            <DynamicHeader big={false} current='project'></DynamicHeader>
-            <PageLayout ref={pageRef}
+            <DynamicHeader big={false} current='project' inView={inView}></DynamicHeader>
+            <PageLayout id='projects' ref={projectsRef}
             >
-                <Picker sideBarRef={sideBarRef} titleRefs={titleRefs} titleClickHandler={titleClickHandler}></Picker>
-                <MainContent projectRefs={projectRefs} scrollPos={scrollPos}></MainContent>
+                <Picker sideBarRef={sideBarRef} titleRefs={titleRefs} titleClickHandler={titleClickHandler} inView={inView}></Picker>
+                <MainContent inView={inView} projectRefs={projectRefs} scrollPos={scrollPos}></MainContent>
 
             </PageLayout>
         </>
@@ -162,11 +159,18 @@ function Projects() {
 
 export default Projects
 
-const PageLayout = styled.div`
+const PageLayout = styled.section`
     padding: 0 var(--side-padding);
     width: 100%;
     max-width: var(--max-content-width);
-
-
+    height: 100vh;
+    overflow: scroll;
+    position: relative;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    scroll-snap-type: y mandatory;
+    /* scroll-padding-bottom : max(calc(20vh - 5vw), 12vh); */
+    scroll-margin-top: 0px;
 ` 
 
