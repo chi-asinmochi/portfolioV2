@@ -79,7 +79,7 @@ const GlobalStyles = createGlobalStyle`
             flex-shrink: 0;
         }
         @media (max-width: 420px) {
-            scroll-snap-type: none;
+            /* scroll-snap-type: none; */
         }
     }
     h1, h2, h3, h4, h5 {
