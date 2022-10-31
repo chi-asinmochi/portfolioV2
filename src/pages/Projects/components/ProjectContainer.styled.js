@@ -9,7 +9,7 @@ export const ProjectContainer = styled.div`
     width: min(60%, 600px);  
     padding: 20vh 0 0 0;
     display: flex;
-    gap: calc(15vh + 10vw);
+    gap: calc(10vh + 10vw);
     flex-direction: column;
     /* background: pink; */
     p {

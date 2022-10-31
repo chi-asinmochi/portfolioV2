@@ -43,7 +43,6 @@ function LandingPage() {
         } else if (location.hash === '#home') {
             heroRef.current.scrollIntoView({block: 'start', behavior: 'smooth'})    
         }
-
     }, [location])
     
     // const particlesInit = (main) => {
