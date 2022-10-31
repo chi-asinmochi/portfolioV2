@@ -169,8 +169,10 @@ const PageLayout = styled.section`
     scroll-snap-align: start;
     display: flex;
     align-items: center;
-    /* scroll-snap-type: y proximity; */
-    /* scroll-padding-bottom : max(calc(20vh - 5vw), 12vh); */
-    scroll-margin-top: 0px;
+    /* scroll-margin-top: 0px; */
+    @media (max-width: 420px) {
+        scroll-snap-type: y mandatory;
+        scroll-padding-bottom : max(calc(20vh - 5vw), 12vh);
+    }
 ` 
 
