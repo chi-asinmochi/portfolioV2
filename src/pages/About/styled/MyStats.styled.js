@@ -124,7 +124,7 @@ export const BarChart = styled(HFlex)`
     width: 100%;
     
     div:nth-of-type(1) {
-        width: 15%;
+        width: 20%;
         background: var(--grey100);
         color: var(--grey100);
     }
@@ -134,7 +134,7 @@ export const BarChart = styled(HFlex)`
         color: var(--neon-green);
     }
     div:nth-of-type(3) {
-        width: 35%;
+        width: 30%;
         background: var(--purple500);
         color: var(--purple500);
     }

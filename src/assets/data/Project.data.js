@@ -41,7 +41,7 @@ const projectData = [
             type: 'image',
             cover: tsCover,
         },
-        badge: ['UI/UX', 'C2C'],
+        badge: ['Ecommerce', 'C2C'],
         // slides: [
         //     {image: home, text: '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
         //     {image: homeChart, text: '2. skldfjgh;esrhfg;jkf;jalsrh;gfjhsd;jkfb;jgshdred et. Ac n At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
@@ -59,7 +59,7 @@ const projectData = [
             staticCover: segmentStatic,
             src: segment,
         },
-        badge: ['Design System'],
+        badge: ['Design System', 'Reusable Components'],
         // slides: [
         //     {image: home, text: '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
         //     {image: homeChart, text: '2. skldfjgh;esrhfg;jkf;jalsrh;gfjhsd;jkfb;jgshdred et. Ac n At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
@@ -75,7 +75,7 @@ const projectData = [
             type: 'image',
             cover: agents,
         },
-        badge: ['Data Visualization', 'B2B', 'UI'],
+        badge: ['SaaS','Data Visualization', 'B2B',],
         slides: [
             {image: dashboard, text: '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
             {image: agents, text: '2. skldfjgh;esrhfg;jkf;jalsrh;gfjhsd;jkfb;jgshdred et. Ac n At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
@@ -121,7 +121,7 @@ const projectData = [
             cover: covidCover,
             src: covidVid,
         },
-        badge: ['UI', 'Prototyping', 'SFX'],
+        badge: ['Mobile', 'Prototyping', 'SFX'],
         action: 'none',
     },
 ]
