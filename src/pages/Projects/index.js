@@ -170,7 +170,7 @@ const PageLayout = styled.section`
     display: flex;
     align-items: center;
     scroll-snap-type: y mandatory;
-    /* scroll-padding-bottom : max(calc(20vh - 5vw), 12vh); */
+    scroll-padding-bottom : max(calc(20vh - 5vw), 12vh);
     scroll-margin-top: 0px;
 ` 
 
