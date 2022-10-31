@@ -29,10 +29,7 @@ function DynamicHeader({ big, current, smPadding, inView }) {
     const homeRef = useRef(null)
     const projectsRef = useRef(null)
 
-    useEffect( () => {
-        homeRef.current.href = '/#home'
-        projectsRef.current.href = '/#projects'
-    },[])
+
 
 
     const shuffle = (e) => {
