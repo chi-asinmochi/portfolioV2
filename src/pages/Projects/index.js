@@ -171,8 +171,9 @@ const PageLayout = styled.section`
     align-items: center;
     /* scroll-margin-top: 0px; */
     @media (max-width: 420px) {
-        scroll-snap-type: y mandatory;
-        scroll-padding-bottom : max(calc(20vh - 5vw), 12vh);
+        /* scroll-snap-type: y mandatory;
+        scroll-padding-bottom : max(calc(20vh - 5vw), 12vh); */
     }
+
 ` 
 
