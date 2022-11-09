@@ -33,6 +33,9 @@ import catProfile from '../TopSeed/assets/cat-profile-min.png'
 
 const TopSeed = () => {
 
+    useEffect(() => {
+        document.getElementById('root').scroll(0, 0)
+    },[])
 
   return (
     <>
