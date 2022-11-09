@@ -10,6 +10,8 @@ import { useLocation } from 'react-router-dom'
 
 function LandingPage() {
 
+
+
     const projectsRef = useRef(null)
     const heroRef = useRef(null)
     const [inView, setView] = useState(false)
@@ -20,12 +22,10 @@ function LandingPage() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 setView(false)
-                // location.hash = '#project'
-                // console.log(entry.target, inView)
+
             } else {
                 setView(true)
-                // console.log(inView)
-                // location.hash = '#home'
+
             }
         })
     },{
@@ -35,7 +35,6 @@ function LandingPage() {
 
     useEffect(() => {
         projectsObserver.observe(heroRef.current)
-        console.log(projectsRef.current, heroRef.current)
 
     }, [])
     

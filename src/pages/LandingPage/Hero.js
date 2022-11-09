@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import DynamicHeader from '../../components/DynamicHeader'
 import { NeonFrame } from './styled/NeonFrame.styled'
@@ -7,14 +8,28 @@ import { NeonFrame } from './styled/NeonFrame.styled'
 
 
 export const Hero = ({heroRef}) => {
-  return (
+
+    const [scaleVar, setScale] = useState(1)
+
+    // const root = document.getElementById('root')
+    // root.onscroll = (e) => {
+    //     setScale(prev => {
+    //         let scale = 1 / root.scrollTop * 40
+    //         scale = scale > 1? 1 : scale 
+    //         scale = scale < 0.4? 0.4 : scale
+    //         return scale
+    //     })
+    //     console.log(scaleVar)
+    // }
+
+    return (
     <Section ref={heroRef} id='home'>
-        <NeonFrame/>
+        <NeonFrame scaleVar={scaleVar}/>
         <Wrapper>
             <DynamicHeader big={true} current='home' inView={true}></DynamicHeader>
         </Wrapper>
     </Section>
-  )
+    )
 }
 
 export const Section = styled.section`

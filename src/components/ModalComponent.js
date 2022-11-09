@@ -49,7 +49,6 @@ export default function ModalComponent({ modalState, setModal }) {
     // Try using different images for different projects
     useEffect(() => {
         if (imgRefs.current.length != 0) {
-            console.log(imgRefs.current)
             imgRefs.current.forEach(item => {
                 if (item != null) {observer.observe(item)}
             })
@@ -60,7 +59,6 @@ export default function ModalComponent({ modalState, setModal }) {
         };
     }, []);
     
-    console.log(projectData[modalState.projNum].content.type)
     return (
         <Modal show = {modalState.isActive}>
             <Overlay  onClick={() => {setModal(prev => {

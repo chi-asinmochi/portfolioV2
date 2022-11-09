@@ -36,7 +36,7 @@ const TopSeed = () => {
 
   return (
     <>
-        <DynamicHeader big={false} smPadding={true}></DynamicHeader>
+        <DynamicHeader big={false} smPadding={true} inView={true}></DynamicHeader>
         <Main>
             <Hero>
                 <VFlex spacing={'4em'} style={{width: '18em'}}>
