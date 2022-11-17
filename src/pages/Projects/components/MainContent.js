@@ -39,12 +39,14 @@ function MainSection({ projectsRef, projectRefs, scrollPos, inView}) {
 
                                 <ProjectWrapper key={proj.id} ref={el => {projectRefs.current[i] = el}} id={proj.id}
                                 >
-                                    <Link to={proj.id==0? '/projects/topseed' : ''} >
+                                    <Link to={proj.id===0? proj.url : ''} >
                                         <ProjectCover className={proj.content.type == 'iframe'? 'iframe-iframe' : null}  onClick={()=>{
-                                            if (proj.id === 2 || proj.id === 5) {
+                                            if (proj.id === 5) {
                                                 setModal(prev => {
                                                     return ({...prev, isActive: true, projNum: proj.id})
                                                 })
+                                            } else if (proj.id === 2) {
+                                                window.open(proj.url)
                                             }
                                         }}>
                                             {proj.content.type == 'image'? <IMG loading='lazy' src={proj.content.cover} width={'100%'}></IMG> : null}
@@ -85,7 +87,11 @@ function MainSection({ projectsRef, projectRefs, scrollPos, inView}) {
                                         <p>A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a fun practice for me.</p> : null
                                     }
 
-                                    {proj.action === 'read'? <ButtonText text='Read more' alignment='end' active={true} to='/projects/topseed'></ButtonText> : null}
+                                    {proj.action === 'read'? <ButtonText text='Read more' alignment='end' active={true} to={proj.id === 0? proj.url : ''} onClick={() => {
+                                        if (proj.id === 2) {
+                                            window.open(proj.url)
+                                        }
+                                    }}></ButtonText> : null}
                                     {proj.action === 'coming'? <ButtonText text='Details coming soon' alignment='end' active={false} to=''></ButtonText> : null}
                                     
 
