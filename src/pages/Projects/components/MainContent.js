@@ -39,15 +39,16 @@ function MainSection({ projectsRef, projectRefs, scrollPos, inView}) {
 
                                 <ProjectWrapper key={proj.id} ref={el => {projectRefs.current[i] = el}} id={proj.id}
                                 >
-                                    <Link to={proj.id===0? proj.url : ''} >
+                                    <Link to={proj.id===1? proj.url : ''} >
                                         <ProjectCover className={proj.content.type == 'iframe'? 'iframe-iframe' : null}  onClick={()=>{
-                                            if (proj.id === 5) {
+                                            if (proj.id === 5 || proj.id === 0) {
                                                 setModal(prev => {
                                                     return ({...prev, isActive: true, projNum: proj.id})
                                                 })
-                                            } else if (proj.id === 2) {
-                                                window.open(proj.url)
-                                            }
+                                            } 
+                                            // else if (proj.id === 2) {
+                                            //     window.open(proj.url)
+                                            // }
                                         }}>
                                             {proj.content.type == 'image'? <IMG loading='lazy' src={proj.content.cover} width={'100%'}></IMG> : null}
                                             {proj.content.type == 'gif'? <video loading='lazy' autoPlay muted loop playsInline><source src={proj.content.src} type='video/mp4'></source></video> : null}
@@ -66,14 +67,14 @@ function MainSection({ projectsRef, projectRefs, scrollPos, inView}) {
                                     </BadgeWrapper>
 
                                     {proj.id == 0? 
-                                        <p>TopSeed is a web application for facilitating the sale of pedigree kittens. This case study goes over the design thinking behind the buyer-facing side of the product.</p> : null
+                                        <p>A dashboard design for <a href='https://www.fico.com/' target="_blank">Fico</a>'s fraud protection program. This is a B2B enterprise application aimed for managerial employees at banking industries.</p> : null
                                     }
 
                                     {proj.id == 1? 
-                                       <p>The design system for Segment's marketing site. Direct contribution includes components such as the logo carousel, accordion, and buttonText.</p> : null
+                                        <p>TopSeed is a web application for facilitating the sale of pedigree kittens. This case study goes over the design thinking behind the buyer-facing side of the product.</p> : null
                                     }
                                     {proj.id == 2? 
-                                        <p>A design project for <a href='https://www.fico.com/' target="_blank">Fico</a>'s fraud protection program. This is a B2B enterprise application aimed for managerial employees at banking industries.</p> : null
+                                       <p>The design system for Segment's marketing site. Direct contribution includes components such as the logo carousel, accordion, and buttonText.</p> : null
 
                                     }
                                     {proj.id == 3? 
@@ -87,10 +88,10 @@ function MainSection({ projectsRef, projectRefs, scrollPos, inView}) {
                                         <p>A conceptual app created early in the 2020 in light of the COVID pandemic. Perhaps not very practical but a fun practice for me.</p> : null
                                     }
 
-                                    {proj.action === 'read'? <ButtonText text='Read more' alignment='end' active={true} to={proj.id === 0? proj.url : ''} onClick={() => {
-                                        if (proj.id === 2) {
-                                            window.open(proj.url)
-                                        }
+                                    {proj.action === 'read'? <ButtonText text='Read more' alignment='end' active={true} to={proj.id === 1? proj.url : ''} onClick={() => {
+                                        // if (proj.id === 2) {
+                                        //     window.open(proj.url)
+                                        // }
                                     }}></ButtonText> : null}
                                     {proj.action === 'coming'? <ButtonText text='Details coming soon' alignment='end' active={false} to=''></ButtonText> : null}
                                     
