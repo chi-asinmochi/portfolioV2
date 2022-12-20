@@ -38,6 +38,9 @@ export const Section = styled.section`
     position: relative;
     scroll-snap-align: start;
     /* flex-shrink: 0; */
+    @media (max-width: 450px) {
+        height: 90vh;
+    }
 `
 const Wrapper = styled.div`
     height: 90%;
