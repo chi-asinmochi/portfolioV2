@@ -11,7 +11,7 @@ import TypeWriter from './TypeWriter'
 
 const letters = '*+-/@_$[%£!XO1&>'
 
-const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design of digital interfaces. Fun fact, this website is built with React from scratch. While it\'s still a WIP, please feel free to poke around nonetheless. Cheers!'
+const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design of digital interfaces. Fun fact, this website is built by me from scratch with React but still a WIP. Please forgive me for any bugs you find. Cheers!'
 function DynamicHeader({ big, current, smPadding, inView }) {
 
     const [play] = useSound(sounds, {

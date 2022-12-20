@@ -5,7 +5,7 @@ export const NeonFrame = styled.div`
     z-index: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(${({scaleVar}) => scaleVar});
+    transform: translate(-50%,-50%);
     width: min(80%, 1200px);
     height: 80%;
     border: 4px var(--grey100) solid;
@@ -14,7 +14,7 @@ export const NeonFrame = styled.div`
     animation: flicker 3s infinite alternate;
 
     @media (max-width: 450px) {
-        height: 98%;
+        height: 94%;
         width: 98%;
     }
 
