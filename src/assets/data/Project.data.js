@@ -54,8 +54,9 @@ const projectData = [
             {image: new_analysts, text: '4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
             {image: new_models, text: '4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus aliquam faucibus aliquam, nulla adipiscing sed et. Ac nisi lectus egestas eu molestie eu faucibus sit. At urna, mauris, leo turpis at velit eleifend. In tellus ultricies dui lorem vestibulum aliquam justo, congue. Erat habitant cum turpis faucibus est. Pulvinar tempor ultricies pellentesque erat pretium sed proin massa.'},
         ],
-        action: 'coming',
-        url: 'https://www.figma.com/proto/jr5Kc2tCgpe0bVkrm1WR5e/Untitled?page-id=0%3A1&node-id=1%3A8&viewport=422%2C2149%2C0.33&scaling=scale-down-width&hide-ui=1'
+        action: 'read',
+        url: '/projects/fico',
+        // url: 'https://www.figma.com/proto/jr5Kc2tCgpe0bVkrm1WR5e/Untitled?page-id=0%3A1&node-id=1%3A8&viewport=422%2C2149%2C0.33&scaling=scale-down-width&hide-ui=1'
 
     },
     {

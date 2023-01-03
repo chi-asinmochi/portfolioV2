@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
 import TopSeed from "./pages/Projects/subdirectory/TopSeed";
+import Fico from "./pages/Projects/subdirectory/Fico";
 
 // const theme = {
 //     colors: {
@@ -40,6 +41,7 @@ return (
                 <Route path="/projects" >
                     <Route index element={<Projects/>}/>
                     <Route path='topseed' element={<TopSeed/>}/>
+                    <Route path='fico' element={<Fico/>}/>
                     {/* <DynamicHeader big={false} current='project'></DynamicHeader> */}
                     
                 </Route>

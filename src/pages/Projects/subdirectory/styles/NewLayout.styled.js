@@ -13,7 +13,7 @@ export const Main = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    padding: 4em var(--side-padding);
+    padding: 10vh var(--side-padding) 4em var(--side-padding);
     font-size: 1.15em;
     p {
         color: white;

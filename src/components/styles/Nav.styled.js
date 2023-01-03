@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Nav = styled.nav`
 /* width: 8em; */
     opacity: ${({inView}) => inView? '1' : '0'};
-    position: ${({big}) => big? '' : 'sticky'};
+    position: ${({big}) => big? '' : 'fixed'};
     top: 0;
     z-index: 10;
     width: ${({big}) => big? 'auto' : '100%'};

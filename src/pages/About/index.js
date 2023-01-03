@@ -128,7 +128,7 @@ const Main = styled.main`
     /* background: yellow; */
     width: 100%;
     height: 80vh;
-    padding: 0 var(--side-padding);
+    padding: 10vh var(--side-padding) 0 var(--side-padding);
     display: flex;
     letter-spacing: unset;
     justify-content: space-between;

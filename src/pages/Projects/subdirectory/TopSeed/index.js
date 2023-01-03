@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import DynamicHeader from '../../../../components/DynamicHeader'
-import { Footer } from '../styles/Footer.styled'
+// import { Footer } from '../styles/Footer.styled'
 import { Logo } from '../../../../components/styles/Nav.styled'
 import { TextFragment } from '../../../../components/styles/TextFragment.styled'
 import { LogoText } from '../../../../components/styles/LogoText.styled'
@@ -27,6 +27,7 @@ import bid from '../TopSeed/assets/bid.svg'
 import congrats from '../TopSeed/assets/congrats.svg'
 import progress from '../TopSeed/assets/progress.svg'
 import catProfile from '../TopSeed/assets/cat-profile-min.png'
+import Footer from '../Components/Footer'
 
 
 
@@ -235,24 +236,8 @@ const TopSeed = () => {
             </EndingSection>
         </Main>
 
+        <Footer></Footer>
 
-        <Footer>
-            <Flex>
-                <div>
-                    <Link to='/' className='home-link'>
-                            <Logo big={false}
-                            > 
-                                <TextFragment bottom={true}>SHAWNCHI</TextFragment>
-                                <TextFragment bottom={false}>SHAWNCHI</TextFragment>
-                                <LogoText text={'SHAWNC'}>SHAWNCHI</LogoText>
-                            </Logo>
-                    </Link>
-                    <p>Thanks for reading!</p>
-                </div>
-                <p>© 2021-present Shawn Chi. All Rights Reserved.</p>
-            </Flex>
-
-        </Footer>
         
     </>
   )
