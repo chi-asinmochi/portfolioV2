@@ -123,7 +123,7 @@ const projectData = [
     },
     {
         id: 5,
-        title: 'Contract Tracing App',
+        title: 'Contact Tracing App',
         content: {
             type: 'video',
             cover: covidCover,
