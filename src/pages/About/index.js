@@ -109,13 +109,13 @@ function About() {
                             </Entry>
                         </Entries>
                     </Container>
-
+{/* 
                     <ButtonText text={'PDF Resume'} active={true} alignment={'end'}
                         onClick={(e) => {
                             e.preventDefault()
                             window.open(resume)
                         }}>
-                    </ButtonText>
+                    </ButtonText> */}
                 </Wrapper>
             </Main>
             
