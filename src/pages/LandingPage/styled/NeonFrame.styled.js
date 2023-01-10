@@ -8,7 +8,7 @@ export const NeonFrame = styled.div`
     transform: translate(-50%,-50%);
     width: min(80%, 1200px);
     height: 80%;
-    border: 4px var(--grey100) solid;
+    border: 2px var(--grey100) solid;
     border-radius: 8px;
     filter: drop-shadow(0px 0px 16px var(--pink));
     animation: flicker 3s infinite alternate;
@@ -22,7 +22,7 @@ export const NeonFrame = styled.div`
     @keyframes flicker {
         0% {
             opacity: 1;
-            border: 4px var(--grey100) solid;
+            border: 2px var(--grey100) solid;
             /* filter: drop-shadow(0px 0px 32px var(--pink)); */    
 
         }
@@ -39,11 +39,7 @@ export const NeonFrame = styled.div`
             /* filter: drop-shadow(0px 0px 16px var(--pink)); */
 
         }
-        75% {
-            opacity: 1;
-            /* border: 4px var(--grey100) solid; */
-            /* filter: drop-shadow(0px 0px 16px var(--pink)); */
-        }
+
         75% {
             opacity: 1;
             border: 4px pink solid;

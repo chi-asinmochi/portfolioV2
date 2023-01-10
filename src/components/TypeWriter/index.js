@@ -76,23 +76,28 @@ const TypeWriter = ({ text, margin }) => {
 const Box = styled.div`
     width: 100%;
     align-self: flex-start;
+    opacity: 0.6;
     cursor: pointer;
+    transition: opacity 0.6s;
 
     p {
         color: var(--blue500);
         font-family: var(--font-cyber);
-        font-weight: 300;
+        /* font-weight: 100; */
         letter-spacing: 0.1em;
         line-height: 200%;
         font-size: 0.9em;
         white-space: pre-line;
+        opacity: 1;
+        /* transition: 0.6s opacity; */
+
     }
     p.done {
         /* color: var(--blue700); */
-        opacity: 0.6;
-        transition: 1s all;
+        /* opacity: 0.6; */
+        /* transition: 1s all; */
     }
-    p.done:hover {
+    &:hover {
         opacity: 1;
     }
 `
