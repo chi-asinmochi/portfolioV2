@@ -73,13 +73,17 @@ function About() {
                                 <Label>Name</Label>
                                 <p>Shawn Chi</p>
                             </Entry>
-                            <Entry>
+                            {/* <Entry>
                                 <Label>Occupation</Label>
                                 <p>Interaction Designer</p>
                             </Entry>
                             <Entry>
                                 <Label>Experience</Label>
                                 <p>2 years</p>
+                            </Entry> */}
+                            <Entry>
+                                <Label>Bio</Label>
+                                <p>An experienced designer with a   solid understanding of UX principles and research methodologies. Skilled in HTML5, Cascading Style Sheets (CSS), Modern Javascript, and React.</p>
                             </Entry>
                             <Entry>
                                 <Label>Degree</Label>
@@ -88,10 +92,7 @@ function About() {
                                     BA Psychology
                                 </p>
                             </Entry>
-                            <Entry>
-                                <Label>Bio</Label>
-                                <p>An experienced designer with a   solid understanding of UX principles and research methodologies. Skilled in HTML5, Cascading Style Sheets (CSS), Modern Javascript, and React.</p>
-                            </Entry>
+
                             <Entry>
                                 <Label>Specialization</Label>
                                 <BarChartWrapper>

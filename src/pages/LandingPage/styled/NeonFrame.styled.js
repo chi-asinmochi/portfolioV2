@@ -9,8 +9,8 @@ export const NeonFrame = styled.div`
     width: min(80%, 1200px);
     height: 80%;
     border: 2px var(--grey100) solid;
-    border-radius: 8px;
-    filter: drop-shadow(0px 0px 16px var(--pink));
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 16px var(--cyan));
     animation: flicker 3s infinite alternate;
 
     @media (max-width: 450px) {
@@ -42,7 +42,7 @@ export const NeonFrame = styled.div`
 
         75% {
             opacity: 1;
-            border: 4px pink solid;
+            border: 4px white solid;
             /* filter: drop-shadow(0px 0px 16px var(--pink)); */
         }
 
