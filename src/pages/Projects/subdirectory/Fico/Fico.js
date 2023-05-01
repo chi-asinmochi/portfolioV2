@@ -12,7 +12,7 @@ const Fico = () => {
         {/* <Figma
         src='https://www.figma.com/proto/8cTCIXVUN2dj0RHMvXw9mF/portfolio?page-id=1501%3A4929&node-id=1615%3A7594&viewport=118%2C856%2C0.13&scaling=scale-down-width&hotspot-hints=0&hide-ui=1'
         /> */}
-        {/* <Footer></Footer> */}
+        <Footer></Footer>
     </>
 
 
