@@ -76,17 +76,17 @@ const TypeWriter = ({ text, margin }) => {
 const Box = styled.div`
     width: 100%;
     align-self: flex-start;
-    opacity: 0.6;
+    opacity: 0.7;
     cursor: pointer;
-    transition: opacity 0.6s;
+    transition: opacity 0.3s;
 
     p {
         color: var(--blue500);
-        font-family: var(--font-cyber);
+        font-family: "Inconsolata";
         /* font-weight: 100; */
-        letter-spacing: 0.1em;
-        line-height: 200%;
-        font-size: 0.9em;
+        /* letter-spacing: 0.1em; */
+        /* line-height: 200%; */
+        font-size: 1.15em;
         white-space: pre-line;
         opacity: 1;
         /* transition: 0.6s opacity; */

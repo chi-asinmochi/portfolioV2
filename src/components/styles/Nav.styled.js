@@ -38,7 +38,7 @@ export const Container = styled.div`
     }
 `
 export const Logo = styled.div`
-    --Blur: ${({ big }) => big? 'blur(8px)' : 'blur(4px)'};
+    --Blur: ${({ big }) => big? 'blur(4px)' : 'blur(2px)'};
     & {
         margin: auto;
         position: relative;

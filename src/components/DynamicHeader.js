@@ -9,9 +9,10 @@ import sounds from '../assets/audio/data-process.wav'
 import TypeWriter from './TypeWriter'
 
 
-const letters = '*+-/@_$[%£!XO1&>'
+const greeting = 'Shawnchi'
+const scrambles = '*+-/@_$[%£!XO1&>'
 
-const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design of digital interfaces. Fun fact, this website is built by me from scratch with React but still a WIP. Please bear with me if you stumble over any bugs. Cheers!'
+const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design of digital interfaces. Fun fact, this website is built by me from scratch with React JS but some of it is still a WIP. Please bear with me if you come across any bugs. Cheers!'
 function DynamicHeader({ big, current, smPadding, inView }) {
 
     const [play] = useSound(sounds, {
@@ -21,7 +22,7 @@ function DynamicHeader({ big, current, smPadding, inView }) {
         },
     })
     // console.log(big)
-    const [text, setLogoText] = useState('shawnchi')
+    const [text, setLogoText] = useState(greeting)
     const [shuffling, setShuffling] = useState(false)
     const menuRef = useRef(null);
 
@@ -39,7 +40,7 @@ function DynamicHeader({ big, current, smPadding, inView }) {
             if (i>0) {
                 setLogoText((prev) => {
                     let arr = [...prev].map(l => 
-                        letters[parseInt(Math.random()*100%letters.length)]
+                        scrambles[parseInt(Math.random()*100%scrambles.length)]
                     )
                     // console.log('render')
                     return arr
@@ -66,7 +67,7 @@ function DynamicHeader({ big, current, smPadding, inView }) {
                                 return 'o'
                                 break
                             default:
-                                return letters[parseInt(Math.random()*100%letters.length)]
+                                return scrambles[parseInt(Math.random()*100%scrambles.length)]
                         }
                     }
                     )
@@ -88,14 +89,14 @@ function DynamicHeader({ big, current, smPadding, inView }) {
             if (i>0) {
                 setLogoText((prev) => {
                     let arr = [...prev].map(l => 
-                        letters[parseInt(Math.random()*100%letters.length)]
+                        scrambles[parseInt(Math.random()*100%scrambles.length)]
                     )
                     return arr
                 })
                 i--
             } else {
                 clearInterval(shuffler)
-                setLogoText('shawnchi')
+                setLogoText(greeting)
                 // setShuffling(false)
             }
         }, 20);
