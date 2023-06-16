@@ -83,7 +83,7 @@ const Box = styled.div`
     p {
         color: var(--blue500);
         font-family: "Inconsolata";
-        /* font-weight: 100; */
+        font-weight: 400;
         /* letter-spacing: 0.1em; */
         /* line-height: 200%; */
         font-size: 1.15em;

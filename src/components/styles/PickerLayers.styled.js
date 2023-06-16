@@ -14,7 +14,7 @@ export const Ul = styled.ul`
     pointer-events: none;
     top: 20%;
     left: var(--side-padding);
-    line-height: 2em;
+    line-height: 1.5em;
     opacity: ${({inView}) => inView? 1 : 0};
     /* transition: all ease-out 0.4s; */
 
@@ -75,13 +75,13 @@ export const ProjectTitle = styled.h4`
     letter-spacing: 0.05em;
     font-size: 1.2em;
     white-space: nowrap;
-    color: var(--blueGrey300);
+    color: var(--blueGrey500);
     transition: all 0.6s;
     pointer-events: auto;
     cursor: pointer;
     padding: 0.8em 0;
     &:hover {
-        opacity: 1;
+        color: white;
     }
     &.current {
         opacity: 1;
@@ -90,14 +90,15 @@ export const ProjectTitle = styled.h4`
         transform-origin: left;
         font-weight: 700;
         position: relative;
+        font-size: 1.6em;
     }
     &.current::before {
         content: '';
         position: absolute;
         top: 50%;
-        left: -2em;
-        width: 1.5em;
-        height: 1.5em;
+        left: -1.8em;
+        width: 1.8rem;
+        height: 1.8rem;
         transform: translate(0, -50%);
         background: url(${indicator});
         background-size: contain;
