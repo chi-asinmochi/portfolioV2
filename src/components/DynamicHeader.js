@@ -136,7 +136,7 @@ function DynamicHeader({ big, current, smPadding, inView }) {
 
                 </Menu>
 
-                {big? <TypeWriter text={typeWriterText} margin='2em 0 0 0'/> : null}
+                {big? <TypeWriter text={typeWriterText} margin='0.5em 0 0 0'/> : null}
 
             </Container>
         </Nav>

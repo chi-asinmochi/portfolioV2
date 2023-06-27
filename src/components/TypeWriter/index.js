@@ -79,14 +79,16 @@ const Box = styled.div`
     opacity: 0.7;
     cursor: pointer;
     transition: opacity 0.3s;
+    /* transform: translateY(5vh); */
 
     p {
         color: var(--blue500);
         font-family: "Inconsolata";
         font-weight: 400;
         /* letter-spacing: 0.1em; */
+        /* letter-spacing: 0.1em; */
         /* line-height: 200%; */
-        font-size: 1.15em;
+        font-size: 1.1em;
         white-space: pre-line;
         opacity: 1;
         /* transition: 0.6s opacity; */

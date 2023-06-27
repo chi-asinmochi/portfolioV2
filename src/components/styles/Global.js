@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: min(14px, calc(11px + 0.4vw));
         --big-logo: min(calc(1.8em + 4vw), 6em);
         --small-logo: calc(1.4em + 0.2vw);
+        --logo-letter-spacing: 0.3em;
         --cyan: #51F5FF;
         --blue700: #A1BFD0;
         --blue500: #BFDBFE;
@@ -31,7 +32,8 @@ const GlobalStyles = createGlobalStyle`
         --side-padding: 10vw;
         --side-padding-sm: 5vw;
         --caution-yellow: #F8D34B;
-        --font-cyber: 'Orbitron';
+        /* --font-cyber: 'Orbitron'; */
+        --font-cyber: 'Play';
         --font-mono: 'Overpass Mono';
         --font-italic: 'Open Sans', 'sans serif';
         --font-inter: 'inter';
@@ -98,7 +100,7 @@ const GlobalStyles = createGlobalStyle`
     }
     h4 {
         font-weight: 500;
-        font-size: 1.15rem;
+        font-size: 1.5rem;
     }
     h5 {
         font-weight: 400;

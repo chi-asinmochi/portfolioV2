@@ -5,16 +5,16 @@ export const LogoText = styled.h1`
         color: white;
         z-index: 3;
         /* font-size: min(calc(2em + 5vw), 8em); */
-        letter-spacing: 0.2em;
+        letter-spacing: var(--logo-letter-spacing);
         font-weight: 900;
         text-transform: uppercase;
         margin-right: -0.2em;
         position: relative;
         animation: main-glitch linear 1.5s infinite; 
         width: 8em;
-        /* text-align: end; */
-        text-shadow: 3px 6px 30px rgb(242, 61, 224, 0.4),
-            -3px -3px 10px rgb(81, 245, 255, 0.5);
+
+        text-shadow: 3px 6px 40px rgb(242, 61, 224, 0.8),
+            -3px -6px 15px rgb(81, 245, 255, 0.8);
     }
     @keyframes main-glitch {
         2%,64%{

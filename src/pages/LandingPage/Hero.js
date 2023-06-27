@@ -43,7 +43,7 @@ export const Section = styled.section`
     }
 `
 const Wrapper = styled.div`
-    height: 90%;
+    height: 100%;
     display: grid;
     place-content: center;
 

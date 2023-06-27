@@ -14,7 +14,7 @@ export const Ul = styled.ul`
     pointer-events: none;
     top: 20%;
     left: var(--side-padding);
-    line-height: 1.5em;
+    line-height: 1em;
     opacity: ${({inView}) => inView? 1 : 0};
     /* transition: all ease-out 0.4s; */
 
@@ -73,7 +73,7 @@ export const ProjectTitle = styled.h4`
 
     font-weight: 400;
     letter-spacing: 0.05em;
-    font-size: 1.2em;
+    font-size: 1.4em;
     white-space: nowrap;
     color: var(--blueGrey500);
     transition: all 0.6s;
@@ -90,7 +90,7 @@ export const ProjectTitle = styled.h4`
         transform-origin: left;
         font-weight: 700;
         position: relative;
-        font-size: 1.6em;
+        font-size: 1.8em;
     }
     &.current::before {
         content: '';
