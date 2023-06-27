@@ -9,6 +9,7 @@ export const LogoText = styled.h1`
         font-weight: 900;
         text-transform: uppercase;
         margin-right: -0.2em;
+        margin-bottom: 0.2em;
         position: relative;
         animation: main-glitch linear 1.5s infinite; 
         width: 8em;

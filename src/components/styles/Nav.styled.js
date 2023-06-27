@@ -1,22 +1,19 @@
 import styled from "styled-components"
 
 export const Nav = styled.nav`
-/* width: 8em; */
+
     opacity: ${({inView}) => inView? '1' : '0'};
     position: ${({big}) => big? '' : 'fixed'};
     top: 0;
     z-index: 10;
     width: ${({big}) => big? 'auto' : '100%'};
-    /* display: grid;
-    place-items: center; */
-    max-width: var(--max-content-width);
+
+
     background-image: ${({big}) => big? `transparent` : 'linear-gradient(to bottom, var(--bg-color), var(--bg-trans))'};
     @media (max-width: 800px) {
         padding-top: 4vh;
     }
 
-
-/* background-color: red; */
 `
 export const Container = styled.div`
     max-width: var(--max-content-width);
@@ -27,7 +24,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: ${({big}) => big? 'column' : 'row'};
     justify-content: ${({big}) => big? '' : 'space-between'};
-    gap: ${({big}) => big? '1em' : ''};
+    gap: ${({big}) => big? '0em' : ''};
     padding: 1.5em ${({ smPadding }) => smPadding? 'var(--side-padding-sm)' : 'var(--side-padding)'} ;
     .home-link {
         display: flex;
@@ -130,10 +127,14 @@ export const Menu = styled.ul`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: ${({big}) => big? '3em' : ''};
+        gap: ${({big}) => big? '1.5em' : ''};
     }
     li {
         padding: 1em 2em;
+        @media (max-width: 800px) {
+        padding: 1em;
+        }
+
         font-size: 1.1em;
         --glitch-shadow: 1px 1px 0px var(--pink),
                 0px -1px 0px var(--cyan);     
@@ -142,7 +143,6 @@ export const Menu = styled.ul`
             text-decoration: none;
             color: #E2E8F0;
             opacity: 1;
-            font-size: 1.1em;
             cursor: pointer;
             /* filter: blur(1px); */
             transition: 0.3s all;   

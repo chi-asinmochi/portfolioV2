@@ -13,8 +13,8 @@ const GlobalStyles = createGlobalStyle`
         src: url(${interFont});
     } */
     html {
-        font-size: min(14px, calc(11px + 0.4vw));
-        --big-logo: min(calc(1.8em + 4vw), 6em);
+        font-size: min(15px, calc(11px + 0.4vw));
+        --big-logo: min(calc(1.4em + 4vw), 5.5em);
         --small-logo: calc(1.4em + 0.2vw);
         --logo-letter-spacing: 0.3em;
         --cyan: #51F5FF;
@@ -37,6 +37,8 @@ const GlobalStyles = createGlobalStyle`
         --font-mono: 'Overpass Mono';
         --font-italic: 'Open Sans', 'sans serif';
         --font-inter: 'inter';
+        --font-pText: 'Ubuntu', sans-serif;
+
         --text-80: #ffffffba;
         --bg-gradient: linear-gradient(to bottom, #15151B , #372E72);
         --grey100: #F3F4F6;
@@ -58,7 +60,7 @@ const GlobalStyles = createGlobalStyle`
         width: 100vw;
         height: 100vh;
         overflow: hidden;
-        font-family: var(--font-inter), monospace;
+        font-family: var(--font-pText);
         color: white;
         font-weight: 300;
         display: grid;

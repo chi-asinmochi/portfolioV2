@@ -1,16 +1,17 @@
 import styled from "styled-components"
 
 export const NeonFrame = styled.div`
+    --shadow-color: #8879E7;
     position: absolute;
     z-index: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: min(80%, 1200px);
-    height: 75%;
-    border: 4px var(--grey100) solid;
+    height: 72%;
+    border: 5px white solid;
     border-radius: 24px;
-    filter: drop-shadow(0px 0px 16px var(--cyan));
+    filter: drop-shadow(0px 0px 16px purple);
     animation: flicker 6s infinite alternate;
 
     @media (max-width: 450px) {
@@ -27,25 +28,27 @@ export const NeonFrame = styled.div`
 
         }
 
-        68% {
+        20% {
             opacity: 1;
             /* filter: drop-shadow(0px 0px 16px var(--pink)); */
+            border: 5px white solid;
 
 
         }
         70% {
             opacity: 1;
-            border: 3px var(--grey100) solid;
-            filter: drop-shadow(0px 0px 4px var(--purple200));
+            border: 4px var(--grey100) solid;
+            /* filter: drop-shadow(0px 0px 4px var(--purple200)); */
             /* border: 4px var(--grey100) solid; */
             /* filter: drop-shadow(0px 0px 16px var(--pink)); */
 
         }
 
-        75% {
+        100% {
             opacity: 1;
+            border: 4px white solid;
             /* border: 4px white solid; */
-            filter: drop-shadow(0px 0px 16px var(--cyan));
+            /* filter: drop-shadow(0px 0px 16px var(--cyan)); */
             /* filter: drop-shadow(0px 0px 16px var(--pink)); */
         }
 

@@ -80,15 +80,16 @@ const Box = styled.div`
     cursor: pointer;
     transition: opacity 0.3s;
     /* transform: translateY(5vh); */
+    /* padding: 0 var(--side-padding); */
 
     p {
         color: var(--blue500);
-        font-family: "Inconsolata";
-        font-weight: 400;
+        font-family: var(--font-pText);
+        font-weight: 300;
+        /* letter-spacing: -0.1em; */
         /* letter-spacing: 0.1em; */
-        /* letter-spacing: 0.1em; */
-        /* line-height: 200%; */
-        font-size: 1.1em;
+        line-height: 200%;
+        font-size: 1em;
         white-space: pre-line;
         opacity: 1;
         /* transition: 0.6s opacity; */
