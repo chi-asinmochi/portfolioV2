@@ -11,7 +11,7 @@ export const NeonFrame = styled.div`
     height: 72%;
     border: 5px white solid;
     border-radius: 24px;
-    filter: drop-shadow(0px 0px 16px purple);
+    filter: drop-shadow(0px 0px 16px var(--blue400));
     animation: flicker 6s infinite alternate;
 
     @media (max-width: 450px) {
