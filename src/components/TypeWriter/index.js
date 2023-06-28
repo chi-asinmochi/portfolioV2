@@ -76,7 +76,7 @@ const TypeWriter = ({ text, margin }) => {
 const Box = styled.div`
     width: 100%;
     align-self: flex-start;
-    opacity: 0.7;
+    opacity: 0.8;
     cursor: pointer;
     transition: opacity 0.3s;
     /* transform: translateY(5vh); */
