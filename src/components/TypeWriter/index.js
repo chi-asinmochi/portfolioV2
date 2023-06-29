@@ -76,14 +76,14 @@ const TypeWriter = ({ text, margin }) => {
 const Box = styled.div`
     width: 100%;
     align-self: flex-start;
-    opacity: 0.8;
+    opacity: 0.7;
     cursor: pointer;
     transition: opacity 0.3s;
     /* transform: translateY(5vh); */
     /* padding: 0 var(--side-padding); */
 
     p {
-        color: var(--blue500);
+        color: var(--blue400);
         font-family: var(--font-pText);
         font-weight: 300;
         /* letter-spacing: -0.1em; */
@@ -119,7 +119,7 @@ const TypeHead = styled.span`
         position: absolute;
         height: 0.8em;
         width: 0.5em;
-        background: white;
+        background: var(--blue400);
         top: 50%;
         transform: translateY(-60%);
         left: 4px;
