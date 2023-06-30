@@ -12,7 +12,7 @@ import TypeWriter from './TypeWriter'
 const greeting = 'Shawnchi'
 const scrambles = '*+-/@_$[%£!XO1&>'
 
-const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design & development of digital interfaces. Fun fact, this website is built from scratch with React JS. Please bear with me if you come across any WIP. Cheers!'
+const typeWriterText = 'Hi there, I\'m Shawn. I specialize in the design & development of digital interfaces. Fun fact, this website is built from scratch with React JS. Please bear with me if you catch any WIP. Cheers!'
 function DynamicHeader({ big, current, smPadding, inView }) {
 
     const [play] = useSound(sounds, {
