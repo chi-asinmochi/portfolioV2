@@ -24,7 +24,9 @@ export const Hero = ({heroRef}) => {
 
     return (
     <Section ref={heroRef} id='home'>
-        <NeonFrame scaleVar={scaleVar}/>
+        {/* <NeonFrame scaleVar={scaleVar}>
+            
+        </NeonFrame> */}
         <Wrapper>
             <DynamicHeader big={true} current='home' inView={true}></DynamicHeader>
         </Wrapper>
@@ -45,6 +47,6 @@ export const Section = styled.section`
 const Wrapper = styled.div`
     height: 100%;
     display: grid;
-    place-content: center;
+    place-items: center;
 
 `

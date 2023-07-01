@@ -3,10 +3,13 @@ import { LogoText } from './styles/LogoText.styled'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import { TextFragment } from './styles/TextFragment.styled'
-import { Nav, Container, Logo, Menu, Hamburger } from './styles/Nav.styled'
+import { NeonNav, NavWrapper, Logo, Menu, Hamburger, ScrollHint, ScrollChev } from './styles/Nav.styled'
 import useSound from 'use-sound'
 import sounds from '../assets/audio/data-process.wav' 
 import TypeWriter from './TypeWriter'
+import chev1 from '../assets/icon/chev-1.svg'
+import chev2 from '../assets/icon/chev-2.svg'
+import chev3 from '../assets/icon/chev-3.svg'
 
 
 const greeting = 'Shawnchi'
@@ -108,8 +111,8 @@ function DynamicHeader({ big, current, smPadding, inView }) {
     }
 
     return (
-        <Nav big = {big} inView={inView}>
-            <Container big={big} smPadding={smPadding}>
+        <NeonNav big = {big} inView={inView}>
+            <NavWrapper big={big} smPadding={smPadding}>
 
                 <HashLink to='/#home' smooth ref={homeRef} className='home-link'>
                     <Logo className={current=='project'? 'current' : ''} big={big}
@@ -137,9 +140,14 @@ function DynamicHeader({ big, current, smPadding, inView }) {
                 </Menu>
 
                 {big? <TypeWriter text={typeWriterText} margin='0.5em 0 0 0'/> : null}
-
-            </Container>
-        </Nav>
+                {big? <ScrollHint>Scroll</ScrollHint> : null}
+                {big? <ScrollChev>
+                    <img src={chev1} alt="" />
+                    <img src={chev2} alt="" />
+                    <img src={chev3} alt="" />
+                </ScrollChev> : null}
+            </NavWrapper>
+        </NeonNav>
     )
 }
 

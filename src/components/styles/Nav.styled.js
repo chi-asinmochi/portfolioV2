@@ -1,21 +1,71 @@
 import styled from "styled-components"
 
-export const Nav = styled.nav`
+export const NeonNav = styled.nav`
+    --shadow-color: #8879E7;
 
     opacity: ${({inView}) => inView? '1' : '0'};
     position: ${({big}) => big? '' : 'fixed'};
     top: 0;
     z-index: 10;
-    width: ${({big}) => big? 'auto' : '100%'};
+    width: ${({big}) => big? 'min(80vw, 1200px)' : '100%'};
+    height: ${({big}) => big? '72%' : 'auto'};
+    padding: ${({big}) => big? '8em 0' : ''};
+    display: ${({big}) => big? 'grid' : 'block'};
+    place-items: center;
+    position: ${({big}) => big? 'relative' : ''};
+    margin-top: ${({big}) => big? '-5em' : ''};
+
+
+    &::after {
+        display: ${({big}) => big? 'initial' : 'none'};
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border: 5px white solid;
+        border-radius: 24px;
+        filter: drop-shadow(0px 0px 16px var(--blue400));
+        animation: flicker 6s infinite alternate;
+        pointer-events: none;
+    }
+
 
 
     background-image: ${({big}) => big? `transparent` : 'linear-gradient(to bottom, var(--bg-color), var(--bg-trans))'};
     @media (max-width: 800px) {
-        padding-top: 4vh;
+        /* padding-top: 4vh; */
     }
 
+    @media (max-width: 450px) {
+        height: ${({big}) => big? '90%' : 'auto'};
+        width: ${({big}) => big? '98vw' : '100%'};
+    }
+
+    @keyframes flicker {
+        0% {
+            opacity: 1;
+        }
+
+        20% {
+            opacity: 1;
+            border: 5px white solid;
+
+
+        }
+        70% {
+            opacity: 1;
+            border: 4px var(--grey100) solid;
+
+        }
+
+        100% {
+            opacity: 1;
+            border: 4px white solid;
+        }
+
+    }
 `
-export const Container = styled.div`
+export const NavWrapper = styled.div`
     max-width: var(--max-content-width);
     margin-top: ${
         ({ big }) => big ? '0' : '0'
@@ -309,4 +359,93 @@ export const Hamburger = styled.div`
     @media (max-width: 800px) {
             display: block;
         }
+`
+export const ScrollHint = styled.span`
+    font-family: var(--font-cyber);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -0.5em);
+    background: linear-gradient(to bottom, #4A8395, #48437D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    animation: fade-in 2s 2s ease-out forwards;
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+`
+export const ScrollChev = styled.div`
+    --gap: -9px;
+    --lux: 0.5;
+    --delay: 3s;
+    display: flex;
+    flex-direction: column;
+    width: 6.5em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 140%);
+    
+    & > img {
+        opacity: 0;
+    }
+
+    & > img:nth-of-type(1) {
+        animation: dim-1 3s ease-out var(--delay) infinite;
+        @keyframes dim-1 {
+            0% {
+                opacity: var(--lux);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+    & > img:nth-of-type(2) {
+        margin-top: var(--gap);
+        animation: dim-2 3s ease-out var(--delay) infinite;
+        @keyframes dim-2 {
+            0% {
+                opacity: 0;
+            }
+            9% {
+                opacity: 0;
+            }
+            10% {
+                opacity: var(--lux);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+    & > img:nth-of-type(3) {
+        margin-top: var(--gap);
+        animation: dim-3 3s ease-out var(--delay) infinite;
+        @keyframes dim-3 {
+            0% {
+                opacity: 0;
+            }
+            19% {
+                opacity: 0;
+            }
+            20% {
+                opacity: var(--lux);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    } 
 `
