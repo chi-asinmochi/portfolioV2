@@ -13,7 +13,7 @@ export const NeonNav = styled.nav`
     display: ${({big}) => big? 'grid' : 'block'};
     place-items: center;
     position: ${({big}) => big? 'relative' : ''};
-    margin-top: ${({big}) => big? '-5em' : ''};
+    margin-top: ${({big}) => big? '-8vh' : ''};
 
 
     &::after {
@@ -37,7 +37,7 @@ export const NeonNav = styled.nav`
     }
 
     @media (max-width: 450px) {
-        height: ${({big}) => big? '90%' : 'auto'};
+        height: ${({big}) => big? '80%' : 'auto'};
         width: ${({big}) => big? '98vw' : '100%'};
     }
 
@@ -386,36 +386,69 @@ export const ScrollHint = styled.span`
 
 `
 export const ScrollChev = styled.div`
-    --gap: -9px;
-    --lux: 0.5;
+    --gap: -0.7em;
+    --lux: 0.4;
     --delay: 3s;
+    --duration: 4s;
+    --yPos: 130%;
     display: flex;
     flex-direction: column;
-    width: 6.5em;
+    width: 7em;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 140%);
+    transform: translate(-50%, var(--yPos));
+    animation: move var(--duration) ease-in var(--delay) infinite;
     
+    @keyframes move {
+        0% {
+            transform: translate(-50%, var(--yPos));
+        }
+        40% {
+            transform: translate(-50%, calc(var(--yPos) + 20%));
+        }
+        100% {
+            transform: translate(-50%, var(--yPos));
+        }
+    }
+
     & > img {
         opacity: 0;
     }
 
     & > img:nth-of-type(1) {
-        animation: dim-1 3s ease-out var(--delay) infinite;
+        animation: dim-1 var(--duration) ease-out var(--delay) infinite;
         @keyframes dim-1 {
             0% {
                 opacity: var(--lux);
             }
-            100% {
+            60% {
                 opacity: 0;
             }
         }
     }
     & > img:nth-of-type(2) {
         margin-top: var(--gap);
-        animation: dim-2 3s ease-out var(--delay) infinite;
+        animation: dim-2 var(--duration) ease-out var(--delay) infinite;
         @keyframes dim-2 {
+            0% {
+                opacity: 0;
+            }
+            4% {
+                opacity: 0;
+            }
+            5% {
+                opacity: var(--lux);
+            }
+            65% {
+                opacity: 0;
+            }
+        }
+    }
+    & > img:nth-of-type(3) {
+        margin-top: var(--gap);
+        animation: dim-3 var(--duration) ease-out var(--delay) infinite;
+        @keyframes dim-3 {
             0% {
                 opacity: 0;
             }
@@ -425,25 +458,7 @@ export const ScrollChev = styled.div`
             10% {
                 opacity: var(--lux);
             }
-            100% {
-                opacity: 0;
-            }
-        }
-    }
-    & > img:nth-of-type(3) {
-        margin-top: var(--gap);
-        animation: dim-3 3s ease-out var(--delay) infinite;
-        @keyframes dim-3 {
-            0% {
-                opacity: 0;
-            }
-            19% {
-                opacity: 0;
-            }
-            20% {
-                opacity: var(--lux);
-            }
-            100% {
+            68% {
                 opacity: 0;
             }
         }
