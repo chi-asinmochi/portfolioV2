@@ -38,7 +38,7 @@ export const NeonNav = styled.nav`
 
     @media (max-width: 450px) {
         height: ${({big}) => big? '80%' : 'auto'};
-        width: ${({big}) => big? '98vw' : '100%'};
+        width: ${({big}) => big? '92vw' : '100%'};
     }
 
     @keyframes flicker {
@@ -414,6 +414,7 @@ export const ScrollChev = styled.div`
 
     & > img {
         opacity: 0;
+        object-fit: contain;
     }
 
     & > img:nth-of-type(1) {
