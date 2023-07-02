@@ -374,7 +374,7 @@ export const ScrollHint = styled.span`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
-    animation: fade-in 2s 2s ease-out forwards;
+    animation: fade-in 2s ease-out forwards;
     @keyframes fade-in {
         0% {
             opacity: 0;
@@ -388,7 +388,7 @@ export const ScrollHint = styled.span`
 export const ScrollChev = styled.div`
     --gap: -0.7em;
     --lux: 0.4;
-    --delay: 3s;
+    --delay: 1s;
     --duration: 4s;
     --yPos: 130%;
     display: flex;
