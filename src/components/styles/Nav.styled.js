@@ -380,14 +380,14 @@ export const ScrollHint = styled.span`
             opacity: 0;
         }
         100% {
-            opacity: 1;
+            opacity: 0.7;
         }
     }
 
 `
 export const ScrollChev = styled.div`
     --gap: -0.7em;
-    --lux: 0.4;
+    --lux: 0.1;
     --delay: 1s;
     --duration: 4s;
     --yPos: 130%;
